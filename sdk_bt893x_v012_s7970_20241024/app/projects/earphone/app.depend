@@ -1,0 +1,1461 @@
+# depslib dependency file v1.0
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\i2s\ta5711.c
+	"include.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\include.h
+	"global.h"
+	"xcfg.h"
+	"config.h"
+	"io_def.h"
+	"api.h"
+	"bsp.h"
+	"3rd_party.h"
+	"system.h"
+	"modules.h"
+	"func.h"
+	"plugin.h"
+	"res.h"
+	"res2.h"
+
+1726042842 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\global.h
+	<stddef.h>
+	<stdarg.h>
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+	"typedef.h"
+	"macro.h"
+	"clib.h"
+	"sfr.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\typedef.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\macro.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\clib.h
+
+1724824405 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\sfr.h
+
+1724225541 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\xcfg.h
+
+1727179350 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\config.h
+	"config_define.h"
+	"config_extra.h"
+
+1724910912 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\config_define.h
+
+1729481940 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\config_extra.h
+
+1714025678 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\io_def.h
+	"global.h"
+	"config.h"
+	"sfr.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api.h
+	"api_btstack.h"
+	"api_cm.h"
+	"api_music.h"
+	"api_sd.h"
+	"api_rtc.h"
+	"api_usb.h"
+	"api_fs.h"
+	"api_device.h"
+	"api_sdadc.h"
+	"api_update.h"
+	"api_dac.h"
+	"api_eq.h"
+	"api_sysclk.h"
+	"api_msg.h"
+	"api_saradc.h"
+	"api_sys.h"
+	"api_tws.h"
+	"api_pwr.h"
+	"api_key.h"
+	"api_gpio.h"
+	"api_uart.h"
+	"api_karaok.h"
+	"api_math.h"
+	"api_tkey.h"
+	"api_nr.h"
+	"api_sensor.h"
+	"api_irrx.h"
+	"api_charge.h"
+	"api_stream.h"
+	"api_effects.h"
+
+1727230335 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_btstack.h
+
+1699337239 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_cm.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_music.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_sd.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_rtc.h
+
+1718096719 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_usb.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_fs.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_device.h
+
+1727179350 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_sdadc.h
+
+1698894787 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_update.h
+
+1727146389 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_dac.h
+
+1723635601 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_eq.h
+
+1718623502 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_sysclk.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_msg.h
+
+1698117832 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_saradc.h
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_sys.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_tws.h
+
+1698420593 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_pwr.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_key.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_gpio.h
+
+1716617170 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_uart.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_karaok.h
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_math.h
+
+1713854397 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_tkey.h
+
+1726732304 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_nr.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_sensor.h
+	"include.h"
+	"..\..\platform\3rd-party\sensor\sc7a20.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_irrx.h
+
+1698152642 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_charge.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_stream.h
+
+1727593048 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\api_effects.h
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp.h
+	"bsp_i2c.h"
+	"bsp_timer.h"
+	"bsp_huart.h"
+	"bsp_uart.h"
+	"bsp_saradc.h"
+	"bsp_port_int.h"
+	"bsp_vad.h"
+	"bsp_iis.h"
+	"bsp_opus.h"
+	"bsp_asr.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_i2c.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_timer.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_huart.h
+
+1716617170 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_uart.h
+
+1709897515 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_saradc.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_port_int.h
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_vad.h
+
+1719371956 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_iis.h
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_opus.h
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_asr.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\3rd_party.h
+	"./i2s/ta5711.h"
+	"./i2s/wm8978.h"
+	"./sensor/sc7a20.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\i2s\ta5711.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\i2s\wm8978.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\sensor\sc7a20.h
+
+1729652236 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\system.h
+	"mute.h"
+	"param.h"
+	"device.h"
+	"vbat.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\mute.h
+
+1705650832 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\param.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\device.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\vbat.h
+
+1729239903 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\modules.h
+	"key/key_scan.h"
+	"audio/audio.h"
+	"bluetooth/bluetooth.h"
+	"gui/gui.h"
+	"fs/fs.h"
+	"charge/charge.h"
+	"charge/charge_box.h"
+	"music/bsp_id3_tag.h"
+	"music/bsp_karaok.h"
+	"music/bsp_lrc.h"
+	"music/bsp_piano.h"
+	"music/bsp_music.h"
+	"music/bsp_abp.h"
+	"record/record.h"
+	"test/iodm.h"
+	"test/qtest.h"
+	"usb_device/usb_audio.h"
+	"usb_device/usb_enum.h"
+	"usb_device/usb_table.h"
+	"warning/warning_play.h"
+	"bluetooth/app/dueros_dma/dueros_dma_app.h"
+
+1729131503 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.h
+	"pwrkey.h"
+	"adkey.h"
+	"tkey.h"
+	"irkey.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\pwrkey.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\adkey.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\tkey.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\irkey.h
+
+1725938507 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\audio.h
+	"bsp_anc.h"
+	"bsp_aux.h"
+	"bsp_dac.h"
+	"bsp_eq.h"
+	"bsp_audio.h"
+	"bsp_effect.h"
+	"bsp_anc_alg.h"
+	"bsp_set_effect.h"
+	"bsp_anc_tool.h"
+
+1709869605 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc.h
+
+1720085288 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_aux.h
+
+1715744154 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_dac.h
+
+1719813284 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_eq.h
+
+1706872001 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_audio.h
+
+1728376072 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_effect.h
+
+1727179350 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_alg.h
+
+1712138047 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_set_effect.h
+
+1726145749 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_tool.h
+
+1715666622 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bluetooth.h
+	"tws/tws.h"
+	"ble/popup.h"
+	"bsp_bt.h"
+	"app/app.h"
+	"bt/pbap.h"
+	"bt/map.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws.h
+	"tws_sync.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_sync.h
+	"tws_res.h"
+
+1721914791 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_res.h
+	"tws_res_tbl.h"
+
+1723192761 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_res_tbl.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\ble\popup.h
+	"gfps.h"
+
+1727140073 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\gfps\gfps.h
+	"include.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bsp_bt.h
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\app.h
+	"ab_mate/ab_mate_app.h"
+	"ab_link/ab_link.h"
+	"dueros_dma/dueros_dma_app.h"
+	"tuya_ble_profile.h"
+	"tuya_ble_app.h"
+	"ab_mate/ab_mate_app.h"
+	"dueros_dma/dueros_dma_app.h"
+	"app_fota/app_fota.h"
+
+1726748225 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_app.h
+	"ab_mate_timer.h"
+	"ab_mate_profile.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_timer.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_profile.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_link\ab_link.h
+	"include.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_app.h
+	"dma_wrapper.h"
+	"dueros_dma_tws.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_wrapper.h
+	"include.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_tws.h
+	"include.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_profile.h
+	"include.h"
+
+1724986753 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_app.h
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_type.h
+	"tuya_ble_stdlib.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_stdlib.h
+	<stdbool.h>
+	<stdint.h>
+	<string.h>
+	<stdlib.h>
+	<stddef.h>
+
+1698894787 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\app_fota\app_fota.h
+
+1700621788 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\pbap.h
+
+1715666622 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\map.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\gui.h
+	"ledseg/ledseg_common.h"
+	"ledseg/display_ledseg.h"
+	"led/led.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_common.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\ledseg\display_ledseg.h
+	"ledseg/ledseg_7p7s.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_7p7s.h
+
+1711682279 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\led\led.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\fs\fs.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\charge\charge.h
+
+1728714526 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\charge\charge_box.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_id3_tag.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_karaok.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_lrc.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_piano.h
+
+1724824405 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_music.h
+
+1726710769 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_abp.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\record\record.h
+
+1700123075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\iodm.h
+
+1700136039 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\qtest.h
+
+1699275236 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_audio.h
+
+1723084213 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_enum.h
+
+1723084213 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_table.h
+
+1724917941 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\warning\warning_play.h
+	"wsbc.h"
+
+1724824405 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\warning\wsbc.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func.h
+	"func_bt.h"
+	"func_bt_hid.h"
+	"func_bt_dut.h"
+	"func_idle.h"
+	"func_music.h"
+	"func_usbdev.h"
+	"func_aux.h"
+	"func_speaker.h"
+	"func_lowpwr.h"
+	"func_update.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt_hid.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt_dut.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_idle.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_music.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_usbdev.h
+
+1701942803 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_aux.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_speaker.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_lowpwr.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_update.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\plugin.h
+	"multi_lang.h"
+	"port_pwm.h"
+	"port_linein.h"
+	"port_led.h"
+	"port_sd.h"
+	"port_tkey.h"
+	"bt_call.h"
+
+1727416671 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\multi_lang.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_pwm.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_linein.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_led.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_sd.h
+
+1698907350 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_tkey.h
+
+1724225541 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\bt_call.h
+
+1723192761 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\res.h
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\res2.h
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\i2s\wm8978.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\sensor\sc7a20.c
+	"include.h"
+	"sc7a20.h"
+
+1724739273 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_asr.c
+	"include.h"
+	"asr.h"
+
+1723173075 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\asr\asr.h
+
+1720424108 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_huart.c
+	"include.h"
+	"api.h"
+
+1701228531 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_i2c.c
+	"include.h"
+
+1719371956 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_iis.c
+	"include.h"
+
+1729131503 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_opus.c
+	"include.h"
+	"api.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_port_int.c
+	"include.h"
+
+1709897515 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_saradc.c
+	"include.h"
+
+1717034560 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_timer.c
+	"include.h"
+
+1728714232 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_uart.c
+	"include.h"
+
+1723173699 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\bsp\bsp_vad.c
+	"include.h"
+	"bsp_vad.h"
+	"asr.h"
+
+1729131503 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func.c
+	"include.h"
+
+1701942803 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_aux.c
+	"include.h"
+	"func.h"
+	"func_aux.h"
+
+1727416671 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt_dut.c
+	"include.h"
+	"func.h"
+	"api.h"
+
+1712127005 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_bt_hid.c
+	"include.h"
+	"func.h"
+	"func_bt_hid.h"
+
+1727407343 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_charge.c
+	"include.h"
+	"func.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1727416671 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_lowpwr.c
+	"include.h"
+	"func.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_music.c
+	"include.h"
+	"func.h"
+	"func_music.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_speaker.c
+	"include.h"
+	"func.h"
+	"func_speaker.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_update.c
+	"include.h"
+	"func.h"
+	"func_update.h"
+
+1725508007 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_usbdev.c
+	"include.h"
+	"func.h"
+	"func_usbdev.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\sfunc_bt_call.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1703138204 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\sfunc_bt_ota.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1726038227 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\sfunc_bt_ring.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1717762785 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\strong_bt.c
+	"include.h"
+
+1719918439 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\strong_le.c
+	"include.h"
+
+1724225541 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\strong_sco.c
+	"include.h"
+
+1729128611 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\strong_symbol.c
+	"include.h"
+
+1713180238 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\libs\bt8930\strong_tws.c
+	"include.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\asr\asr.c
+	"include.h"
+	"asr.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\asr\asr_prefetch.c
+	"include.h"
+	"asr.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\asr\asr_strong_symbol.c
+	"include.h"
+	"asr.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc.c
+	"include.h"
+	"bsp_anc_param_table.h"
+
+1718185039 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_param_table.h
+
+1729756891 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_alg.c
+	"include.h"
+
+1701073094 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_param_table.c
+	"include.h"
+	"bsp_anc_param_table.h"
+
+1726219861 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_anc_tool.c
+	"include.h"
+
+1725362784 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_audio.c
+	"include.h"
+
+1722259426 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_aux.c
+	"include.h"
+
+1723024580 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_dac.c
+	"include.h"
+	"bsp_dac.h"
+
+1728376072 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_effect.c
+	"include.h"
+
+1729137148 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_eq.c
+	"include.h"
+	"bsp_eq.h"
+	"bsp_anc.h"
+
+1728376072 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\audio\bsp_set_effect.c
+	"include.h"
+
+1698894787 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_link\ab_link_app.c
+	"include.h"
+	"ab_link.h"
+
+1729137148 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_app.c
+	"include.h"
+	"ab_mate_app.h"
+	"ab_mate_timer.h"
+	"ab_mate_ota.h"
+	"ab_mate_tws.h"
+	"ab_mate_profile.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_ota.h
+
+1726656697 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_tws.h
+
+1726748225 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_gfps_profile.c
+	"include.h"
+	"ab_mate_profile.h"
+
+1726656697 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_ota.c
+	"include.h"
+	"ab_mate_ota.h"
+	"ab_mate_tws.h"
+
+1727253112 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_profile.c
+	"include.h"
+	"ab_mate_profile.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_timer.c
+	"include.h"
+	"ab_mate_timer.h"
+
+1726656697 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\ab_mate\ab_mate_tws.c
+	"include.h"
+	"ab_mate_tws.h"
+	"ab_mate_ota.h"
+	"ab_mate_timer.h"
+	"ab_mate_profile.h"
+
+1699947933 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\app_fota\app_fota.c
+	"include.h"
+
+1698894787 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\app_interface.c
+	"include.h"
+	"app.h"
+
+1725938507 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\app_test\app_test.c
+	"include.h"
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma.pb-c.c
+	"dma_wrapper.h"
+	"dma.pb-c.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma.pb-c.h
+	"protobuf-c.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\protobuf-c.h
+	<assert.h>
+	<stddef.h>
+	<stdint.h>
+	<macro.h>
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_stream.c
+	"dma_stream.h"
+	"dma_utils.h"
+	"include.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_stream.h
+	"dma_wrapper.h"
+	"dma.pb-c.h"
+	"dma_utils.h"
+	"include.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_utils.h
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_utils.c
+	"dma_stream.h"
+	"dma_utils.h"
+
+1729131503 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dma_wrapper.c
+	"dueros_dma_extern.h"
+	"dueros_dma_app.h"
+	"api_cm.h"
+	"dueros_dma_profile.h"
+	"api_btstack.h"
+	"xcfg.h"
+	"dueros_dma_sha256.h"
+	"dueros_dma_tws.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_extern.h
+	"dma_wrapper.h"
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_profile.h
+
+1717746084 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_sha256.h
+	"typedef.h"
+
+1729239903 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_app.c
+	"dueros_dma_app.h"
+	"dueros_dma_profile.h"
+	"dueros_dma_extern.h"
+
+1729239903 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_profile.c
+	"include.h"
+	"dueros_dma_profile.h"
+	"dma_wrapper.h"
+	"dueros_dma_app.h"
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_sha256.c
+	<string.h>
+	"dueros_dma_sha256.h"
+	"include.h"
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\dueros_dma_tws.c
+	"include.h"
+	"dueros_dma_tws.h"
+	"dma_wrapper.h"
+	"dueros_dma_app.h"
+
+1717746084 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\dueros_dma\protobuf-c.c
+	"protobuf-c.h"
+	"dma_wrapper.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\aes.c
+	"include.h"
+	"aes.h"
+	<string.h>
+	"mbedtls/padlock.h"
+	"mbedtls/aesni.h"
+	"mbedtls/platform.h"
+	<stdio.h>
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\aes.h
+	<stddef.h>
+	<stdint.h>
+	"aes_alt.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\md5.c
+	"include.h"
+	"md5.h"
+	<string.h>
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\md5.h
+	<stddef.h>
+	<stdint.h>
+	"md5_alt.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\sha256.c
+	"sha256.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\mbedtls\sha256.h
+	<stddef.h>
+	<stdint.h>
+	"sha256_alt.h"
+
+1724986753 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_app.c
+	"include.h"
+	"tuya_ble_api.h"
+	"tuya_ble_log.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_timer.h"
+	"tuya_ble_app.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_event.h"
+	"tuya_ble_ota.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+	"tuya_ble_tws.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_main.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_api.h
+	"tuya_ble_type.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_port.h"
+	"tuya_ble_app.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_internal_config.h
+	"tuya_ble_config.h"
+	"tuya_ble_port.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_config.h
+	"tuya_ble_custom_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_custom_config.h
+	"include.h"
+	"tuya_ble_type.h"
+	"tuya_ble_app.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_port.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_log.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_log_internal.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_log_internal.h
+	"tuya_ble_port.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_mem.h
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_timer.h
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_utils.h
+	"tuya_ble_stdlib.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_event.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_ota.h
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_mutli_tsf_protocol.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_tws.h
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_data_handler.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_main.h
+	"tuya_ble_type.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_bt892x.c
+	"include.h"
+	"tuya_ble_timer.h"
+	"tuya_ble_port.h"
+	"tuya_ble_type.h"
+	"aes.h"
+	"md5.h"
+	"tuya_ble_utils.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_ota.c
+	"include.h"
+	"tuya_ble_log.h"
+	"tuya_ble_type.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_api.h"
+	"tuya_ble_ota.h"
+	"api_update.h"
+	"tuya_ble_tws.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_profile.c
+	"include.h"
+	"tuya_ble_api.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_timer.c
+	"include.h"
+	"tuya_ble_timer.h"
+	"tuya_ble_type.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\port\tuya_ble_tws.c
+	"include.h"
+	"tuya_ble_log.h"
+	"tuya_ble_app.h"
+	"tuya_ble_ota.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_tws.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_data_handler.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_storage.h
+	"tuya_ble_type.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_api.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_type.h"
+	"tuya_ble_main.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_log.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_sdk_version.h"
+	"tuya_ble_gatt_send_queue.h"
+	"tuya_ble_event.h"
+	"tuya_ble_app_production_test.h"
+	"cJSON.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_sdk_version.h
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_gatt_send_queue.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_queue.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_queue.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_app_production_test.h
+	<stdint.h>
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_bulk_data.c
+	"tuya_ble_bulk_data.h"
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_main.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_secure.h"
+	"tuya_ble_main.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_unix_time.h"
+	"tuya_ble_log.h"
+	"tuya_ble_gatt_send_queue.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_bulk_data.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_heap.h
+	"tuya_ble_stdlib.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_secure.h
+	"tuya_ble_type.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_unix_time.h
+	"tuya_ble_stdlib.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_data_handler.c
+	"include.h"
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_main.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_secure.h"
+	"tuya_ble_main.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_unix_time.h"
+	"tuya_ble_log.h"
+	"tuya_ble_gatt_send_queue.h"
+	"tuya_ble_bulk_data.h"
+	"tuya_ble_app_production_test.h"
+	"tuya_ble_app_uart_common_handler.h"
+	"tuya_ble_feature_weather.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_app_uart_common_handler.h
+	<stdint.h>
+	"tuya_ble_internal_config.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_feature_weather.h
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_event.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_main.h"
+	"tuya_ble_secure.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_sdk_version.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_event.h"
+	"tuya_ble_log.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_event_handler.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_main.h"
+	"tuya_ble_secure.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_sdk_version.h"
+	"tuya_ble_event.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_app_uart_common_handler.h"
+	"tuya_ble_app_production_test.h"
+	"tuya_ble_log.h"
+	"tuya_ble_event_handler.h"
+
+1723107602 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\include\tuya_ble_event_handler.h
+	"tuya_ble_type.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_event_handler_weak.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_event_handler.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_gatt_send_queue.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_gatt_send_queue.h"
+	"tuya_ble_type.h"
+	"tuya_ble_config.h"
+	"tuya_ble_port.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_main.h"
+	"tuya_ble_log.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_heap.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_port.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_main.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_main.h"
+	"tuya_ble_secure.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_sdk_version.h"
+	"tuya_ble_event.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_app_uart_common_handler.h"
+	"tuya_ble_app_production_test.h"
+	"tuya_ble_log.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_mem.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_heap.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_internal_config.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_mutli_tsf_protocol.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_type.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_port.c
+	"tuya_ble_port.h"
+	"tuya_ble_type.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_queue.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_queue.h"
+	"tuya_ble_type.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_storage.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_api.h"
+	"tuya_ble_port.h"
+	"tuya_ble_type.h"
+	"tuya_ble_main.h"
+	"tuya_ble_mem.h"
+	"tuya_ble_data_handler.h"
+	"tuya_ble_internal_config.h"
+	"tuya_ble_mutli_tsf_protocol.h"
+	"tuya_ble_storage.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_log.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_unix_time.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_unix_time.h"
+
+1723107602 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\app\tuya\src\tuya_ble_utils.c
+	"tuya_ble_stdlib.h"
+	"tuya_ble_utils.h"
+	"tuya_ble_port.h"
+	"tuya_ble_mem.h"
+
+1728614043 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\ble\adv0.c
+	"include.h"
+
+1704437563 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\ble\ble.c
+	"include.h"
+
+1706002176 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\ble\priv_ble.c
+	"include.h"
+
+1725263875 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bsp_bt.c
+	"include.h"
+	"api.h"
+
+1720581122 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\a2dp.c
+	"include.h"
+	"api.h"
+
+1721285020 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\bt.c
+	"include.h"
+	"api.h"
+
+1719899548 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\dev_vol.c
+	"include.h"
+	"api.h"
+
+1715666622 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\hfhs.c
+	"include.h"
+	"api.h"
+
+1715742417 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\hid.c
+	"include.h"
+	"api.h"
+	"func.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\id3_tag.c
+	"id3_tag.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\id3_tag.h
+	"include.h"
+
+1715666622 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\map.c
+	"include.h"
+
+1700621788 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\pbap.c
+	"include.h"
+
+1727140073 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\profile.c
+	"include.h"
+	"api.h"
+
+1725938507 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\bt\spp.c
+	"include.h"
+	"api.h"
+
+1724917941 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\call\bt_sco.c
+	"include.h"
+	"bt_sco.h"
+
+1711680731 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\call\bt_sco.h
+
+1727140073 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\gfps\gfps.c
+	"include.h"
+	"gfps.h"
+
+1727140073 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\gfps\gfps_util.c
+	"include.h"
+
+1729144164 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws.c
+	"include.h"
+	"api.h"
+
+1728465675 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_res.c
+	"include.h"
+	"tws_res.h"
+
+1727416671 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_res_tbl.c
+	"include.h"
+
+1726710769 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_sync.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\bluetooth\tws\tws_util.c
+	"include.h"
+
+1704695182 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\charge\charge.c
+	"include.h"
+
+1728714526 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\charge\charge_box.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\fs\fs.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\gui.c
+	"include.h"
+	"gui.h"
+
+1711682279 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\led\led.c
+	"include.h"
+	"led.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_6c6s.c
+	"include.h"
+	"ledseg_6c6s.h"
+
+1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_6c6s.h
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_7p7s.c
+	"include.h"
+	"ledseg_common.h"
+	"ledseg_7p7s.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\gui\ledseg\ledseg_common.c
+	"include.h"
+	"ledseg_common.h"
+	"ledseg_7p7s.h"
+
+1701859126 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\adkey.c
+	"include.h"
+
+1723800220 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\knob.c
+	"include.h"
+
+1723800220 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\pwrkey.c
+	"include.h"
+
+1716537237 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\tkey.c
+	"include.h"
+	"api.h"
+
+1726905366 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_abp.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_id3_tag.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_karaok.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_lrc.c
+	"include.h"
+
+1726710769 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_music.c
+	"include.h"
+
+1724983974 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\music\bsp_piano.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\record\record.c
+	"include.h"
+
+1713411461 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\anc_test.c
+	"include.h"
+
+1706853363 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\enc_test.c
+	"include.h"
+
+1716617170 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\iodm.c
+	"include.h"
+
+1700136039 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\test\qtest.c
+	"include.h"
+
+1718096719 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_audio.c
+	"include.h"
+	"usb_audio.h"
+
+1724830137 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_enum.c
+	"include.h"
+	"usb_enum.h"
+	"usb_table.h"
+
+1724830137 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_device\usb_table.c
+	"include.h"
+	"usb_table.h"
+	"usb_enum.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\usb_host\usb_iap.c
+	"include.h"
+
+1725363941 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\warning\warning_play.c
+	"include.h"
+	"warning_play.h"
+
+1724824405 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\warning\wsbc.c
+	"include.h"
+	"wsbc.h"
+
+1724050881 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\cm.c
+	"include.h"
+
+1703757156 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\device.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\interrupt.c
+	"include.h"
+
+1716362344 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\mute.c
+	"include.h"
+
+1724071741 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\param.c
+	"include.h"
+
+1727416671 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\system.c
+	"include.h"
+
+1702027377 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\vbat.c
+	"include.h"
+
+1703482742 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\config.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\display_aux.c
+	"include.h"
+	"func.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\display_bt.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\display_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\display_speaker.c
+	"include.h"
+	"func.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\display_usbdev.c
+	"include.h"
+	"func.h"
+	"func_usbdev.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\display\ledseg\display_ledseg.c
+	"include.h"
+	"ledseg/display_ledseg.h"
+
+1725005055 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\main.c
+	"include.h"
+
+1713274085 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_aux.c
+	"include.h"
+	"func.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_bt.c
+	"include.h"
+	"func.h"
+	"func_bt.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_idle.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_music.c
+	"include.h"
+	"func.h"
+	"func_music.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_speaker.c
+	"include.h"
+	"func.h"
+
+1718096719 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_usbdev.c
+	"include.h"
+	"func.h"
+	"func_idle.h"
+
+1723173075 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\app.xm
+	"config.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\download.xm
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\res.xm
+
+1724225541 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\xcfg.xm
+
+1727146869 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\bt_call.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\eq_table.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\karaok.c
+	"include.h"
+
+1727407343 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\multi_lang.c
+	"include.h"
+
+1724824405 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\plugin.c
+	"include.h"
+
+1698306021 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_key.c
+	"include.h"
+
+1722512747 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_led.c
+	"include.h"
+	"led.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_ledseg.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_linein.c
+	"include.h"
+
+1713354888 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_pwm.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_sd.c
+	"include.h"
+
+1713854397 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_tkey.c
+	"include.h"
+
+1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\port\port_update.c
+	"include.h"
+
+1729239903 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\ram.ld
+	"config.h"
+
