@@ -33,6 +33,13 @@ typedef struct {
     u8 loc_house_bat;
     u8 loc_bat;
     u8 popup_en;
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+	u8 chg_box_sw_version_h;
+	u8 chg_box_sw_version_m;
+	u8 chg_box_sw_version_l;
+#endif
+//End
 #endif
     u8 tws_left_channel;        //TWS左声道标志.
     u8 name_suffix_en;          //TWS名称是否增加后缀名了

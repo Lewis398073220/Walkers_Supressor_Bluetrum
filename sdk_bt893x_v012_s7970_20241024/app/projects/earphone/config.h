@@ -552,10 +552,11 @@
  * Module    :  充电仓功能选择
  *****************************************************************************/
 #define CHARGE_BOX_EN                   1               //是否打开充电仓功能
-#define CHARGE_BOX_TYPE                 CBOX_NOR        //充电仓类型选择，0=普通充电仓，1=昇生微智能充电仓
+#define CHARGE_BOX_TYPE                 CBOX_SSW        //@lewis choose CBOX_SSW.充电仓类型选择，0=普通充电仓，1=昇生微智能充电仓
 #define CHARGE_BOX_INTF_SEL             INTF_UART1      //充电仓通信接口选择
 #define CHARGE_BOX_DELAY_DISC           3500            //智能充电仓时，延迟断线进入充电（0=不延迟, n=延迟n毫秒）
 #define CHARGE_BOX_OUTBOX_FLIT          0               //智能仓通信时，是否使能消抖机制，处理有些仓不能保持维持电压，会检测到一瞬间出仓又入仓
+#define CMT_CHARGE_BOX_CMD_PROTOCOL     1               //@lewis whether to use CMT charge box cmd protocol
 
 /*****************************************************************************
 * Module    : NTC预警关机功能配置

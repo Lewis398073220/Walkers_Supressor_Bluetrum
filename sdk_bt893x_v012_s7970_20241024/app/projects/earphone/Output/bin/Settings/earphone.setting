@@ -22,7 +22,7 @@
         <add key="eq_dgb_spp_en" value="False" />
         <add key="huart_en" value="False" />
         <add key="huart_sel" value="0" />
-        <add key="uart1_en" value="False" />
+        <add key="uart1_en" value="True" />
         <add key="uart1_sel" value="2" />
         <add key="dac_sel" value="4" />
         <add key="dac_ldoh_sel" value="2" />
@@ -54,11 +54,11 @@
         <add key="ch_inbox_sel" value="0" />
         <add key="ch_out_auto_pwron_en" value="True" />
         <add key="ch_leakage_sel" value="2" />
-        <add key="chg_inbox_pwrdwn_en" value="True" />
+        <add key="chg_inbox_pwrdwn_en" value="False" />
         <add key="chbox_out_delay" value="0" />
         <add key="bt_name" value="BT893X-TWS" />
-        <add key="bt_addr_mode" value="随机地址" />
-        <add key="bt_addr" value="41:42:00:00:00:01" />
+        <add key="bt_addr_mode" value="保持地址" />
+        <add key="bt_addr" value="41:42:00:00:00:03" />
         <add key="bt_addr_start" value="41:42:00:00:00:00" />
         <add key="bt_addr_step" value="00:00:00:00:00:01" />
         <add key="bt_addr_end" value="41:42:FF:FF:FF:FF" />
@@ -320,5 +320,17 @@
         <add key="sndp_fbdm_level" value="10" />
         <add key="sndp_fbdm_dnn_level" value="26" />
         <add key="sndp_fbdm_noiserms_th0" value="61" />
+        <add key="uart2_en" value="False" />
+        <add key="uart2_sel" value="2" />
+        <add key="micr_phase_en" value="False" />
+        <add key="anc_alg_dgain_en" value="False" />
+        <add key="anc_mic0_dig_gain" value="20" />
+        <add key="anc_mic1_dig_gain" value="20" />
+        <add key="anc_mic2_dig_gain" value="20" />
+        <add key="anc_mic3_dig_gain" value="20" />
+        <add key="anc_mic4_dig_gain" value="20" />
+        <add key="bt_sndp_smic_ai_en" value="False" />
+        <add key="bt_sndp_dm_ai_en" value="False" />
+        <add key="led_sta_config_en" value="False" />
     </appSettings>
 </configuration>

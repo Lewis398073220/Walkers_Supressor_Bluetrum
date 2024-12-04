@@ -33,6 +33,19 @@ enum {
 
 };
 
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+typedef enum {
+	VHOUSE_RSP_SUCCESS = 0x00,
+	VHOUSE_RSP_NOT_SUPPORT = 0x01,
+	VHOUSE_RSP_DISALLOW = 0x02,
+	VHOUSE_RSP_NO_RESOURCE = 0x03,
+	VHOUSE_RSP_FORMAT_ERROR = 0x04,
+	VHOUSE_RSP_PARAMETER_ERROR = 0x05,
+	VHOUSE_RSP_FAIL = 0xFF,
+} VHOUSE_RSP_E;
+#endif
+//End
 
 typedef struct {
     u16 on_cnt;

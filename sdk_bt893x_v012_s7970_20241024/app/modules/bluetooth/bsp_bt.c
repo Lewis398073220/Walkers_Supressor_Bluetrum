@@ -229,6 +229,7 @@ void bt_emit_notice(uint evt, void *params)
         if(xcfg_cb.bt_tws_pair_mode > 1) {
             bt_tws_set_scan(0x03);
         }
+		printf("tws scan mode:0x%x\n", bt_tws_get_scan()); //@lewis
 #endif
 
         if(cfg_bt_work_mode == MODE_BQB_RF_BREDR) {

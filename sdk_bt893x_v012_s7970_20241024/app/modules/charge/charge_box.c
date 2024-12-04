@@ -2,7 +2,7 @@
 
 #if CHARGE_BOX_EN
 
-#define TRACE_EN                0
+#define TRACE_EN                1 //@lewis open
 
 #if TRACE_EN
 #define TRACE(...)              printf(__VA_ARGS__)
@@ -379,12 +379,16 @@ void charge_box_packet_recv(void)
         vhouse_cb.open_win_flag = 1;
     }
 
+//@lewis
+#if !CMT_CHARGE_BOX_CMD_PROTOCOL
     if((!vhouse_cb.ack_dat_confirm)||(vhouse_cb.ack_dat == p->buf[0])){
         vhouse_cb.ack_dat = p->buf[0];
         if((p->cmd != VHOUSE_CMD_PAIR)&&(p->cmd != VHOUSE_CMD_GET_TWS_BTADDR)){
             vhouse_cb.need_ack = 1;
         }
     }
+#endif
+//End
 }
 #elif (CHARGE_BOX_INTF_SEL == INTF_HUART)
 AT(.com_rodata.charge_box_tbl)
@@ -404,12 +408,16 @@ void charge_box_packet_huart_recv(u8 *buf)
                 vhouse_cb.win_ticks = vhouse_cb.ticks;
                 vhouse_cb.open_win_flag = 1;
             }
+//@lewis
+#if !CMT_CHARGE_BOX_CMD_PROTOCOL
             if((!vhouse_cb.ack_dat_confirm) || (vhouse_cb.ack_dat == buf[5])){
                 vhouse_cb.ack_dat = buf[5];
                 if((buf[3] != VHOUSE_CMD_PAIR) && (buf[3] != VHOUSE_CMD_GET_TWS_BTADDR)) {
                     vhouse_cb.need_ack = 1;
                 }
             }
+#endif
+//End
 
             memcpy(packet, buf, buf[4]+5);
             packet->checksum = buf[packet->length+5];
@@ -451,9 +459,13 @@ static void charge_box_send_data(u8 *buf,u8 len)
     }
     vhouse_cb.need_ack = 0;
 
+//@lewis disable reason:can't send data by uart when wake up
+#if !CMT_CHARGE_BOX_CMD_PROTOCOL
     if(tick_check_expire(vhouse_cb.ticks, 80)){
         return;
     }
+#endif
+//End
 
 #if (CHARGE_BOX_INTF_SEL == INTF_HUART)
     huart_tx(buf,len);
@@ -469,6 +481,188 @@ static void charge_box_send_data(u8 *buf,u8 len)
 
 }
 
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+AT(.text.charge_box)
+static void cmt_charge_box_cmd_ack(u8 cmd, VHOUSE_RSP_E rsp_status, u8 *pData, u8 pData_len)
+{
+    vh_packet_t *packet = &vhouse_cb.packet;
+	u8 rspData_len = 0;
+	
+	packet->header = 0xAA55;
+    packet->distinguish = VHOUSE_DISTINGUISH;
+	packet->cmd = cmd;
+	packet->length = pData_len + 1; //1:rsp_status, don't contain crc8_maxim
+	if(packet->length + 1 > VH_DATA_LEN) // + 1:crc8_maxim
+	{
+		TRACE("warning:payload data is too long\n");
+		return;
+	}
+	rspData_len = packet->length + 5 + 1; // + 1:crc8_maxim
+	packet->buf[0] = rsp_status;
+	if(pData && pData_len)
+	{
+		memcpy(&(packet->buf[1]), pData, pData_len);
+	}
+	packet->buf[packet->length] = crc8_maxim((u8 *)packet, rspData_len - 1);
+	charge_box_send_data((u8 *)packet, rspData_len);
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_power_off(vh_packet_t *packet, u32 charge_sta)
+{
+	vhouse_cb.status = 2;							//充满电
+
+	if(!charge_sta)
+	{
+		func_cb.sta = FUNC_PWROFF;
+	}
+
+	//TODO:disallow outbox wakeup
+	
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, NULL, 0);
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_update_bat_value(vh_packet_t *packet)
+{
+	bool update_flag = false;
+	
+	if(sys_cb.loc_house_bat != packet->buf[0]) {
+		sys_cb.loc_house_bat = packet->buf[0];
+		sys_cb.rem_house_bat = packet->buf[0];
+		update_flag = true;
+	}
+
+	if(!vhouse_cb.inbox_sta) {
+		vhouse_cb.inbox_sta = true;
+		update_flag = true;
+	}
+
+	vhouse_cb.update_ear_flag = update_flag;
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_vbat_ack(vh_packet_t *packet)
+{
+	u8 temp[3] = {0};
+
+	if((packet->cmd == VHOUSE_CMD_OPEN_WINDOW))
+	{
+		sys_cb.chg_box_sw_version_h = packet->buf[1];
+		sys_cb.chg_box_sw_version_m = packet->buf[2];
+		sys_cb.chg_box_sw_version_l = packet->buf[3];
+	}
+	
+	cmt_charge_box_update_bat_value(packet);
+	
+	//TODO:access mode and NTC status
+	temp[1] = sys_cb.loc_bat & 0x7f;
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, temp, sizeof(temp));
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_clr_link_info(bool isClrMasterLink, bool isClrNorLink)
+{
+	if(isClrMasterLink)
+	{
+	    bt_clr_master_addr();
+	    bt_tws_delete_link_info_with_tag(BT_INFO_TAG_CHARGE_BOX, (uint32_t)__builtin_return_address(0));
+	}
+
+	if(isClrNorLink)
+	{
+		bt_nor_delete_link_info();
+		//bt_nor_unpair_device();
+	}
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_pair_ack(vh_packet_t *packet)
+{
+    u8 channel = packet->buf[0];
+	u8 bt_tws_addr[6] = {0};
+	u8 temp[13] = {0};
+
+	if(!((channel == LEFT_CHANNEL_USER) || (channel == RIGHT_CHANNEL_USER)))
+	{
+		TRACE("warning:invalid channel:0x%x\n", channel);
+		cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_FORMAT_ERROR, NULL, 0);
+		return;
+	}
+	
+    if (!bt_tws_channel_check(channel)) {
+		TRACE("warning:diff channel:0x%x/0x%x\n", bt_tws_get_tws_channel(), channel);
+		cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_DISALLOW, NULL, 0);
+        return;
+    }
+
+	u8 feature = bt_tws_get_link_info(bt_tws_addr);
+	memcpy(temp, bt_tws_addr, 6);              //TWS地址
+    memcpy(temp+6, xcfg_cb.bt_addr, 6);        //本地的地址
+    temp[12] = feature;                        //TWS主从Feature
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, temp, sizeof(temp));
+}
+
+AT(.text.charge_box)
+static void cmt_charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
+{
+    u8 tws_role = 0;
+    u8 bt_tws_addr[6] = {0};
+	u8 new_addr[6] = {0};
+    u8 channel = packet->buf[0];
+    u8 pkt_feature = packet->buf[13];
+
+	if(!((channel == LEFT_CHANNEL_USER) || (channel == RIGHT_CHANNEL_USER)))
+	{
+		TRACE("warning:invalid channel:0x%x\n", channel);
+		cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_FORMAT_ERROR, NULL, 0);
+		return;
+	}
+	
+    if (!bt_tws_channel_check(channel)) {
+		TRACE("warning:diff channel:0x%x/0x%x\n", bt_tws_get_tws_channel(), channel);
+		cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_DISALLOW, NULL, 0);
+        return;
+    }
+
+	u8 feature = bt_tws_get_link_info(bt_tws_addr);     //获取TWS地址及feature
+    //TWS地址不匹配或Feature不对需要清除配对信息
+    if ((memcmp(packet->buf+1, bt_tws_addr, 6) != 0) || (feature == pkt_feature) || (feature == 0) || (pkt_feature == 0)) {
+
+        if (!bt_tws_is_slave()) {
+            bt_nor_disconnect();
+            ble_adv0_idx_update();
+        }
+
+		if(bt_tws_is_connected()){
+			bt_tws_disconnect();
+		}
+
+        tws_role = bt_tws_get_tws_role();
+        TRACE("BT_ADDDR_IS_DIFF: %d\n", tws_role);
+        cmt_charge_box_clr_link_info(1, 0);
+        if (tws_role) {
+            memcpy(new_addr, packet->buf + 7, 6);     //保存master
+        } else {
+            memcpy(new_addr, xcfg_cb.bt_addr, 6);
+        }
+		tws_update_local_addr(new_addr);
+        u8 data[4];
+        data[0] = new_addr[2];
+        data[1] = new_addr[3];
+        data[2] = new_addr[4];
+        data[3] = new_addr[5];
+        bt_tws_put_link_info_addr(new_addr,data);
+        bt_tws_put_link_info_feature(new_addr, tws_role);
+
+		if(tws_role){
+			bt_tws_connect();
+		}
+    }
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, NULL, 0);
+}
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
 AT(.text.charge_box)
 static void charge_box_cmd_ack(vh_packet_t *packet)
 {
@@ -640,6 +834,8 @@ static void charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
 		bt_tws_connect();
 	}
 }
+#endif
+//End
 
 
 AT(.text.charge_box)
@@ -650,41 +846,83 @@ static void charge_box_analysis_packet(vh_packet_t *packet)
     switch (cmd) {
         case VHOUSE_CMD_GET_VBAT:
             TRACE("VHOUSE_CMD_GET_VBAT\n");
-            charge_box_vbat_ack(packet);
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_vbat_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
+			charge_box_vbat_ack(packet);
+#endif
+//End
             break;
 
         case VHOUSE_CMD_PAIR:
             TRACE("VHOUSE_CMD_PAIR\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_pair_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_pair_ack(packet);
+#endif
+//End
             break;
 
         case VHOUSE_CMD_GET_TWS_BTADDR:
-            TRACE("VHOUSE_CMD_GET_TWS_BTADDR\n");
+            TRACE("VHOUSE_CMD_GET_TWS_BTADDR\n");		
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_get_tws_btaddr_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_get_tws_btaddr_ack(packet);
+#endif
+//End
             break;
 
         case  VHOUSE_CMD_CLEAR_PAIR:
             TRACE("VHOUSE_CMD_CLEAR_PAIR\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_clr_link_info(1, 1);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_clr_bt_all_link_info();                         //删除所有配对信息
-            break;
+#endif
+//End
+			break;
 
         case  VHOUSE_CMD_PWROFF:
             TRACE("VHOUSE_CMD_PWROFF\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_power_off(packet, 0);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             vhouse_cb.status = 2;                           //充满电
             func_cb.sta = FUNC_PWROFF;
+#endif
+//End
             break;
 
         case VHOUSE_CMD_CLOSE_WINDOW:
             TRACE("VHOUSE_CMD_CLOSE_WINDOW\n");
             vhouse_cb.open_win_flag = 0;
             vhouse_cb.status = 0;                           //关盖, 充电
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, NULL, 0);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_vbat_ack(packet);
+#endif
+//End
             break;
 
         case VHOUSE_CMD_OPEN_WINDOW:
             TRACE("VHOUSE_CMD_OPEN_WINDOW\n");
             charge_box_open_windows();
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_vbat_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_vbat_ack(packet);
+#endif
+//End
             break;
 
         case VHOUSE_CMD_ENABLE_POPUP:
@@ -696,6 +934,12 @@ static void charge_box_analysis_packet(vh_packet_t *packet)
             break;
 
         default:
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			TRACE("unsupported cmd:0x%x\n", cmd);
+            cmt_charge_box_cmd_ack(cmd, VHOUSE_RSP_NOT_SUPPORT, NULL, 0);
+#endif
+//End
             break;
     }
 
@@ -706,10 +950,27 @@ AT(.text.charge_box)
 static void charge_box_analysis_packet_for_charge(vh_packet_t *packet)
 {
     switch (packet->cmd) {
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+		case VHOUSE_CMD_CLOSE_WINDOW:
+			TRACE("VHOUSE_CMD_CLOSE_WINDOW\n");
+			vhouse_cb.open_win_flag = 0;
+			vhouse_cb.status = 0;							//关盖, 充电
+			cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, NULL, 0);
+			break;
+#endif
+//End
+
         //仓关盖后获取电量
         case VHOUSE_CMD_CLOSE_WIN_GET_VBAT:
             TRACE("VHOUSE_DISP_VBAT\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_vbat_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_vbat_ack(packet);
+#endif
+//End
             vhouse_cb.open_win_flag = 0;
 			vhouse_cb.status = 0;                           //关盖, 充电
             break;
@@ -717,18 +978,44 @@ static void charge_box_analysis_packet_for_charge(vh_packet_t *packet)
         //仓开盖后获取电量
         case VHOUSE_CMD_OPEN_WINDOW:
             TRACE("VHOUSE_CMD_OPEN_WINDOW\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_vbat_ack(packet);
+            vhouse_cb.status = 1;                           //开窗，停止充电
+			break;
+#endif
+//End
+
         case VHOUSE_CMD_GET_VBAT:
             TRACE("VHOUSE_CMD_GET_VBAT\n");
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_vbat_ack(packet);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
             charge_box_vbat_ack(packet);
+#endif
+//End
             vhouse_cb.status = 1;                           //开窗，停止充电
             break;
 
         case VHOUSE_CMD_PWROFF:
             TRACE("VHOUSE_CMD_PWROFF\n");
-            vhouse_cb.status = 2;                           //充满电
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			cmt_charge_box_power_off(packet, 1);
+#else //CMT_CHARGE_BOX_CMD_PROTOCOL
+            vhouse_cb.status = 2;                           //充满电         
+#endif
+//End
             break;
 
         default:
+//@lewis
+#if CMT_CHARGE_BOX_CMD_PROTOCOL
+			TRACE("unsupported cmd:0x%x\n", packet->cmd);
+			cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_NOT_SUPPORT, NULL, 0);
+#endif
+//End
             break;
     }
 }
