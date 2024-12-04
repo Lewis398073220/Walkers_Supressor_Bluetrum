@@ -6614,15 +6614,15 @@ LOAD Output\obj\projects\earphone\port\port_update.o
  *(.text.charge_box)
  *fill*         0x0000000010014472        0x2 
  .text.charge_box
-                0x0000000010014474      0x7ea Output\obj\modules\charge\charge_box.o
+                0x0000000010014474      0x80e Output\obj\modules\charge\charge_box.o
                 0x000000001001461e                charge_box_inbox_wakeup_enable
                 0x0000000010014644                charge_box_inbox_chk_init
                 0x000000001001465c                charge_box_enter
                 0x00000000100146b0                charge_box_update_sta
                 0x00000000100146be                charge_box_ssw_process
-                0x0000000010014b74                charge_box_charge_on_process
+                0x0000000010014b98                charge_box_charge_on_process
                 0x0000000010014e00                . = ALIGN (0x200)
- *fill*         0x0000000010014c5e      0x1a2 
+ *fill*         0x0000000010014c82      0x17e 
                 0x0000000010014e00                __code_end_charge = .
                 0x0000000010014e00                __code_start_bt_voice = .
  *(.bt_voice*)

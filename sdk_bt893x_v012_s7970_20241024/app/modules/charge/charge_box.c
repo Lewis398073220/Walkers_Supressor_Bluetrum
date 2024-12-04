@@ -582,7 +582,7 @@ static void cmt_charge_box_pair_ack(vh_packet_t *packet)
 {
     u8 channel = packet->buf[0];
 	u8 bt_tws_addr[6] = {0};
-	u8 temp[13] = {0};
+	u8 temp[14] = {0};
 
 	if(!((channel == LEFT_CHANNEL_USER) || (channel == RIGHT_CHANNEL_USER)))
 	{
@@ -598,9 +598,10 @@ static void cmt_charge_box_pair_ack(vh_packet_t *packet)
     }
 
 	u8 feature = bt_tws_get_link_info(bt_tws_addr);
-	memcpy(temp, bt_tws_addr, 6);              //TWS地址
-    memcpy(temp+6, xcfg_cb.bt_addr, 6);        //本地的地址
-    temp[12] = feature;                        //TWS主从Feature
+	temp[0] = (channel == RIGHT_CHANNEL_USER) ? LEFT_CHANNEL_USER : RIGHT_CHANNEL_USER; //发送对方声道
+	memcpy(temp+1, bt_tws_addr, 6);              //TWS地址
+    memcpy(temp+7, xcfg_cb.bt_addr, 6);        //本地的地址
+    temp[13] = feature;                        //TWS主从Feature
 	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, temp, sizeof(temp));
 }
 
@@ -612,6 +613,7 @@ static void cmt_charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
 	u8 new_addr[6] = {0};
     u8 channel = packet->buf[0];
     u8 pkt_feature = packet->buf[13];
+	u8 temp[1] = {0};
 
 	if(!((channel == LEFT_CHANNEL_USER) || (channel == RIGHT_CHANNEL_USER)))
 	{
@@ -660,7 +662,9 @@ static void cmt_charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
 			bt_tws_connect();
 		}
     }
-	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, NULL, 0);
+
+	temp[0] = channel;
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, temp, sizeof(temp));
 }
 #else //CMT_CHARGE_BOX_CMD_PROTOCOL
 AT(.text.charge_box)
