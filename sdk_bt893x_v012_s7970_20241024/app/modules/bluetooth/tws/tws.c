@@ -75,7 +75,13 @@ bool bt_tws_get_channel_cfg(uint8_t *channel)
         *channel = 0;
         return true;
     }
-
+	//@lewis
+	else if(12 == xcfg_cb.bt_tws_lr_mode) { 	//偶BT地址左声道奇BT地址右声道
+		*channel = sys_cb.tws_left_channel;
+		return true;
+	}
+	//End
+	
     return false;
 }
 

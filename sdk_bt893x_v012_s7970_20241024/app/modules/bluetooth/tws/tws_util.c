@@ -83,7 +83,20 @@ void tws_lr_xcfg_sel(void)
         sys_cb.tws_left_channel = 1;
     } else if(11 == xcfg_cb.bt_tws_lr_mode) {   //配置选择为右声道
         sys_cb.tws_left_channel = 0;
-    } else {
+    } 
+	//@lewis
+	else if(12 == xcfg_cb.bt_tws_lr_mode) { 	//偶BT地址左声道奇BT地址右声道
+		if(xcfg_cb.bt_addr[5] & 0x01)
+		{
+			sys_cb.tws_left_channel = 0;
+			printf("I'm Right\n");
+		} else{
+			sys_cb.tws_left_channel = 1;
+			printf("I'm Left\n");
+		}
+	}
+	//End
+	else {
         return;
     }
     sys_cb.tws_force_channel = sys_cb.tws_left_channel + 1;

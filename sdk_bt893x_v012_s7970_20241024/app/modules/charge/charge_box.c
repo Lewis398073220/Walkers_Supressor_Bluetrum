@@ -613,7 +613,6 @@ static void cmt_charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
 	u8 new_addr[6] = {0};
     u8 channel = packet->buf[0];
     u8 pkt_feature = packet->buf[13];
-	u8 temp[1] = {0};
 
 	if(!((channel == LEFT_CHANNEL_USER) || (channel == RIGHT_CHANNEL_USER)))
 	{
@@ -663,8 +662,7 @@ static void cmt_charge_box_get_tws_btaddr_ack(vh_packet_t *packet)
 		}
     }
 
-	temp[0] = channel;
-	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, temp, sizeof(temp));
+	cmt_charge_box_cmd_ack(packet->cmd, VHOUSE_RSP_SUCCESS, &channel, sizeof(channel));
 }
 #else //CMT_CHARGE_BOX_CMD_PROTOCOL
 AT(.text.charge_box)

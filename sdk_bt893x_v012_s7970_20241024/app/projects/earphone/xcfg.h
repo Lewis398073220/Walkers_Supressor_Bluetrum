@@ -93,7 +93,7 @@ typedef struct __attribute__((packed)) _xcfg_cb_t {
     u32 bt_tws_en                        : 1;   //TWS功能
     u32 bt_tws_pair_bonding_en           : 1;   //TWS组队绑定功能
     u32 bt_tws_pair_mode                 : 3;   //TWS组队方式选择: 自动组队: 0, 自定义组队<调用api>: 1, 双击USER_DEF键组队: 2, 单击USER_DEF键组队: 3, 长按USER_DEF键组队: 4, 双击MODE/POWER键组队: 5
-    u32 bt_tws_lr_mode                   : 4;   //TWS声道分配选择: 不分配，主副均双声道输出: 0, 自动分配，主右声道副左声道: 1, 自动分配，主左声道副右声道: 2, PWRKEY,有820K接地为左: 8, GPIOx有接地为左声道: 9, 配置选择为左声道: 10, 配置选择为右声道: 11
+    u32 bt_tws_lr_mode                   : 4;   //TWS声道分配选择: 不分配，主副均双声道输出: 0, 自动分配，主右声道副左声道: 1, 自动分配，主左声道副右声道: 2, PWRKEY,有820K接地为左: 8, GPIOx有接地为左声道: 9, 配置选择为左声道: 10, 配置选择为右声道: 11, 偶BT地址左声道奇BT地址右声道: 12
     u32 tws_sel_left_gpio_sel            : 5;   //TWS声道GPIOx: None: 0, PA4: 5, PA5: 6, PA6: 7, PA7: 8, PB0: 9, PB1: 10, PB2: 11, PB3: 12, PB4: 13, PB5: 14, PE0: 17, PE4: 21, PE5: 22, PE6: 23, PE7: 24, PF0: 25, PF1: 26
     u32 bt_tws_name_suffix_en            : 1;   //TWS蓝牙名加L或R后缀
     u32 bt_tswi_en                       : 1;   //TWS主从切换功能

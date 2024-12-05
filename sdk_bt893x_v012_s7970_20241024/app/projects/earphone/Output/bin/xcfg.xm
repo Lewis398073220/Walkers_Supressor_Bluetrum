@@ -117,7 +117,7 @@ config(SUB, "TWS配置", "TWS的相关配置");
 config(CHECK, "TWS功能", "是否支持TWS功能，打开后<连接两部手机功能>无效", BT_TWS_EN, 1);
 config(CHECK, "TWS组队绑定功能", "打开TWS组队绑定后，需要手动删除组队信息才能重新组队", BT_TWS_PAIR_BONDING_EN, 0, BT_TWS_EN);
 config(LISTVAL, "TWS组队方式选择", "选择TWS组队操作方式", BT_TWS_PAIR_MODE, BIT, 3, 0, 6, ("自动组队", 0), ("自定义组队<调用api>", 1), ("双击USER_DEF键组队", 2), ("单击USER_DEF键组队", 3), ("长按USER_DEF键组队", 4), ("双击MODE/POWER键组队", 5) BT_TWS_EN);
-config(LISTVAL, "TWS声道分配选择", "选择TWS声道分配方式", BT_TWS_LR_MODE, BIT, 4, 1, 7, ("不分配，主副均双声道输出", 0), ("自动分配，主右声道副左声道", 1), ("自动分配，主左声道副右声道", 2), ("PWRKEY,有820K接地为左", 8), ("GPIOx有接地为左声道", 9), ("配置选择为左声道", 10), ("配置选择为右声道", 11), BT_TWS_EN);
+config(LISTVAL, "TWS声道分配选择", "选择TWS声道分配方式", BT_TWS_LR_MODE, BIT, 4, 1, 8, ("不分配，主副均双声道输出", 0), ("自动分配，主右声道副左声道", 1), ("自动分配，主左声道副右声道", 2), ("PWRKEY,有820K接地为左", 8), ("GPIOx有接地为左声道", 9), ("配置选择为左声道", 10), ("配置选择为右声道", 11), ("偶BT地址左声道奇BT地址右声道", 12), BT_TWS_EN); #@lewis
 config(LISTVAL, "TWS声道GPIOx", "GPIOx有接地为左声道", TWS_SEL_LEFT_GPIO_SEL, BIT, 5, 0, 18, ("None", 0), ("PA4", 5), ("PA5", 6), ("PA6", 7), ("PA7", 8), ("PB0", 9), ("PB1", 10), ("PB2", 11), ("PB3", 12), ("PB4", 13), ("PB5", 14), ("PE0", 17), ("PE4", 21), ("PE5", 22), ("PE6", 23), ("PE7", 24), ("PF0", 25), ("PF1", 26), BT_TWS_EN);
 config(CHECK, "TWS蓝牙名加L或R后缀", "是否使能TWS蓝牙名称加L或R后缀, 需要GPIOx固定左右耳", BT_TWS_NAME_SUFFIX_EN, 0, BT_TWS_EN);
 config(CHECK, "TWS主从切换功能", "是否支持TWS主从自动切换功能", BT_TSWI_EN, 1, BT_TWS_EN);
