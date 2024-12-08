@@ -4,15 +4,29 @@
 #define KEY_SCAN_TIMES          6           //按键防抖的扫描次数
 #define KEY_UP_TIMES            6           //抬键防抖的扫描次数
 #define KEY_LONG_TIMES          150         //长按键的次数
+//@lewis
+#if 1
+#define KEY_LV1_LONG_TIMES      (KEY_LONG_TIMES + 50)  //LV1长按的次数 1秒
+#define KEY_LV2_LONG_TIMES      (KEY_LV1_LONG_TIMES + 800)  //LV2长按的次数 5秒
+#define KEY_HOLD_TIMES          100          //连按的频率次数，长按次数大于KEY_LV1_LONG_TIMES后才可以触发连按事件
+#else
 #define KEY_HOLD_TIMES          35          //连按的频率次数
 #define KEY_LONG_HOLD_TIMES     (KEY_LONG_TIMES + KEY_HOLD_TIMES)
+#endif
+//End
 
 #define KEY_SHORT               0x000
 #define KEY_SHORT_UP            0x800
-#define KEY_LONG                0xA00
-#define KEY_LONG_UP             0xC00
+#define KEY_LONG                0xA00       //@lewis LV1_LONG
+#define KEY_LONG_UP             0xC00       //@lewis LV1_LONG_UP
 #define KEY_HOLD                0xE00
-#define KEY_LHOLD               0x1E00
+#define KEY_LHOLD               0x1E00      //@lewis 已用于长按软关机
+//@lewis
+#define KEY_LV2_LONG            0x2000      //@lewis LV2_LONG     
+#define KEY_LV2_LONG_UP         0x2100      //@lewis LV2_LONG_UP
+#define KEY_DOUBLE_LV2_LONG     0x2200      //@lewis DOUBLE_LV2_LONG     
+#define KEY_DOUBLE_LV2_LONG_UP  0x2300      //@lewis DOUBLE_LV2_LONG_UP
+//End
 #define KEY_DOUBLE              0x1800      //2击
 #define KEY_THREE               0x1900      //3击
 #define KEY_FOUR                0x1A00      //4击
@@ -530,6 +544,10 @@ typedef struct {
     u16 scan_cnt;
     u16 up_cnt;
     u16 long_cnt;
+	//@lewis
+	u16 lv1_long_cnt;
+	u16 lv2_long_cnt;
+	//End
     u16 hold_cnt;
 } key_shake_tbl_t;
 

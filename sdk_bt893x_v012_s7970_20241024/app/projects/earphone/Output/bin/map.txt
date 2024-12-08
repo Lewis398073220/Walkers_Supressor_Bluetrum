@@ -2297,8 +2297,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Output\obj\modules\key\key_scan.o
  .data          0x0000000000000000        0x0 Output\obj\modules\key\key_scan.o
  .bss           0x0000000000000000        0x0 Output\obj\modules\key\key_scan.o
- .com_rodata.bsp.key
-                0x0000000000000000        0xf Output\obj\modules\key\key_scan.o
+ .com_text.key.table
+                0x0000000000000000        0xc Output\obj\modules\key\key_scan.o
  .sdata         0x0000000000000000        0x4 Output\obj\modules\key\key_scan.o
  .text          0x0000000000000000        0x0 Output\obj\modules\key\knob.o
  .data          0x0000000000000000        0x0 Output\obj\modules\key\knob.o
@@ -2307,6 +2307,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Output\obj\modules\key\pwrkey.o
  .data          0x0000000000000000        0x0 Output\obj\modules\key\pwrkey.o
  .bss           0x0000000000000000        0x0 Output\obj\modules\key\pwrkey.o
+ .com_text.bsp.key
+                0x0000000000000000       0x18 Output\obj\modules\key\pwrkey.o
  .text.bsp.power
                 0x0000000000000000       0x4c Output\obj\modules\key\pwrkey.o
  .text          0x0000000000000000        0x0 Output\obj\modules\key\tkey.o
@@ -3133,6 +3135,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ..\..\libs\bt8930\libplatform.a(key.o)
  .data          0x0000000000000000        0x0 ..\..\libs\bt8930\libplatform.a(key.o)
  .bss           0x0000000000000000        0x0 ..\..\libs\bt8930\libplatform.a(key.o)
+ .com_text.bsp.key
+                0x0000000000000000      0x186 ..\..\libs\bt8930\libplatform.a(key.o)
  .text          0x0000000000000000        0x0 ..\..\libs\bt8930\libplatform.a(lock.o)
  .data          0x0000000000000000        0x0 ..\..\libs\bt8930\libplatform.a(lock.o)
  .text.lock_whcode
@@ -5019,7 +5023,7 @@ LOAD Output\obj\projects\earphone\port\port_update.o
                 0x00000000000142f0       0x38 Output\obj\modules\charge\charge_box.o
                 0x00000000000142f0                charge_box_heart_beat_ack
  .com_text.led_disp
-                0x0000000000014328      0x174 Output\obj\modules\gui\led\led.o
+                0x0000000000014328      0x176 Output\obj\modules\gui\led\led.o
                 0x0000000000014328                get_led_sta
                 0x000000000001433e                led_cfg_set_on
                 0x0000000000014344                led_cfg_set_off
@@ -5029,1035 +5033,1032 @@ LOAD Output\obj\projects\earphone\port\port_update.o
                 0x00000000000143b2                rled_set_off
                 0x00000000000143d8                rled_set_on
                 0x00000000000143fe                led_scan
+ *fill*         0x000000000001449e        0x2 
  .com_text.bsp.key
-                0x000000000001449c      0x11e Output\obj\modules\key\key_scan.o
-                0x000000000001449c                check_key_return
-                0x00000000000144d0                get_poweron_flag
-                0x00000000000144e6                set_poweron_flag
-                0x00000000000144f4                bsp_key_process
-                0x000000000001450e                bsp_key_scan_do
-                0x0000000000014524                bsp_key_scan
- *fill*         0x00000000000145ba        0x2 
- .com_text.key.table
-                0x00000000000145bc        0x8 Output\obj\modules\key\key_scan.o
-                0x00000000000145bc                key_shake_table
- .com_text.bsp.key
-                0x00000000000145c4       0x16 Output\obj\modules\key\pwrkey.o
-                0x00000000000145c4                pwrkey10s_counter_clr
+                0x00000000000144a0      0x3e4 Output\obj\modules\key\key_scan.o
+                0x00000000000144a0                check_key_return
+                0x00000000000144d4                get_poweron_flag
+                0x00000000000144ea                set_poweron_flag
+                0x00000000000144f8                key_deal
+                0x00000000000147ca                bsp_key_process
+                0x00000000000147cc                bsp_key_scan_do
+                0x00000000000147e2                bsp_key_scan
+ .com_text.bsp.key_cb
+                0x0000000000014884       0x14 Output\obj\modules\key\key_scan.o
+                0x0000000000014884                key_cb
  .com_text.port.key
-                0x00000000000145da       0x68 Output\obj\modules\key\pwrkey.o
-                0x00000000000145da                pwrkey_get_val
+                0x0000000000014898       0x68 Output\obj\modules\key\pwrkey.o
+                0x0000000000014898                pwrkey_get_val
  .com_text.bsp.sys
-                0x0000000000014642        0xe Output\obj\system\mute.o
-                0x0000000000014642                bsp_get_mute_sta
+                0x0000000000014900        0xe Output\obj\system\mute.o
+                0x0000000000014900                bsp_get_mute_sta
  .com_text.timer
-                0x0000000000014650      0x13c Output\obj\system\system.o
-                0x0000000000014650                usr_tmr1ms_isr
-                0x000000000001465e                usr_tmr5ms_thread
+                0x000000000001490e      0x13c Output\obj\system\system.o
+                0x000000000001490e                usr_tmr1ms_isr
+                0x000000000001491c                usr_tmr5ms_thread
  .com_text.port.vbat
-                0x000000000001478c       0x86 Output\obj\system\vbat.o
-                0x000000000001478c                vbat_get_voltage
+                0x0000000000014a4a       0x86 Output\obj\system\vbat.o
+                0x0000000000014a4a                vbat_get_voltage
  .com_text.plugin
-                0x0000000000014812        0x4 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000000014812                plugin_tmr5ms_isr
-                0x0000000000014814                plugin_tmr1ms_isr
+                0x0000000000014ad0        0x4 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000000014ad0                plugin_tmr5ms_isr
+                0x0000000000014ad2                plugin_tmr1ms_isr
  .com_text.bsp.sys
-                0x0000000000014816        0xa Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000000014816                lefmic_zero_detect
-                0x0000000000014818                is_sd_support
-                0x000000000001481c                is_usb_support
+                0x0000000000014ad4        0xa Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000000014ad4                lefmic_zero_detect
+                0x0000000000014ad6                is_sd_support
+                0x0000000000014ada                is_usb_support
  .com_text.port.vbat
-                0x0000000000014820        0x2 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000000014820                plugin_vbat_filter
- .com_text.key  0x0000000000014822       0x7c Output\obj\projects\earphone\port\port_key.o
-                0x0000000000014822                check_key_double_configure
+                0x0000000000014ade        0x2 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000000014ade                plugin_vbat_filter
+ .com_text.key  0x0000000000014ae0       0x7c Output\obj\projects\earphone\port\port_key.o
+                0x0000000000014ae0                check_key_double_configure
  .com_text.pwrkey
-                0x000000000001489e       0x3c Output\obj\projects\earphone\port\port_key.o
-                0x000000000001489e                get_pwrkey_configure
- *fill*         0x00000000000148da        0x2 
+                0x0000000000014b5c       0x3c Output\obj\projects\earphone\port\port_key.o
+                0x0000000000014b5c                get_pwrkey_configure
+ *fill*         0x0000000000014b98        0x0 
  .com_text.key.table
-                0x00000000000148dc       0x19 Output\obj\projects\earphone\port\port_key.o
-                0x00000000000148dc                key_config_table
- *fill*         0x00000000000148f5        0x3 
+                0x0000000000014b98       0x19 Output\obj\projects\earphone\port\port_key.o
+                0x0000000000014b98                key_config_table
+ *fill*         0x0000000000014bb1        0x3 
  .com_text.pwrkey.table
-                0x00000000000148f8        0xc Output\obj\projects\earphone\port\port_key.o
-                0x00000000000148f8                pwrkey_table
+                0x0000000000014bb4        0xc Output\obj\projects\earphone\port\port_key.o
+                0x0000000000014bb4                pwrkey_table
  .com_text.bsp.sys
-                0x0000000000014904        0xe Output\obj\projects\earphone\port\port_led.o
-                0x0000000000014904                is_led_scan_enable
+                0x0000000000014bc0        0xe Output\obj\projects\earphone\port\port_led.o
+                0x0000000000014bc0                is_led_scan_enable
  .com_text.ext.eq
-                0x0000000000014912       0x38 ..\..\libs\bt8930\libplatform.a(audio_eq.o)
-                0x0000000000014912                mic_eq_proc
- .com_text.dac  0x000000000001494a       0x20 ..\..\libs\bt8930\libplatform.a(dac.o)
-                0x000000000001494a                dac_sclk_is_enable
+                0x0000000000014bce       0x38 ..\..\libs\bt8930\libplatform.a(audio_eq.o)
+                0x0000000000014bce                mic_eq_proc
+ .com_text.dac  0x0000000000014c06       0x20 ..\..\libs\bt8930\libplatform.a(dac.o)
+                0x0000000000014c06                dac_sclk_is_enable
  .com_text.dac.sta
-                0x000000000001496a        0xe ..\..\libs\bt8930\libplatform.a(dac.o)
-                0x000000000001496a                dac_get_pwr_sta
+                0x0000000000014c26        0xe ..\..\libs\bt8930\libplatform.a(dac.o)
+                0x0000000000014c26                dac_get_pwr_sta
  .com_text.dac.fifo
-                0x0000000000014978       0x44 ..\..\libs\bt8930\libplatform.a(dac.o)
-                0x0000000000014978                dac_fifo_detect
+                0x0000000000014c34       0x44 ..\..\libs\bt8930\libplatform.a(dac.o)
+                0x0000000000014c34                dac_fifo_detect
  .com_text.aubuf.dma.isr
-                0x00000000000149bc       0x5e ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x00000000000149bc                aubuf_dma_isr
-                0x0000000000014a0c                aubuf_dma_clr_flag
+                0x0000000000014c78       0x5e ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014c78                aubuf_dma_isr
+                0x0000000000014cc8                aubuf_dma_clr_flag
  .com_text.aubuf.dma
-                0x0000000000014a1a       0x30 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014cd6       0x30 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
  .com_text.aubuf0.dma.isr
-                0x0000000000014a4a       0x1c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014a4a                aubuf0_sem_post
+                0x0000000000014d06       0x1c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014d06                aubuf0_sem_post
  .com_text.aubuf1.dma.isr
-                0x0000000000014a66       0x1c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014a66                aubuf1_sem_post
+                0x0000000000014d22       0x1c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014d22                aubuf1_sem_post
  .com_text.aubuf.dma.kick
-                0x0000000000014a82       0x6c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014a82                aubuf_dma_kick
+                0x0000000000014d3e       0x6c ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014d3e                aubuf_dma_kick
  .com_text.aubuf.dma.w4
-                0x0000000000014aee       0x3e ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014aee                aubuf_dma_w4_done
+                0x0000000000014daa       0x3e ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014daa                aubuf_dma_w4_done
  .com_text.aubuf0.dma
-                0x0000000000014b2c       0x2a ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014b2c                aubuf0_dma_kick
-                0x0000000000014b4e                aubuf0_dma_w4_done
+                0x0000000000014de8       0x2a ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014de8                aubuf0_dma_kick
+                0x0000000000014e0a                aubuf0_dma_w4_done
  .com_text.gpdma.kick
-                0x0000000000014b56       0x32 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014b56                gpdma_decode_kick
+                0x0000000000014e12       0x32 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014e12                gpdma_decode_kick
  .com_text.aubuf1.dma
-                0x0000000000014b88       0x2a ..\..\libs\bt8930\libplatform.a(dac_dma.o)
-                0x0000000000014b88                aubuf1_dma_kick
-                0x0000000000014baa                aubuf1_dma_w4_done
+                0x0000000000014e44       0x2a ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+                0x0000000000014e44                aubuf1_dma_kick
+                0x0000000000014e66                aubuf1_dma_w4_done
  .com_text.dac.dnr
-                0x0000000000014bb2       0xcc ..\..\libs\bt8930\libplatform.a(dac_dnr.o)
-                0x0000000000014c2c                dnr_voice_maxpow
- .com_text.dac  0x0000000000014c7e      0x13c ..\..\libs\bt8930\libplatform.a(dac_src.o)
-                0x0000000000014c7e                dac_spr_set
-                0x0000000000014cba                dac1_spr_set
-                0x0000000000014cee                dac_put_sample_16bit_w
-                0x0000000000014d30                dac_put_sample_24bit_w
-                0x0000000000014d72                obuf_put_samples_w
+                0x0000000000014e6e       0xcc ..\..\libs\bt8930\libplatform.a(dac_dnr.o)
+                0x0000000000014ee8                dnr_voice_maxpow
+ .com_text.dac  0x0000000000014f3a      0x13c ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x0000000000014f3a                dac_spr_set
+                0x0000000000014f76                dac1_spr_set
+                0x0000000000014faa                dac_put_sample_16bit_w
+                0x0000000000014fec                dac_put_sample_24bit_w
+                0x000000000001502e                obuf_put_samples_w
  .com_text.dac.bit16
-                0x0000000000014dba       0x2c ..\..\libs\bt8930\libplatform.a(dac_src.o)
-                0x0000000000014dba                dac_put_sample_16bit
+                0x0000000000015076       0x2c ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x0000000000015076                dac_put_sample_16bit
  .com_text.dac.bit32
-                0x0000000000014de6       0x2c ..\..\libs\bt8930\libplatform.a(dac_src.o)
-                0x0000000000014de6                dac_put_sample_24bit
- .com_text.dac  0x0000000000014e12      0x29c ..\..\libs\bt8930\libplatform.a(dac_vol.o)
-                0x0000000000014e12                dac_fade_process
-                0x0000000000014f36                dac_src_fade_in
-                0x0000000000014fac                dac_src_fade_out
-                0x0000000000015008                dac_src_vol_set
-                0x000000000001504a                dac_src_fade_wait
+                0x00000000000150a2       0x2c ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x00000000000150a2                dac_put_sample_24bit
+ .com_text.dac  0x00000000000150ce      0x29c ..\..\libs\bt8930\libplatform.a(dac_vol.o)
+                0x00000000000150ce                dac_fade_process
+                0x00000000000151f2                dac_src_fade_in
+                0x0000000000015268                dac_src_fade_out
+                0x00000000000152c4                dac_src_vol_set
+                0x0000000000015306                dac_src_fade_wait
  .com_text.isr.sdadc
-                0x00000000000150ae       0x68 ..\..\libs\bt8930\libplatform.a(sdadc.o)
-                0x00000000000150ae                sdadc_isr
+                0x000000000001536a       0x68 ..\..\libs\bt8930\libplatform.a(sdadc.o)
+                0x000000000001536a                sdadc_isr
  .com_text.sdadc
-                0x0000000000015116       0xb4 ..\..\libs\bt8930\libplatform.a(sdadc.o)
-                0x0000000000015116                sdadc_process
-                0x00000000000151c8                sdadc_dummy
+                0x00000000000153d2       0xb4 ..\..\libs\bt8930\libplatform.a(sdadc.o)
+                0x00000000000153d2                sdadc_process
+                0x0000000000015484                sdadc_dummy
  .com_text.bthw
-                0x00000000000151ca       0x26 ..\..\libs\bt8930\libplatform.a(bt.o)
-                0x00000000000151ca                btstack_status_lock
-                0x00000000000151de                btstack_status_unlock
+                0x0000000000015486       0x26 ..\..\libs\bt8930\libplatform.a(bt.o)
+                0x0000000000015486                btstack_status_lock
+                0x000000000001549a                btstack_status_unlock
  .com_text.ret.stack.thread
-                0x00000000000151f0       0x3e ..\..\libs\bt8930\libplatform.a(bt.o)
-                0x00000000000151f0                thread_btstack_pend
-                0x0000000000015204                thread_btstack_post
+                0x00000000000154ac       0x3e ..\..\libs\bt8930\libplatform.a(bt.o)
+                0x00000000000154ac                thread_btstack_pend
+                0x00000000000154c0                thread_btstack_post
  .com_text.ret.stack.run_loop
-                0x000000000001522e       0x5e ..\..\libs\bt8930\libplatform.a(bt.o)
-                0x000000000001522e                thread_btstack_entry
+                0x00000000000154ea       0x5e ..\..\libs\bt8930\libplatform.a(bt.o)
+                0x00000000000154ea                thread_btstack_entry
  .com_text.isr.aec
-                0x000000000001528c       0x3c ..\..\libs\bt8930\libplatform.a(bt_nlms_nlp_aec.o)
-                0x000000000001528c                aec_isr
+                0x0000000000015548       0x3c ..\..\libs\bt8930\libplatform.a(bt_nlms_nlp_aec.o)
+                0x0000000000015548                aec_isr
  .com_text.aec.det
-                0x00000000000152c8       0x46 ..\..\libs\bt8930\libplatform.a(bt_nlms_nlp_aec.o)
-                0x00000000000152c8                aec_far_detect
+                0x0000000000015584       0x46 ..\..\libs\bt8930\libplatform.a(bt_nlms_nlp_aec.o)
+                0x0000000000015584                aec_far_detect
  .com_text.isr.peri_nr
-                0x000000000001530e       0x4e ..\..\libs\bt8930\libplatform.a(bt_peri_nr.o)
-                0x000000000001530e                peri_nr_isr
+                0x00000000000155ca       0x4e ..\..\libs\bt8930\libplatform.a(bt_peri_nr.o)
+                0x00000000000155ca                peri_nr_isr
  .com_text.isr.voice
-                0x000000000001535c       0x18 ..\..\libs\bt8930\libplatform.a(bt_sco.o)
-                0x000000000001535c                bt_voice_isr
+                0x0000000000015618       0x18 ..\..\libs\bt8930\libplatform.a(bt_sco.o)
+                0x0000000000015618                bt_voice_isr
  .com_text.device
-                0x0000000000015374       0x10 ..\..\libs\bt8930\libplatform.a(device.o)
-                0x0000000000015374                dev_is_online
+                0x0000000000015630       0x10 ..\..\libs\bt8930\libplatform.a(device.o)
+                0x0000000000015630                dev_is_online
  .com_text.delay
-                0x0000000000015384       0x48 ..\..\libs\bt8930\libplatform.a(main.o)
-                0x0000000000015384                delay_5ms
-                0x000000000001539e                delay_ms
+                0x0000000000015640       0x48 ..\..\libs\bt8930\libplatform.a(main.o)
+                0x0000000000015640                delay_5ms
+                0x000000000001565a                delay_ms
  .com_text.ret.delay
-                0x00000000000153cc       0x18 ..\..\libs\bt8930\libplatform.a(main.o)
-                0x00000000000153cc                delay_us
+                0x0000000000015688       0x18 ..\..\libs\bt8930\libplatform.a(main.o)
+                0x0000000000015688                delay_us
  .com_text.music
-                0x00000000000153e4      0x1e4 ..\..\libs\bt8930\libplatform.a(music.o)
-                0x00000000000153e4                music_reset_hwdec
-                0x00000000000153fe                os_msc_sem_pend
-                0x0000000000015458                os_msc_sem_post
-                0x000000000001546a                os_tws_sem_pend
-                0x000000000001547e                os_tws_sem_post
-                0x0000000000015490                music_wait_status_update
-                0x00000000000154ec                music_enc_control
-                0x0000000000015514                music_decode
-                0x000000000001556e                thread_music_run_loop
- .com_text.sbc  0x00000000000155c8       0x2a ..\..\libs\bt8930\libplatform.a(music.o)
-                0x00000000000155c8                music_kick_play
+                0x00000000000156a0      0x1e4 ..\..\libs\bt8930\libplatform.a(music.o)
+                0x00000000000156a0                music_reset_hwdec
+                0x00000000000156ba                os_msc_sem_pend
+                0x0000000000015714                os_msc_sem_post
+                0x0000000000015726                os_tws_sem_pend
+                0x000000000001573a                os_tws_sem_post
+                0x000000000001574c                music_wait_status_update
+                0x00000000000157a8                music_enc_control
+                0x00000000000157d0                music_decode
+                0x000000000001582a                thread_music_run_loop
+ .com_text.sbc  0x0000000000015884       0x2a ..\..\libs\bt8930\libplatform.a(music.o)
+                0x0000000000015884                music_kick_play
  .com_text.music.ctrl
-                0x00000000000155f2       0x14 ..\..\libs\bt8930\libplatform.a(music.o)
-                0x00000000000155f2                music_is_playing
+                0x00000000000158ae       0x14 ..\..\libs\bt8930\libplatform.a(music.o)
+                0x00000000000158ae                music_is_playing
  .com_text.sync
-                0x0000000000015606       0x42 ..\..\libs\bt8930\libplatform.a(music_res.o)
-                0x0000000000015606                wav_sync_kick
- .com_text.irq  0x0000000000015648      0x110 ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x0000000000015648                aubuf_isr
-                0x00000000000156b8                mschw_isr
-                0x00000000000156e0                pickup_isr
-                0x00000000000156f0                register_isr
-                0x000000000001572a                tick_get
-                0x0000000000015734                tick_check_expire
-                0x0000000000015748                vector23_isr
- .com_text.isr  0x0000000000015758        0xa ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x0000000000015758                cpu_soft_isr
+                0x00000000000158c2       0x42 ..\..\libs\bt8930\libplatform.a(music_res.o)
+                0x00000000000158c2                wav_sync_kick
+ .com_text.irq  0x0000000000015904      0x110 ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015904                aubuf_isr
+                0x0000000000015974                mschw_isr
+                0x000000000001599c                pickup_isr
+                0x00000000000159ac                register_isr
+                0x00000000000159e6                tick_get
+                0x00000000000159f0                tick_check_expire
+                0x0000000000015a04                vector23_isr
+ .com_text.isr  0x0000000000015a14        0xa ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015a14                cpu_soft_isr
  .com_text.ret.irq
-                0x0000000000015762       0xca ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x0000000000015762                timer0_isr
-                0x00000000000157d4                watch_point_isr
+                0x0000000000015a1e       0xca ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015a1e                timer0_isr
+                0x0000000000015a90                watch_point_isr
  .com_text.tws.isr
-                0x000000000001582c        0xe ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x000000000001582c                tws_soft_isr
+                0x0000000000015ae8        0xe ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015ae8                tws_soft_isr
  .com_text.irq13
-                0x000000000001583a       0x20 ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x000000000001583a                vector13_isr
+                0x0000000000015af6       0x20 ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015af6                vector13_isr
  .com_text.irq24
-                0x000000000001585a       0x44 ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x000000000001585a                vector24_isr
+                0x0000000000015b16       0x44 ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x0000000000015b16                vector24_isr
  .com_text.timer
-                0x000000000001589e       0x22 ..\..\libs\bt8930\libplatform.a(startup.o)
+                0x0000000000015b5a       0x22 ..\..\libs\bt8930\libplatform.a(startup.o)
  .com_text.rdft.api
-                0x00000000000158c0       0x26 ..\..\libs\bt8930\libplatform.a(startup.o)
-                0x00000000000158c0                os_mutex_rdft_take
-                0x00000000000158d4                os_mutex_rdft_release
+                0x0000000000015b7c       0x26 ..\..\libs\bt8930\libplatform.a(startup.o)
+                0x0000000000015b7c                os_mutex_rdft_take
+                0x0000000000015b90                os_mutex_rdft_release
  .com_text.thread.npu
-                0x00000000000158e6       0x3c ..\..\libs\bt8930\libplatform.a(startup.o)
-                0x00000000000158e6                os_npu_sem_pend
-                0x0000000000015910                os_npu_sem_post
+                0x0000000000015ba2       0x3c ..\..\libs\bt8930\libplatform.a(startup.o)
+                0x0000000000015ba2                os_npu_sem_pend
+                0x0000000000015bcc                os_npu_sem_post
  .com_text.delay
-                0x0000000000015922       0x18 ..\..\libs\bt8930\libplatform.a(startup.o)
-                0x0000000000015922                bt_thread_trigger_when_sys_delay
- *fill*         0x000000000001593a        0x2 
+                0x0000000000015bde       0x18 ..\..\libs\bt8930\libplatform.a(startup.o)
+                0x0000000000015bde                bt_thread_trigger_when_sys_delay
+ *fill*         0x0000000000015bf6        0x2 
  .com_text.thread.driver
-                0x000000000001593c      0x118 ..\..\libs\bt8930\libplatform.a(thread_driver.o)
-                0x000000000001593c                os_mq_drv_post
-                0x0000000000015964                thread_driver_entry
+                0x0000000000015bf8      0x118 ..\..\libs\bt8930\libplatform.a(thread_driver.o)
+                0x0000000000015bf8                os_mq_drv_post
+                0x0000000000015c20                thread_driver_entry
  .com_text.a2dp.sync
-                0x0000000000015a54        0x6 ..\..\libs\bt8930\libplatform.a(thread_driver.o)
-                0x0000000000015a54                a2dp_media_fill_kick_start
+                0x0000000000015d10        0x6 ..\..\libs\bt8930\libplatform.a(thread_driver.o)
+                0x0000000000015d10                a2dp_media_fill_kick_start
  .com_text.thread.driver
-                0x0000000000015a5a       0x28 ..\..\libs\bt8930\libplatform.a(thread_pcm.o)
-                0x0000000000015a5a                os_mq_aupcm_post
- *fill*         0x0000000000015a82        0x2 
+                0x0000000000015d16       0x28 ..\..\libs\bt8930\libplatform.a(thread_pcm.o)
+                0x0000000000015d16                os_mq_aupcm_post
+ *fill*         0x0000000000015d3e        0x2 
  .com_text.thread.aupcm
-                0x0000000000015a84       0xc8 ..\..\libs\bt8930\libplatform.a(thread_pcm.o)
-                0x0000000000015a84                thread_aupcm_entry
+                0x0000000000015d40       0xc8 ..\..\libs\bt8930\libplatform.a(thread_pcm.o)
+                0x0000000000015d40                thread_aupcm_entry
  .com_text.saradc.set_channel
-                0x0000000000015b4c       0x14 ..\..\libs\bt8930\libplatform.a(saradc.o)
-                0x0000000000015b4c                saradc_set_channel
+                0x0000000000015e08       0x14 ..\..\libs\bt8930\libplatform.a(saradc.o)
+                0x0000000000015e08                saradc_set_channel
  .com_text.saradc
-                0x0000000000015b60       0x3a ..\..\libs\bt8930\libplatform.a(saradc.o)
-                0x0000000000015b60                saradc_start
-                0x0000000000015b88                saradc_is_finish
-                0x0000000000015b92                saradc_get_channel
+                0x0000000000015e1c       0x3a ..\..\libs\bt8930\libplatform.a(saradc.o)
+                0x0000000000015e1c                saradc_start
+                0x0000000000015e44                saradc_is_finish
+                0x0000000000015e4e                saradc_get_channel
  .com_text.saradc.done
-                0x0000000000015b9a       0x32 ..\..\libs\bt8930\libplatform.a(saradc.o)
-                0x0000000000015b9a                saradc_get_result
+                0x0000000000015e56       0x32 ..\..\libs\bt8930\libplatform.a(saradc.o)
+                0x0000000000015e56                saradc_get_result
  .com_text.saradc.ch15
-                0x0000000000015bcc       0xb4 ..\..\libs\bt8930\libplatform.a(saradc.o)
-                0x0000000000015bcc                saradc_adc15_analog_select
-                0x0000000000015c54                saradc_adc15_analog_next
+                0x0000000000015e88       0xb4 ..\..\libs\bt8930\libplatform.a(saradc.o)
+                0x0000000000015e88                saradc_adc15_analog_select
+                0x0000000000015f10                saradc_adc15_analog_next
  .com_text.uart1
-                0x0000000000015c80       0x10 ..\..\libs\bt8930\libplatform.a(uart.o)
-                0x0000000000015c80                uart1_putchar
+                0x0000000000015f3c       0x10 ..\..\libs\bt8930\libplatform.a(uart.o)
+                0x0000000000015f3c                uart1_putchar
  .com_text.ret.lowpwr.sleep
-                0x0000000000015c90        0xc ..\..\libs\bt8930\libplatform.a(wko.o)
-                0x0000000000015c90                wakeup_get_status
- .com_text.wko  0x0000000000015c9c        0xe ..\..\libs\bt8930\libplatform.a(wko.o)
-                0x0000000000015c9c                pwrkey_is_pressed
+                0x0000000000015f4c        0xc ..\..\libs\bt8930\libplatform.a(wko.o)
+                0x0000000000015f4c                wakeup_get_status
+ .com_text.wko  0x0000000000015f58        0xe ..\..\libs\bt8930\libplatform.a(wko.o)
+                0x0000000000015f58                pwrkey_is_pressed
  .com_text.piano
-                0x0000000000015caa       0x22 ..\..\libs\bt8930\libplatform.a(piano.o)
-                0x0000000000015caa                tone_sync_kick
+                0x0000000000015f66       0x22 ..\..\libs\bt8930\libplatform.a(piano.o)
+                0x0000000000015f66                tone_sync_kick
  .com_text.ret.irq
-                0x0000000000015ccc       0x5a ..\..\libs\bt8930\libplatform.a(reset.o)
-                0x0000000000015ccc                cpu_irq_comm
-                0x0000000000015d1e                btmdm_isr
+                0x0000000000015f88       0x5a ..\..\libs\bt8930\libplatform.a(reset.o)
+                0x0000000000015f88                cpu_irq_comm
+                0x0000000000015fda                btmdm_isr
  .com_text.ret.util.isr
-                0x0000000000015d26        0x6 ..\..\libs\bt8930\libplatform.a(reset.o)
-                0x0000000000015d26                kick_soft_isr
+                0x0000000000015fe2        0x6 ..\..\libs\bt8930\libplatform.a(reset.o)
+                0x0000000000015fe2                kick_soft_isr
  .com_text.bsp.charge
-                0x0000000000015d2c       0x2a ..\..\libs\bt8930\libplatform.a(charge.o)
-                0x0000000000015d2c                charge_set_leakage
+                0x0000000000015fe8       0x2a ..\..\libs\bt8930\libplatform.a(charge.o)
+                0x0000000000015fe8                charge_set_leakage
  .com_text.charge
-                0x0000000000015d56       0xa2 ..\..\libs\bt8930\libplatform.a(charge.o)
-                0x0000000000015d56                charge_dc_detect
-                0x0000000000015d60                charge_detect
+                0x0000000000016012       0xa2 ..\..\libs\bt8930\libplatform.a(charge.o)
+                0x0000000000016012                charge_dc_detect
+                0x000000000001601c                charge_detect
  .com_text.crc8
-                0x0000000000015df8       0x26 ..\..\libs\bt8930\libplatform.a(crc.o)
-                0x0000000000015df8                crc8_maxim
+                0x00000000000160b4       0x26 ..\..\libs\bt8930\libplatform.a(crc.o)
+                0x00000000000160b4                crc8_maxim
  .com_text.dump.err
-                0x0000000000015e1e        0xe ..\..\libs\bt8930\libplatform.a(debug.o)
-                0x0000000000015e1e                dump_err
+                0x00000000000160da        0xe ..\..\libs\bt8930\libplatform.a(debug.o)
+                0x00000000000160da                dump_err
  .com_text.exception
-                0x0000000000015e2c        0xc ..\..\libs\bt8930\libplatform.a(debug.o)
-                0x0000000000015e2c                exception_isr
+                0x00000000000160e8        0xc ..\..\libs\bt8930\libplatform.a(debug.o)
+                0x00000000000160e8                exception_isr
  .com_text.debug
-                0x0000000000015e38       0x72 ..\..\libs\bt8930\libplatform.a(debug.o)
-                0x0000000000015e38                debug_dump_info_cache_miss_callback
- .com_text.bsp.key
-                0x0000000000015eaa      0x168 ..\..\libs\bt8930\libplatform.a(key.o)
-                0x0000000000015eaa                key_process
-                0x0000000000016006                key_multi_press_process
- .com_text.sys  0x0000000000016012       0x96 ..\..\libs\bt8930\libplatform.a(s_sys.o)
-                0x0000000000016012                s_ff1
-                0x0000000000016018                s_fl1
-                0x000000000001601e                s_log2
-                0x0000000000016026                s_clb
-                0x000000000001602c                s_bcnt
-                0x0000000000016032                s_ror
-                0x0000000000016038                s_swapw
-                0x000000000001603e                s_bitrvti
-                0x0000000000016044                s_clip16
-                0x000000000001604a                s_abs
-                0x0000000000016050                mul_r
-                0x000000000001605c                dummy_func
-                0x000000000001605e                __ashrdi3
-                0x000000000001606c                __lshrdi3
-                0x000000000001607a                __ashldi3
-                0x0000000000016088                pcm_soft_vol_process
- .com_text.sys  0x00000000000160a8       0x1e ..\..\libs\bt8930\libplatform.a(sys.o)
-                0x00000000000160a8                sw_reset_kick
+                0x00000000000160f4       0x72 ..\..\libs\bt8930\libplatform.a(debug.o)
+                0x00000000000160f4                debug_dump_info_cache_miss_callback
+ .com_text.sys  0x0000000000016166       0x96 ..\..\libs\bt8930\libplatform.a(s_sys.o)
+                0x0000000000016166                s_ff1
+                0x000000000001616c                s_fl1
+                0x0000000000016172                s_log2
+                0x000000000001617a                s_clb
+                0x0000000000016180                s_bcnt
+                0x0000000000016186                s_ror
+                0x000000000001618c                s_swapw
+                0x0000000000016192                s_bitrvti
+                0x0000000000016198                s_clip16
+                0x000000000001619e                s_abs
+                0x00000000000161a4                mul_r
+                0x00000000000161b0                dummy_func
+                0x00000000000161b2                __ashrdi3
+                0x00000000000161c0                __lshrdi3
+                0x00000000000161ce                __ashldi3
+                0x00000000000161dc                pcm_soft_vol_process
+ .com_text.sys  0x00000000000161fc       0x1e ..\..\libs\bt8930\libplatform.a(sys.o)
+                0x00000000000161fc                sw_reset_kick
  .com_text.func.dac
-                0x00000000000160c6       0x2c ..\..\libs\bt8930\libplatform.a(sys.o)
-                0x00000000000160c6                sys_run_loop
- .com_text.vbg  0x00000000000160f2       0x10 ..\..\libs\bt8930\libplatform.a(voltage_trim.o)
-                0x00000000000160f2                vbg_voltage_get
-                0x00000000000160fa                vbat2_voltage_get
+                0x000000000001621a       0x2c ..\..\libs\bt8930\libplatform.a(sys.o)
+                0x000000000001621a                sys_run_loop
+ .com_text.vbg  0x0000000000016246       0x10 ..\..\libs\bt8930\libplatform.a(voltage_trim.o)
+                0x0000000000016246                vbg_voltage_get
+                0x000000000001624e                vbat2_voltage_get
  .com_text.aubuf1.dma.isr
-                0x0000000000016102        0x2 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
-                0x0000000000016102                aubuf1_dma_done_callback
+                0x0000000000016256        0x2 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
+                0x0000000000016256                aubuf1_dma_done_callback
  .com_text.aubuf0.dma.isr
-                0x0000000000016104        0x2 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
-                0x0000000000016104                aubuf0_dma_done_callback
+                0x0000000000016258        0x2 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
+                0x0000000000016258                aubuf0_dma_done_callback
  .com_text.vad.sta
-                0x0000000000016106        0x4 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
-                0x0000000000016106                vad_is_start
- .com_text.vad  0x000000000001610a        0x2 ..\..\libs\bt8930\libplatform.a(audio_vad.o)
-                0x000000000001610a                vad_isr
+                0x000000000001625a        0x4 ..\..\libs\bt8930\libplatform.a(weak_symbol.o)
+                0x000000000001625a                vad_is_start
+ .com_text.vad  0x000000000001625e        0x2 ..\..\libs\bt8930\libplatform.a(audio_vad.o)
+                0x000000000001625e                vad_isr
  .com_text.thread.rdft
-                0x000000000001610c       0x3c ..\..\libs\bt8930\libplatform.a(bt_alg.o)
-                0x000000000001610c                os_sem_rdft_pend
-                0x0000000000016136                os_sem_rdft_post
- *fill*         0x0000000000016148        0x0 
+                0x0000000000016260       0x3c ..\..\libs\bt8930\libplatform.a(bt_alg.o)
+                0x0000000000016260                os_sem_rdft_pend
+                0x000000000001628a                os_sem_rdft_post
  .com_text.thread.alg
-                0x0000000000016148      0x102 ..\..\libs\bt8930\libplatform.a(bt_alg.o)
-                0x0000000000016148                thread_alg_kick_start
-                0x0000000000016170                thread_alg_entry
+                0x000000000001629c      0x102 ..\..\libs\bt8930\libplatform.a(bt_alg.o)
+                0x000000000001629c                thread_alg_kick_start
+                0x00000000000162c4                thread_alg_entry
  .com_text.dec.pll
-                0x000000000001624a       0x2a ..\..\libs\bt8930\libplatform.a(bt_pll.o)
-                0x000000000001624a                bt_tws_get_dmain_time
+                0x000000000001639e       0x2a ..\..\libs\bt8930\libplatform.a(bt_pll.o)
+                0x000000000001639e                bt_tws_get_dmain_time
  .com_text.tws.fifo
-                0x0000000000016274       0x4a ..\..\libs\bt8930\libplatform.a(bt_pll.o)
-                0x0000000000016274                bt_tws_get_fifocnt
+                0x00000000000163c8       0x4a ..\..\libs\bt8930\libplatform.a(bt_pll.o)
+                0x00000000000163c8                bt_tws_get_fifocnt
  .com_text.matrix.isr
-                0x00000000000162be        0x2 ..\..\libs\bt8930\libplatform.a(matrix_test.o)
-                0x00000000000162be                matrix_isr
+                0x0000000000016412        0x2 ..\..\libs\bt8930\libplatform.a(matrix_test.o)
+                0x0000000000016412                matrix_isr
  .com_text.ret.md.nanos
-                0x00000000000162c0       0x18 ..\..\libs\bt8930\libbtstack.a(nanos.o)
-                0x00000000000162c0                nanos_event_set
-                0x00000000000162d6                nanos_sleep_restore
+                0x0000000000016414       0x18 ..\..\libs\bt8930\libbtstack.a(nanos.o)
+                0x0000000000016414                nanos_event_set
+                0x000000000001642a                nanos_sleep_restore
  .com_text.bb.tws.spr
-                0x00000000000162d8       0x42 ..\..\libs\bt8930\libbtstack.a(patch.o)
-                0x00000000000162d8                bt_tws_set_spr_do_fix
+                0x000000000001642c       0x42 ..\..\libs\bt8930\libbtstack.a(patch.o)
+                0x000000000001642c                bt_tws_set_spr_do_fix
  .com_text.bb.tws
-                0x000000000001631a       0x64 ..\..\libs\bt8930\libbtstack.a(patch.o)
-                0x000000000001631a                tws_cal_offset_fix
+                0x000000000001646e       0x64 ..\..\libs\bt8930\libbtstack.a(patch.o)
+                0x000000000001646e                tws_cal_offset_fix
  .com_text.bb.dbg.ble
-                0x000000000001637e        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
-                0x000000000001637e                bb_ll_tx_cb
-                0x0000000000016380                bb_ll_rx_cb
+                0x00000000000164d2        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
+                0x00000000000164d2                bb_ll_tx_cb
+                0x00000000000164d4                bb_ll_rx_cb
  .com_text.bb.dbg.bt21
-                0x0000000000016382        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
-                0x0000000000016382                bb_lmp_tx_cb
-                0x0000000000016384                bb_lmp_rx_cb
+                0x00000000000164d6        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
+                0x00000000000164d6                bb_lmp_tx_cb
+                0x00000000000164d8                bb_lmp_rx_cb
  .com_text.ret.bb.isr
-                0x0000000000016386       0x5c ..\..\libs\bt8930\libbtstack.a(rf.o)
-                0x0000000000016386                rf_rssi_calc_dbm
-                0x0000000000016394                rf_txpwr_get_lv
-                0x00000000000163d0                rf_txpwr_get_dbm
-                0x00000000000163e0                rf_agc_enable
+                0x00000000000164da       0x5c ..\..\libs\bt8930\libbtstack.a(rf.o)
+                0x00000000000164da                rf_rssi_calc_dbm
+                0x00000000000164e8                rf_txpwr_get_lv
+                0x0000000000016524                rf_txpwr_get_dbm
+                0x0000000000016534                rf_agc_enable
  .com_text.ret.bb.rf.isr
-                0x00000000000163e2       0x1e ..\..\libs\bt8930\libbtstack.a(rf.o)
-                0x00000000000163e2                bb_rf_ext_ctl_cb
-                0x00000000000163e4                bthw_txrx_isr
+                0x0000000000016536       0x1e ..\..\libs\bt8930\libbtstack.a(rf.o)
+                0x0000000000016536                bb_rf_ext_ctl_cb
+                0x0000000000016538                bthw_txrx_isr
  .com_text.bb.tws
-                0x0000000000016400      0x1a2 ..\..\libs\bt8930\libbtstack.a(tws.o)
-                0x0000000000016400                tws_evs_set_snoop_offset_do
-                0x000000000001655c                tws_acl_tx_lost_pkt
-                0x0000000000016584                tws_acl_tx_is_vaild
+                0x0000000000016554      0x1a2 ..\..\libs\bt8930\libbtstack.a(tws.o)
+                0x0000000000016554                tws_evs_set_snoop_offset_do
+                0x00000000000166b0                tws_acl_tx_lost_pkt
+                0x00000000000166d8                tws_acl_tx_is_vaild
  .com_text.bb.tws.stauts
-                0x00000000000165a2       0xe4 ..\..\libs\bt8930\libbtstack.a(tws.o)
-                0x00000000000165a2                tws_get_snoop_status
+                0x00000000000166f6       0xe4 ..\..\libs\bt8930\libbtstack.a(tws.o)
+                0x00000000000166f6                tws_get_snoop_status
  .com_text.bb.lc
-                0x0000000000016686       0x96 ..\..\libs\bt8930\libbtstack.a(lc.o)
-                0x0000000000016686                lc_conhdl_to_index
-                0x000000000001669c                lc_send_unsniff_msg
+                0x00000000000167da       0x96 ..\..\libs\bt8930\libbtstack.a(lc.o)
+                0x00000000000167da                lc_conhdl_to_index
+                0x00000000000167f0                lc_send_unsniff_msg
  .com_text.bb.tws
-                0x000000000001671c       0xe4 ..\..\libs\bt8930\libbtstack.a(bt_tws.o)
-                0x000000000001671c                tws_get_ticks
-                0x0000000000016728                bt_tws_ticks_isr
-                0x000000000001677e                tws_get_speed_new
-                0x000000000001678c                tws_get_spr_idx
-                0x000000000001679c                tws_get_ticks_lid
-                0x00000000000167aa                tws_get_ticks_status
+                0x0000000000016870       0xe4 ..\..\libs\bt8930\libbtstack.a(bt_tws.o)
+                0x0000000000016870                tws_get_ticks
+                0x000000000001687c                bt_tws_ticks_isr
+                0x00000000000168d2                tws_get_speed_new
+                0x00000000000168e0                tws_get_spr_idx
+                0x00000000000168f0                tws_get_ticks_lid
+                0x00000000000168fe                tws_get_ticks_status
  .com_text.bb.sco
-                0x0000000000016800      0x19a ..\..\libs\bt8930\libbtstack.a(bt_sco.o)
-                0x0000000000016800                bt_sco_is_transp
-                0x0000000000016810                bt_codec_isr
-                0x0000000000016858                lc_sco_codec_pkt
+                0x0000000000016954      0x19a ..\..\libs\bt8930\libbtstack.a(bt_sco.o)
+                0x0000000000016954                bt_sco_is_transp
+                0x0000000000016964                bt_codec_isr
+                0x00000000000169ac                lc_sco_codec_pkt
  .com_text.bt21.isr
-                0x000000000001699a       0x3c ..\..\libs\bt8930\libbtstack.a(bt_hal.o)
-                0x000000000001699a                bt_channel_assess
+                0x0000000000016aee       0x3c ..\..\libs\bt8930\libbtstack.a(bt_hal.o)
+                0x0000000000016aee                bt_channel_assess
  .com_text.bt21.isr
-                0x00000000000169d6      0x1b6 ..\..\libs\bt8930\libbtstack.a(bt_acl.o)
-                0x00000000000169fa                bt_acl_evt_canceled_cb_fix
-                0x0000000000016a90                bt_sco_audio_isr
+                0x0000000000016b2a      0x1b6 ..\..\libs\bt8930\libbtstack.a(bt_acl.o)
+                0x0000000000016b4e                bt_acl_evt_canceled_cb_fix
+                0x0000000000016be4                bt_sco_audio_isr
  .com_text.bt21.isr
-                0x0000000000016b8c       0xdc ..\..\libs\bt8930\libbtstack.a(bt21.o)
-                0x0000000000016b8c                bt_buf_acl_rx_lit_alloc
-                0x0000000000016bba                bt_buf_acl_rx_lit_free
-                0x0000000000016c12                bt21_isr
+                0x0000000000016ce0       0xd8 ..\..\libs\bt8930\libbtstack.a(bt21.o)
+                0x0000000000016ce0                bt_buf_acl_rx_lit_alloc
+                0x0000000000016d0e                bt_buf_acl_rx_lit_free
+                0x0000000000016d66                bt21_isr
  .com_text.ret.bb.sleep
-                0x0000000000016c68       0x52 ..\..\libs\bt8930\libbtstack.a(bt21.o)
-                0x0000000000016c68                bt21_is_sleep
+                0x0000000000016db8       0x52 ..\..\libs\bt8930\libbtstack.a(bt21.o)
+                0x0000000000016db8                bt21_is_sleep
  .com_text.ble.isr.adv
-                0x0000000000016cba      0x142 ..\..\libs\bt8930\libbtstack.a(ble_pscan.o)
-                0x0000000000016d1a                ble_pscan_rx_ind
+                0x0000000000016e0a      0x142 ..\..\libs\bt8930\libbtstack.a(ble_pscan.o)
+                0x0000000000016e6a                ble_pscan_rx_ind
  .com_text.ble.isr.scan
-                0x0000000000016dfc      0x1de ..\..\libs\bt8930\libbtstack.a(ble_page.o)
-                0x0000000000016e1e                ble_scan0_rx_ind
+                0x0000000000016f4c      0x1de ..\..\libs\bt8930\libbtstack.a(ble_page.o)
+                0x0000000000016f6e                ble_scan0_rx_ind
  .com_text.ret.bb.utils
-                0x0000000000016fda        0xa ..\..\libs\bt8930\libbtstack.a(bb_utils.o)
-                0x0000000000016fda                bb_slot_to_duration
+                0x000000000001712a        0xa ..\..\libs\bt8930\libbtstack.a(bb_utils.o)
+                0x000000000001712a                bb_slot_to_duration
  .com_text.ret.bb.isr
-                0x0000000000016fe4      0x1ba ..\..\libs\bt8930\libbtstack.a(bb_int.o)
-                0x0000000000017018                bb_lpcycles_2_hus
-                0x0000000000017064                bb_isr
-                0x000000000001718c                bb_hal_isr
+                0x0000000000017134      0x1ba ..\..\libs\bt8930\libbtstack.a(bb_int.o)
+                0x0000000000017168                bb_lpcycles_2_hus
+                0x00000000000171b4                bb_isr
+                0x00000000000172dc                bb_hal_isr
  .com_text.ret.bb.sleep
-                0x000000000001719e       0x4a ..\..\libs\bt8930\libbtstack.a(bb_int.o)
-                0x000000000001719e                bb_is_sleep
-                0x00000000000171d8                bb_is_allow_sleep
+                0x00000000000172ee       0x4a ..\..\libs\bt8930\libbtstack.a(bb_int.o)
+                0x00000000000172ee                bb_is_sleep
+                0x0000000000017328                bb_is_allow_sleep
  .com_text.bt21.isr
-                0x00000000000171e8       0x96 ..\..\libs\bt8930\libbtstack.a(bb.o)
-                0x00000000000171e8                bb_acl_rx0_parse
-                0x0000000000017226                bb_buf_acl_rx_free
-                0x0000000000017252                bb_free_acl_buf
-                0x0000000000017260                bb_alloc_acl_buf
+                0x0000000000017338       0x96 ..\..\libs\bt8930\libbtstack.a(bb.o)
+                0x0000000000017338                bb_acl_rx0_parse
+                0x0000000000017376                bb_buf_acl_rx_free
+                0x00000000000173a2                bb_free_acl_buf
+                0x00000000000173b0                bb_alloc_acl_buf
  .com_text.ret.bb.run_loop
-                0x000000000001727e       0x18 ..\..\libs\bt8930\libbtstack.a(bb.o)
-                0x000000000001727e                bb_run_loop
+                0x00000000000173ce       0x18 ..\..\libs\bt8930\libbtstack.a(bb.o)
+                0x00000000000173ce                bb_run_loop
  .com_text.ret.bb.isr
-                0x0000000000017296       0x34 ..\..\libs\bt8930\libbtstack.a(bb.o)
-                0x0000000000017296                bb_notice_status
+                0x00000000000173e6       0x34 ..\..\libs\bt8930\libbtstack.a(bb.o)
+                0x00000000000173e6                bb_notice_status
  .com_text.dummy
-                0x00000000000172ca        0x6 ..\..\libs\bt8930\libbtstack.a(platform.o)
-                0x00000000000172ca                dummy_void
-                0x00000000000172cc                dummy_false
+                0x000000000001741a        0x6 ..\..\libs\bt8930\libbtstack.a(platform.o)
+                0x000000000001741a                dummy_void
+                0x000000000001741c                dummy_false
  .com_text.cpu.sfr
-                0x00000000000172d0       0x3c ..\..\libs\bt8930\libbtstack.a(platform.o)
-                0x00000000000172d0                cpu_set_sfr
-                0x00000000000172ec                cpu_clr_sfr
- .com_text.sco  0x000000000001730c        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
-                0x000000000001730c                bt_sco_is_msbc
+                0x0000000000017420       0x3c ..\..\libs\bt8930\libbtstack.a(platform.o)
+                0x0000000000017420                cpu_set_sfr
+                0x000000000001743c                cpu_clr_sfr
+ .com_text.sco  0x000000000001745c        0x4 ..\..\libs\bt8930\libbtstack.a(platform.o)
+                0x000000000001745c                bt_sco_is_msbc
  .com_text.aubuf.isr
-                0x0000000000017310        0x2 ..\..\libs\bt8930\libbtstack.a(extern.o)
-                0x0000000000017310                ext_aubuf_isr
+                0x0000000000017460        0x2 ..\..\libs\bt8930\libbtstack.a(extern.o)
+                0x0000000000017460                ext_aubuf_isr
  .com_text.l2cap_test.con
-                0x0000000000017312       0x50 ..\..\libs\bt8930\libbtstack.a(l2cap_test.o)
-                0x0000000000017312                l2cap_vd_acl_check
+                0x0000000000017462       0x50 ..\..\libs\bt8930\libbtstack.a(l2cap_test.o)
+                0x0000000000017462                l2cap_vd_acl_check
  .com_text.stack.handler.l2cap
-                0x0000000000017362       0x3c ..\..\libs\bt8930\libbtstack.a(l2cap.o)
-                0x0000000000017362                l2cap_get_channel_for_local_cid
-                0x000000000001737c                l2cap_get_channel_for_remote_cid
+                0x00000000000174b2       0x3c ..\..\libs\bt8930\libbtstack.a(l2cap.o)
+                0x00000000000174b2                l2cap_get_channel_for_local_cid
+                0x00000000000174cc                l2cap_get_channel_for_remote_cid
  .com_text.bb.sco
-                0x000000000001739e       0x6c ..\..\libs\bt8930\libbtstack.a(hci_sco.o)
-                0x000000000001739e                sco_get_near_buffer
-                0x00000000000173f0                bt_sco_kick_dac_output
- .com_text.sco  0x000000000001740a        0xa ..\..\libs\bt8930\libbtstack.a(hci_sco.o)
-                0x000000000001740a                bt_sco_far_rptr
+                0x00000000000174ee       0x6c ..\..\libs\bt8930\libbtstack.a(hci_sco.o)
+                0x00000000000174ee                sco_get_near_buffer
+                0x0000000000017540                bt_sco_kick_dac_output
+ .com_text.sco  0x000000000001755a        0xa ..\..\libs\bt8930\libbtstack.a(hci_sco.o)
+                0x000000000001755a                bt_sco_far_rptr
  .com_text.stack.hci
-                0x0000000000017414       0x5e ..\..\libs\bt8930\libbtstack.a(hci.o)
-                0x0000000000017414                hci_connection_for_handle
-                0x000000000001743c                hci_can_send_command_packet_now
+                0x0000000000017564       0x5e ..\..\libs\bt8930\libbtstack.a(hci.o)
+                0x0000000000017564                hci_connection_for_handle
+                0x000000000001758c                hci_can_send_command_packet_now
  .com_text.stack.hci_recv
-                0x0000000000017472       0x10 ..\..\libs\bt8930\libbtstack.a(hci.o)
-                0x0000000000017472                hci_host_recv_packet
+                0x00000000000175c2       0x10 ..\..\libs\bt8930\libbtstack.a(hci.o)
+                0x00000000000175c2                hci_host_recv_packet
  .com_text.stack.spp.send_kick
-                0x0000000000017482        0xe ..\..\libs\bt8930\libbtstack.a(spp.o)
-                0x0000000000017482                spp_send_kick
+                0x00000000000175d2        0xe ..\..\libs\bt8930\libbtstack.a(spp.o)
+                0x00000000000175d2                spp_send_kick
  .com_text.stack.spp.send_req
-                0x0000000000017490       0xae ..\..\libs\bt8930\libbtstack.a(spp.o)
-                0x0000000000017490                btstack_spp_send_req
+                0x00000000000175e0       0xae ..\..\libs\bt8930\libbtstack.a(spp.o)
+                0x00000000000175e0                btstack_spp_send_req
  .com_text.stack.spp.event_send
-                0x000000000001753e       0x92 ..\..\libs\bt8930\libbtstack.a(spp.o)
-                0x000000000001753e                spp_event_send
+                0x000000000001768e       0x92 ..\..\libs\bt8930\libbtstack.a(spp.o)
+                0x000000000001768e                spp_event_send
  .com_text.stack.sbc
-                0x00000000000175d0      0x10e ..\..\libs\bt8930\libbtstack.a(avdtp.o)
-                0x00000000000175d0                avdtp_fill_get_offset
+                0x0000000000017720      0x10e ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x0000000000017720                avdtp_fill_get_offset
  .com_text.sbc.play
-                0x00000000000176de       0x32 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
-                0x00000000000176de                sbc_rx_reset
-                0x00000000000176ee                sbc_rx_w4_reset
+                0x000000000001782e       0x32 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x000000000001782e                sbc_rx_reset
+                0x000000000001783e                sbc_rx_w4_reset
  .com_text.sbc.rx
-                0x0000000000017710       0x60 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
-                0x0000000000017710                sbc_rx_is_reset
-                0x0000000000017754                sbc_rx_is_full
-                0x000000000001776e                btstack_check_sbc_fill
+                0x0000000000017860       0x60 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x0000000000017860                sbc_rx_is_reset
+                0x00000000000178a4                sbc_rx_is_full
+                0x00000000000178be                btstack_check_sbc_fill
  .com_text.a2dp.play
-                0x0000000000017770      0x1d8 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
-                0x0000000000017770                avdtp_fill_reset
-                0x00000000000177cc                avdtp_fill_sbc
-                0x00000000000178ec                a2dp_media_is_pend
-                0x0000000000017928                a2dp_media_fill_cb
+                0x00000000000178c0      0x1d8 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x00000000000178c0                avdtp_fill_reset
+                0x000000000001791c                avdtp_fill_sbc
+                0x0000000000017a3c                a2dp_media_is_pend
+                0x0000000000017a78                a2dp_media_fill_cb
  .com_text.bb.btisr
-                0x0000000000017948      0x22c ..\..\libs\bt8930\libbtstack.a(avdtp.o)
-                0x0000000000017948                avdtp_media_rxpkt
-                0x00000000000179a8                avdtp_rx_media_parse
-                0x0000000000017b4e                a2dp_get_play_index
+                0x0000000000017a98      0x22c ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x0000000000017a98                avdtp_media_rxpkt
+                0x0000000000017af8                avdtp_rx_media_parse
+                0x0000000000017c9e                a2dp_get_play_index
  .com_text.stack.avctp.vol
-                0x0000000000017b74      0x114 ..\..\libs\bt8930\libbtstack.a(avctp.o)
-                0x0000000000017b74                avctp_acl_set_absolute_volume_fileter
-                0x0000000000017bd0                avctp_acl_rx_done
-                0x0000000000017c36                avctp_rx_cmd_parse
-                0x0000000000017c62                avctp_run_loop
- .com_text.sbc  0x0000000000017c88       0x22 ..\..\libs\bt8930\libbtstack.a(a2dp_send.o)
-                0x0000000000017c88                a2dp_tx_valid
-                0x0000000000017c96                tws_send_pkt
+                0x0000000000017cc4      0x114 ..\..\libs\bt8930\libbtstack.a(avctp.o)
+                0x0000000000017cc4                avctp_acl_set_absolute_volume_fileter
+                0x0000000000017d20                avctp_acl_rx_done
+                0x0000000000017d86                avctp_rx_cmd_parse
+                0x0000000000017db2                avctp_run_loop
+ .com_text.sbc  0x0000000000017dd8       0x22 ..\..\libs\bt8930\libbtstack.a(a2dp_send.o)
+                0x0000000000017dd8                a2dp_tx_valid
+                0x0000000000017de6                tws_send_pkt
  .com_text.a2dp.send
-                0x0000000000017caa       0x4c ..\..\libs\bt8930\libbtstack.a(a2dp_send.o)
-                0x0000000000017caa                tws_send_is_pend
+                0x0000000000017dfa       0x4c ..\..\libs\bt8930\libbtstack.a(a2dp_send.o)
+                0x0000000000017dfa                tws_send_is_pend
  .com_text.a2dp.lost
-                0x0000000000017cf6       0x5c ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x0000000000017cf6                a2dp_txlost_add
+                0x0000000000017e46       0x5c ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x0000000000017e46                a2dp_txlost_add
  .com_text.a2dp.tick
-                0x0000000000017d52      0x474 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x0000000000017d52                a2dp_set_play_ticks
-                0x0000000000017eb0                a2dp_fix_slv_ticks
-                0x0000000000017f00                a2dp_fix_slv_ticks_cb
-                0x0000000000017fb6                a2dp_set_first_seqn
-                0x000000000001800c                tws_ticks_set
+                0x0000000000017ea2      0x474 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x0000000000017ea2                a2dp_set_play_ticks
+                0x0000000000018000                a2dp_fix_slv_ticks
+                0x0000000000018050                a2dp_fix_slv_ticks_cb
+                0x0000000000018106                a2dp_set_first_seqn
+                0x000000000001815c                tws_ticks_set
  .com_text.sbc.play
-                0x00000000000181c6      0x3ee ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x00000000000181c6                a2dp_cache_user_reset_do
-                0x00000000000181c8                tws_get_delta_ticks
-                0x00000000000181f4                aac_dec_kick_isr
-                0x00000000000182a4                tws_get_near_state
-                0x00000000000182ba                tws_play_sync
-                0x00000000000182be                tws_ticks_trigger
-                0x0000000000018434                tws_trigger_isr
-                0x00000000000184f2                avdtp_check_play_reset
-                0x0000000000018514                a2dp_delay_report_check
-                0x000000000001854c                a2dp_run_loop
+                0x0000000000018316      0x3ee ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x0000000000018316                a2dp_cache_user_reset_do
+                0x0000000000018318                tws_get_delta_ticks
+                0x0000000000018344                aac_dec_kick_isr
+                0x00000000000183f4                tws_get_near_state
+                0x000000000001840a                tws_play_sync
+                0x000000000001840e                tws_ticks_trigger
+                0x0000000000018584                tws_trigger_isr
+                0x0000000000018642                avdtp_check_play_reset
+                0x0000000000018664                a2dp_delay_report_check
+                0x000000000001869c                a2dp_run_loop
  .com_text.a2dp.play
-                0x00000000000185b4       0x2a ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x00000000000185b4                tws_is_first_pkt
+                0x0000000000018704       0x2a ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x0000000000018704                tws_is_first_pkt
  .com_text.sbcdec.code
-                0x00000000000185de       0x24 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x00000000000185de                sbc_hwdec_kick_isr
+                0x000000000001872e       0x24 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x000000000001872e                sbc_hwdec_kick_isr
  .com_text.sbc.play.rst
-                0x0000000000018602       0x78 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x0000000000018602                a2dp_play_reset
+                0x0000000000018752       0x78 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x0000000000018752                a2dp_play_reset
  .com_text.bb.btisr
-                0x000000000001867a       0xe8 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x000000000001867a                a2dp_nor_silence_check
+                0x00000000000187ca       0xe8 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x00000000000187ca                a2dp_nor_silence_check
  .com_text.sbc.rx
-                0x0000000000018762       0x9c ..\..\libs\bt8930\libbtstack.a(a2dp_cache.o)
-                0x0000000000018762                a2dp_cache_check_alloc
-                0x00000000000187b6                a2dp_cache_alloc
- .com_text.sbc  0x00000000000187fe        0xa ..\..\libs\bt8930\libbtstack.a(a2dp.o)
-                0x00000000000187fe                a2dp_get_connections
+                0x00000000000188b2       0x9c ..\..\libs\bt8930\libbtstack.a(a2dp_cache.o)
+                0x00000000000188b2                a2dp_cache_check_alloc
+                0x0000000000018906                a2dp_cache_alloc
+ .com_text.sbc  0x000000000001894e        0xa ..\..\libs\bt8930\libbtstack.a(a2dp.o)
+                0x000000000001894e                a2dp_get_connections
  .com_text.a2dp
-                0x0000000000018808       0x38 ..\..\libs\bt8930\libbtstack.a(a2dp.o)
-                0x0000000000018808                get_avctp_connection_context_for_l2cap_cid
+                0x0000000000018958       0x38 ..\..\libs\bt8930\libbtstack.a(a2dp.o)
+                0x0000000000018958                get_avctp_connection_context_for_l2cap_cid
  .com_text.stack.run_loop
-                0x0000000000018840       0xc4 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
-                0x0000000000018840                btstack_cmp_abs_tick
-                0x0000000000018846                btstack_run_loop_execute_once
+                0x0000000000018990       0xc4 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
+                0x0000000000018990                btstack_cmp_abs_tick
+                0x0000000000018996                btstack_run_loop_execute_once
  .com_text.ret.stack.thread
-                0x0000000000018904       0x1a ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
-                0x0000000000018904                btstack_thread_event_trigger
-                0x0000000000018910                btstack_thread_msg_trigger
+                0x0000000000018a54       0x1a ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
+                0x0000000000018a54                btstack_thread_event_trigger
+                0x0000000000018a60                btstack_thread_msg_trigger
  .com_text.stack.ticks
-                0x000000000001891e       0x48 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
+                0x0000000000018a6e       0x48 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
  .com_text.bt.thread
-                0x0000000000018966       0x52 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
-                0x0000000000018966                bt_thread_check_trigger
+                0x0000000000018ab6       0x52 ..\..\libs\bt8930\libbtstack.a(btstack_run_loop.o)
+                0x0000000000018ab6                bt_thread_check_trigger
  .com_text.stack.linked_list
-                0x00000000000189b8       0x50 ..\..\libs\bt8930\libbtstack.a(btstack_linked_list.o)
-                0x00000000000189b8                btstack_linked_list_empty
-                0x00000000000189c0                btstack_linked_list_iterator_init
-                0x00000000000189cc                btstack_linked_list_iterator_has_next
-                0x00000000000189ea                btstack_linked_list_iterator_next
+                0x0000000000018b08       0x50 ..\..\libs\bt8930\libbtstack.a(btstack_linked_list.o)
+                0x0000000000018b08                btstack_linked_list_empty
+                0x0000000000018b10                btstack_linked_list_iterator_init
+                0x0000000000018b1c                btstack_linked_list_iterator_has_next
+                0x0000000000018b3a                btstack_linked_list_iterator_next
  .com_text.ble.send_pkt
-                0x0000000000018a08       0xda ..\..\libs\bt8930\libbtstack.a(gatt_server.o)
-                0x0000000000018a08                ble_send_notify_packet
-                0x0000000000018aac                att_event_server_send
+                0x0000000000018b58       0xda ..\..\libs\bt8930\libbtstack.a(gatt_server.o)
+                0x0000000000018b58                ble_send_notify_packet
+                0x0000000000018bfc                att_event_server_send
  .com_text.ble.send_kick
-                0x0000000000018ae2       0x22 ..\..\libs\bt8930\libbtstack.a(gatt_server.o)
-                0x0000000000018ae2                ble_send_kick
+                0x0000000000018c32       0x22 ..\..\libs\bt8930\libbtstack.a(gatt_server.o)
+                0x0000000000018c32                ble_send_kick
  .com_text.stack.hcic
-                0x0000000000018b04       0x10 ..\..\libs\bt8930\libbtstack.a(hci_transport_hcic.o)
-                0x0000000000018b04                hcic_can_send_packet_now
+                0x0000000000018c54       0x10 ..\..\libs\bt8930\libbtstack.a(hci_transport_hcic.o)
+                0x0000000000018c54                hcic_can_send_packet_now
  .com_text.stack.ticks
-                0x0000000000018b14        0xa ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
-                0x0000000000018b16                sys_tick_handler
- .com_text.isr  0x0000000000018b1e       0x20 ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
-                0x0000000000018b1e                bt_timer_isr
+                0x0000000000018c64        0xa ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
+                0x0000000000018c66                sys_tick_handler
+ .com_text.isr  0x0000000000018c6e       0x20 ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
+                0x0000000000018c6e                bt_timer_isr
  .com_text.ret.bb.sleep
-                0x0000000000018b3e       0x2c ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
-                0x0000000000018b3e                bt_is_sleep
+                0x0000000000018c8e       0x2c ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
+                0x0000000000018c8e                bt_is_sleep
  .com_text.bb.sleep
-                0x0000000000018b6a       0x3e ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
-                0x0000000000018b6a                bt_is_allow_sleep
-                0x0000000000018b96                btstack_is_sleep_status
+                0x0000000000018cba       0x3e ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
+                0x0000000000018cba                bt_is_allow_sleep
+                0x0000000000018ce6                btstack_is_sleep_status
  .com_text.stack.api
-                0x0000000000018ba8      0x212 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
-                0x0000000000018ba8                bt_is_testmode
-                0x0000000000018bb8                bt_is_l2cap_disconnected
-                0x0000000000018be4                bt_is_disconnecting
-                0x0000000000018c10                btstack_status_update
-                0x0000000000018c20                btstack_set_play_status
-                0x0000000000018c4e                btstack_get_play_status
-                0x0000000000018c60                bt_get_status
-                0x0000000000018cc0                bt_get_disp_status
-                0x0000000000018d04                bt_is_calling
-                0x0000000000018d18                bt_get_l2cap_status
-                0x0000000000018d48                bt_tws_get_status
+                0x0000000000018cf8      0x212 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
+                0x0000000000018cf8                bt_is_testmode
+                0x0000000000018d08                bt_is_l2cap_disconnected
+                0x0000000000018d34                bt_is_disconnecting
+                0x0000000000018d60                btstack_status_update
+                0x0000000000018d70                btstack_set_play_status
+                0x0000000000018d9e                btstack_get_play_status
+                0x0000000000018db0                bt_get_status
+                0x0000000000018e10                bt_get_disp_status
+                0x0000000000018e54                bt_is_calling
+                0x0000000000018e68                bt_get_l2cap_status
+                0x0000000000018e98                bt_tws_get_status
  .com_text.stack.run_loop
-                0x0000000000018dba       0x10 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
-                0x0000000000018dba                btstack_msg
- .com_text.sco  0x0000000000018dca       0x48 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
-                0x0000000000018dca                sco_is_connected
-                0x0000000000018ddc                sco_is_bypass
-                0x0000000000018e00                sbc_is_bypass
+                0x0000000000018f0a       0x10 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
+                0x0000000000018f0a                btstack_msg
+ .com_text.sco  0x0000000000018f1a       0x48 ..\..\libs\bt8930\libbtstack.a(btstack_api.o)
+                0x0000000000018f1a                sco_is_connected
+                0x0000000000018f2c                sco_is_bypass
+                0x0000000000018f50                sbc_is_bypass
  .com_text.bt.api
-                0x0000000000018e12       0x78 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
-                0x0000000000018e6c                bt_a2dp_get_codec_type
+                0x0000000000018f62       0x78 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
+                0x0000000000018fbc                bt_a2dp_get_codec_type
  .com_text.stack.ble.api0
-                0x0000000000018e8a       0x12 ..\..\libs\bt8930\libbtstack.a(ble_api.o)
-                0x0000000000018e8a                ble_get_status
+                0x0000000000018fda       0x12 ..\..\libs\bt8930\libbtstack.a(ble_api.o)
+                0x0000000000018fda                ble_get_status
  .com_text.stack.ble.api1
-                0x0000000000018e9c       0x18 ..\..\libs\bt8930\libbtstack.a(ble_api.o)
-                0x0000000000018e9c                ble_is_connect
+                0x0000000000018fec       0x18 ..\..\libs\bt8930\libbtstack.a(ble_api.o)
+                0x0000000000018fec                ble_is_connect
  .com_text.tws.timer.proc
-                0x0000000000018eb4      0x18a ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x0000000000018f08                tws_time_calc_proc_cb
-                0x0000000000018fa4                tws_time_fix_proc
+                0x0000000000019004      0x18a ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x0000000000019058                tws_time_calc_proc_cb
+                0x00000000000190f4                tws_time_fix_proc
  .com_text.tws.timer
-                0x000000000001903e       0x68 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x000000000001903e                tws_time_tickn_get
-                0x0000000000019046                tws_time_tickn_expire
-                0x0000000000019062                tws_time_tmr_proc
+                0x000000000001918e       0x68 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x000000000001918e                tws_time_tickn_get
+                0x0000000000019196                tws_time_tickn_expire
+                0x00000000000191b2                tws_time_tmr_proc
  .com_text.bb.tws
-                0x00000000000190a6       0x3c ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x00000000000190a6                tws_time_get
+                0x00000000000191f6       0x3c ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x00000000000191f6                tws_time_get
  .com_text.bb.tws.tick2n
-                0x00000000000190e2       0x16 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x00000000000190e2                tws_time_tick2n
- *fill*         0x00000000000190f8        0x0 
+                0x0000000000019232       0x16 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x0000000000019232                tws_time_tick2n
+ *fill*         0x0000000000019248        0x0 
  .com_text.ret.timer
-                0x00000000000190f8       0x14 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x00000000000190f8                tws_sync
+                0x0000000000019248       0x14 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x0000000000019248                tws_sync
  .com_text.tws.switch
-                0x000000000001910c       0x1e ..\..\libs\bt8930\libbtstack.a(tws_lmp.o)
-                0x000000000001910c                tws_rem_switch_is_allow
+                0x000000000001925c       0x1e ..\..\libs\bt8930\libbtstack.a(tws_lmp.o)
+                0x000000000001925c                tws_rem_switch_is_allow
  .com_text.tws.avdtp_close
-                0x000000000001912a       0x46 ..\..\libs\bt8930\libbtstack.a(tws_lmp.o)
-                0x000000000001912a                tws_evs_a2dp_close_cb
+                0x000000000001927a       0x46 ..\..\libs\bt8930\libbtstack.a(tws_lmp.o)
+                0x000000000001927a                tws_evs_a2dp_close_cb
  .com_text.tws.alarm
-                0x0000000000019170       0x16 ..\..\libs\bt8930\libbtstack.a(tws_alarm.o)
+                0x00000000000192c0       0x16 ..\..\libs\bt8930\libbtstack.a(tws_alarm.o)
  .com_text.tws.alarm.proc
-                0x0000000000019186       0x3a ..\..\libs\bt8930\libbtstack.a(tws_alarm.o)
-                0x0000000000019186                tws_alarm_proc
+                0x00000000000192d6       0x3a ..\..\libs\bt8930\libbtstack.a(tws_alarm.o)
+                0x00000000000192d6                tws_alarm_proc
  .com_text.ret.bb.frag
-                0x00000000000191c0       0x3c ..\..\libs\bt8930\libbtstack.a(bb_sche.o)
+                0x0000000000019310       0x3c ..\..\libs\bt8930\libbtstack.a(bb_sche.o)
  .com_text.ret.bb.prog
-                0x00000000000191fc       0x6a ..\..\libs\bt8930\libbtstack.a(bb_sche.o)
+                0x000000000001934c       0x6a ..\..\libs\bt8930\libbtstack.a(bb_sche.o)
  .com_text.bb.patch
-                0x0000000000019266       0x16 ..\..\libs\bt8930\libbtstack.a(patch_asm.o)
-                0x0000000000019266                bb_v1_patch0
+                0x00000000000193b6       0x16 ..\..\libs\bt8930\libbtstack.a(patch_asm.o)
+                0x00000000000193b6                bb_v1_patch0
  .com_text.ret.bb.isr
-                0x000000000001927c       0x1c ..\..\libs\bt8930\libbtstack.a(aes.o)
+                0x00000000000193cc       0x1c ..\..\libs\bt8930\libbtstack.a(aes.o)
  .com_text.tws.rssi
-                0x0000000000019298       0x4a ..\..\libs\bt8930\libbtstack.a(bt_api.o)
-                0x0000000000019298                tws_get_rssi
+                0x00000000000193e8       0x4a ..\..\libs\bt8930\libbtstack.a(bt_api.o)
+                0x00000000000193e8                tws_get_rssi
  .com_text.bb.api.clock
-                0x00000000000192e2       0x3e ..\..\libs\bt8930\libbtstack.a(bt_api.o)
-                0x00000000000192e2                bt_tws_master_clock_get
+                0x0000000000019432       0x3e ..\..\libs\bt8930\libbtstack.a(bt_api.o)
+                0x0000000000019432                bt_tws_master_clock_get
  .com_text.bb.active_lid
-                0x0000000000019320        0x8 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
-                0x0000000000019320                bt_set_active_lid
+                0x0000000000019470        0x8 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
+                0x0000000000019470                bt_set_active_lid
  .com_text.bt21.isr
-                0x0000000000019328     0x12e0 ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
-                0x0000000000019b12                bt_page_init_func
-                0x0000000000019b44                bt_acl_rx_header
-                0x0000000000019e08                bt_acl_qos_check
-                0x0000000000019ef8                bt_acl_rx_end
-                0x0000000000019f76                bb_sched_time_prio_adj
-                0x000000000001a060                bt_isr_hook
-                0x000000000001a5c0                bt_acl_get_link_info
+                0x0000000000019478     0x12e0 ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
+                0x0000000000019c62                bt_page_init_func
+                0x0000000000019c94                bt_acl_rx_header
+                0x0000000000019f58                bt_acl_qos_check
+                0x000000000001a048                bt_acl_rx_end
+                0x000000000001a0c6                bb_sched_time_prio_adj
+                0x000000000001a1b0                bt_isr_hook
+                0x000000000001a710                bt_acl_get_link_info
  .com_text.bt21.isr.adj
-                0x000000000001a608      0x14a ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
-                0x000000000001a608                ble_sched_prio_time_adj
+                0x000000000001a758      0x14a ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
+                0x000000000001a758                ble_sched_prio_time_adj
  .com_text.ret.ble.isr
-                0x000000000001a752      0x128 ..\..\libs\bt8930\libbtstack.a(ble_hook.o)
-                0x000000000001a752                ble_pwr_ctrl_hook
-                0x000000000001a7c4                ble_isr_hook
+                0x000000000001a8a2      0x128 ..\..\libs\bt8930\libbtstack.a(ble_hook.o)
+                0x000000000001a8a2                ble_pwr_ctrl_hook
+                0x000000000001a914                ble_isr_hook
  .com_text.ret.bb.sleep
-                0x000000000001a87a       0x16 ..\..\libs\bt8930\libbtstack.a(hct_tl.o)
-                0x000000000001a87a                hct_queue_is_empty
+                0x000000000001a9ca       0x16 ..\..\libs\bt8930\libbtstack.a(hct_tl.o)
+                0x000000000001a9ca                hct_queue_is_empty
  .com_text.ret.bb.hct
-                0x000000000001a890       0x1a ..\..\libs\bt8930\libbtstack.a(hct_fc.o)
-                0x000000000001a890                hci_fc_acl_packet_sent
+                0x000000000001a9e0       0x1a ..\..\libs\bt8930\libbtstack.a(hct_fc.o)
+                0x000000000001a9e0                hci_fc_acl_packet_sent
  .com_text.tws.timer
-                0x000000000001a8aa       0x38 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
-                0x000000000001a8aa                tws_time_calc_proc
+                0x000000000001a9fa       0x38 ..\..\libs\bt8930\libbtstack.a(tws_time.o)
+                0x000000000001a9fa                tws_time_calc_proc
  .com_text.bb.tws.sw
-                0x000000000001a8e2       0x32 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001aa32       0x32 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
  .com_text.stk.tws.send
-                0x000000000001a914       0x18 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
-                0x000000000001a914                tws_vs_switch_is_active
-                0x000000000001a922                tws_vs_switch_get_status
+                0x000000000001aa64       0x18 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001aa64                tws_vs_switch_is_active
+                0x000000000001aa72                tws_vs_switch_get_status
  .com_text.bb.tws.sw.chk
-                0x000000000001a92c      0x106 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
-                0x000000000001a92c                tws_switch_acl_is_pause
-                0x000000000001a94e                tws_switch_qos_check
+                0x000000000001aa7c      0x106 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001aa7c                tws_switch_acl_is_pause
+                0x000000000001aa9e                tws_switch_qos_check
  .com_text.bb.tws.sw.tws
-                0x000000000001aa32      0x1e0 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
-                0x000000000001aa32                tws_switch_wait_aclseqn
-                0x000000000001aa5c                tws_switch_restore_aclseqn_do
-                0x000000000001aaca                tws_switch_restore_aclseqn
-                0x000000000001ab12                tws_switch_check_inst
+                0x000000000001ab82      0x1e0 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001ab82                tws_switch_wait_aclseqn
+                0x000000000001abac                tws_switch_restore_aclseqn_do
+                0x000000000001ac1a                tws_switch_restore_aclseqn
+                0x000000000001ac62                tws_switch_check_inst
  .com_text.bb.tws.sw.need_cb
-                0x000000000001ac12        0x6 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
-                0x000000000001ac12                tws_switch_is_need_cb
+                0x000000000001ad62        0x6 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001ad62                tws_switch_is_need_cb
  .com_text.bb.tws.sw.need
-                0x000000000001ac18       0x64 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
-                0x000000000001ac18                tws_switch_is_need
+                0x000000000001ad68       0x64 ..\..\libs\bt8930\libbtstack.a(tws_switch.o)
+                0x000000000001ad68                tws_switch_is_need
  .com_text.bb.tws.sco
-                0x000000000001ac7c      0x29a ..\..\libs\bt8930\libbtstack.a(tws_sco.o)
-                0x000000000001ac7c                tws_sco_is_active
-                0x000000000001ac8a                tws_sco_is_setup
-                0x000000000001ac96                tws_sco_is_active_for_idx
-                0x000000000001acb4                tws_sco_master_setup_ind
-                0x000000000001accc                tws_sco_rx_lost_pkt
-                0x000000000001ad02                tws_sco_tx_lost_pkt
-                0x000000000001adb4                tws_sco_tx_lost_req
-                0x000000000001ade8                tws_sco_buf_add
-                0x000000000001ae3c                tws_sco_set_lost_req
-                0x000000000001aea2                tws_sco_get_lost_req
+                0x000000000001adcc      0x29a ..\..\libs\bt8930\libbtstack.a(tws_sco.o)
+                0x000000000001adcc                tws_sco_is_active
+                0x000000000001adda                tws_sco_is_setup
+                0x000000000001ade6                tws_sco_is_active_for_idx
+                0x000000000001ae04                tws_sco_master_setup_ind
+                0x000000000001ae1c                tws_sco_rx_lost_pkt
+                0x000000000001ae52                tws_sco_tx_lost_pkt
+                0x000000000001af04                tws_sco_tx_lost_req
+                0x000000000001af38                tws_sco_buf_add
+                0x000000000001af8c                tws_sco_set_lost_req
+                0x000000000001aff2                tws_sco_get_lost_req
  .com_text.bb.sco
-                0x000000000001af16       0x72 ..\..\libs\bt8930\libbtstack.a(tws_sco.o)
-                0x000000000001af16                bt_sco_get_index
+                0x000000000001b066       0x72 ..\..\libs\bt8930\libbtstack.a(tws_sco.o)
+                0x000000000001b066                bt_sco_get_index
  .com_text.bb.tws.evs.bitoff
-                0x000000000001af88       0x6a ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b0d8       0x6a ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
  .com_text.bb.tws.evs.proc
-                0x000000000001aff2      0x41c ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
-                0x000000000001b0f4                tws_evs_send_proc
-                0x000000000001b280                tws_evs_rx_remote
+                0x000000000001b142      0x41c ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b244                tws_evs_send_proc
+                0x000000000001b3d0                tws_evs_rx_remote
  .com_text.bb.tws.evs
-                0x000000000001b40e       0x72 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
-                0x000000000001b40e                tws_evs_send_last_seqn_req
-                0x000000000001b434                tws_evs_send_first_seqn_req
-                0x000000000001b45a                tws_evs_send_sco_req
+                0x000000000001b55e       0x72 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b55e                tws_evs_send_last_seqn_req
+                0x000000000001b584                tws_evs_send_first_seqn_req
+                0x000000000001b5aa                tws_evs_send_sco_req
  .com_text.bb.tws.avdtp_req
-                0x000000000001b480       0x36 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
-                0x000000000001b480                tws_evs_send_avdtp_close_req
+                0x000000000001b5d0       0x36 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b5d0                tws_evs_send_avdtp_close_req
  .com_text.bb.tws.evs.txptr
-                0x000000000001b4b6       0x80 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
-                0x000000000001b4b6                tws_evs_check_tx_ptr
+                0x000000000001b606       0x80 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b606                tws_evs_check_tx_ptr
  .com_text.bb.tws.evs.seqn
-                0x000000000001b536       0x66 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
-                0x000000000001b536                tws_seqn_clr_local
-                0x000000000001b560                tws_seqn_update_local
+                0x000000000001b686       0x66 ..\..\libs\bt8930\libbtstack.a(tws_evs.o)
+                0x000000000001b686                tws_seqn_clr_local
+                0x000000000001b6b0                tws_seqn_update_local
  .com_text.bb.tws.ack.sta
-                0x000000000001b59c       0xb2 ..\..\libs\bt8930\libbtstack.a(tws_ack.o)
+                0x000000000001b6ec       0xb2 ..\..\libs\bt8930\libbtstack.a(tws_ack.o)
  .com_text.bb.tws.ack
-                0x000000000001b64e      0x4ce ..\..\libs\bt8930\libbtstack.a(tws_ack.o)
-                0x000000000001b64e                tws_set_tx_ack2
-                0x000000000001b708                tws_set_rx_ack2
-                0x000000000001b7dc                tws_acl_ignore_ack2
-                0x000000000001b838                tws_acl_rx_ack2tx
-                0x000000000001b948                tws_acl_rx_ack2rx
-                0x000000000001baf6                tws_acl_rx_media_pkt
+                0x000000000001b79e      0x4ce ..\..\libs\bt8930\libbtstack.a(tws_ack.o)
+                0x000000000001b79e                tws_set_tx_ack2
+                0x000000000001b858                tws_set_rx_ack2
+                0x000000000001b92c                tws_acl_ignore_ack2
+                0x000000000001b988                tws_acl_rx_ack2tx
+                0x000000000001ba98                tws_acl_rx_ack2rx
+                0x000000000001bc46                tws_acl_rx_media_pkt
  .com_text.ret.bb.isr
-                0x000000000001bb1c       0x2c ..\..\libs\bt8930\libbtstack.a(tws_acl.o)
+                0x000000000001bc6c       0x2c ..\..\libs\bt8930\libbtstack.a(tws_acl.o)
  .com_text.ble.isr.con.chas
-                0x000000000001bb48       0x3c ..\..\libs\bt8930\libbtstack.a(ble_hal.o)
-                0x000000000001bb48                ble_channel_assess
+                0x000000000001bc98       0x3c ..\..\libs\bt8930\libbtstack.a(ble_hal.o)
+                0x000000000001bc98                ble_channel_assess
  .com_text.ble.isr.con.end
-                0x000000000001bb84       0x5a ..\..\libs\bt8930\libbtstack.a(ble_con.o)
-                0x000000000001bb84                ble_con_rx_end
+                0x000000000001bcd4       0x5a ..\..\libs\bt8930\libbtstack.a(ble_con.o)
+                0x000000000001bcd4                ble_con_rx_end
  .com_text.ret.bb.isr
-                0x000000000001bbde       0x32 ..\..\libs\bt8930\libbtstack.a(ble.o)
-                0x000000000001bbde                ble_isr
- .com_text.sys  0x000000000001bc10       0x18 ..\..\libs\bt8930\libbtstack.a(platform_asm.o)
-                0x000000000001bc10                s_bit64
+                0x000000000001bd2e       0x32 ..\..\libs\bt8930\libbtstack.a(ble.o)
+                0x000000000001bd2e                ble_isr
+ .com_text.sys  0x000000000001bd60       0x18 ..\..\libs\bt8930\libbtstack.a(platform_asm.o)
+                0x000000000001bd60                s_bit64
  .com_text.fifo.list
-                0x000000000001bc28       0xb6 ..\..\libs\bt8930\libbtstack.a(fifo_list.o)
-                0x000000000001bc28                fifo_insert
-                0x000000000001bca6                fifo_remove_curr
- *fill*         0x000000000001bcde        0x2 
+                0x000000000001bd78       0xb6 ..\..\libs\bt8930\libbtstack.a(fifo_list.o)
+                0x000000000001bd78                fifo_insert
+                0x000000000001bdf6                fifo_remove_curr
+ *fill*         0x000000000001be2e        0x2 
  .com_text.tws.con
-                0x000000000001bce0      0x1ec ..\..\libs\bt8930\libbtstack.a(tws_con.o)
+                0x000000000001be30      0x1ec ..\..\libs\bt8930\libbtstack.a(tws_con.o)
  .com_text.sbc.kick
-                0x000000000001becc       0x26 ..\..\libs\bt8930\libcodecs.a(bt_sbc.o)
-                0x000000000001becc                a2dp_kick_play
+                0x000000000001c01c       0x26 ..\..\libs\bt8930\libcodecs.a(bt_sbc.o)
+                0x000000000001c01c                a2dp_kick_play
  .com_text.music
-                0x000000000001bef2       0x28 ..\..\libs\bt8930\libcodecs.a(layer3.o)
-                0x000000000001bef2                music_sync_kick
- .com_text.irq  0x000000000001bf1a       0x26 ..\..\libs\bt8930\libcodecs.a(bit_pickup.o)
-                0x000000000001bf1a                bsp_pickup_isr
+                0x000000000001c042       0x28 ..\..\libs\bt8930\libcodecs.a(layer3.o)
+                0x000000000001c042                music_sync_kick
+ .com_text.irq  0x000000000001c06a       0x26 ..\..\libs\bt8930\libcodecs.a(bit_pickup.o)
+                0x000000000001c06a                bsp_pickup_isr
  .com_text.aac.done
-                0x000000000001bf40       0x28 ..\..\libs\bt8930\libcodecs.a(bt_aac.o)
-                0x000000000001bf40                aac_gpdma_done
+                0x000000000001c090       0x28 ..\..\libs\bt8930\libcodecs.a(bt_aac.o)
+                0x000000000001c090                aac_gpdma_done
  .com_text.decode
-                0x000000000001bf68        0x4 ..\..\libs\bt8930\libcodecs.a(weak_symbol.o)
-                0x000000000001bf68                maint_test_dac_exception_decode_err
-                0x000000000001bf6a                maint_test_dac_exception_set_flag
+                0x000000000001c0b8        0x4 ..\..\libs\bt8930\libcodecs.a(weak_symbol.o)
+                0x000000000001c0b8                maint_test_dac_exception_decode_err
+                0x000000000001c0ba                maint_test_dac_exception_set_flag
  .com_text.math.fft.isr
-                0x000000000001bf6c       0x2a ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
-                0x000000000001bf6c                rdft_isr
+                0x000000000001c0bc       0x2a ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
+                0x000000000001c0bc                rdft_isr
  .com_text.math.fft
-                0x000000000001bf96       0xbc ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
-                0x000000000001bf96                fft_hw
+                0x000000000001c0e6       0xbc ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
+                0x000000000001c0e6                fft_hw
  .com_text.math.ifft
-                0x000000000001c052       0xe8 ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
-                0x000000000001c052                ifft_hw
+                0x000000000001c1a2       0xe8 ..\..\libs\bt8930\libvoices.a(rdft_hw.o)
+                0x000000000001c1a2                ifft_hw
  .com_text.bb.sco
-                0x000000000001c13a       0x2a ..\..\libs\bt8930\libvoices.a(plc.o)
-                0x000000000001c13a                plc_isr
- .com_text.npu  0x000000000001c164      0x28c ..\..\libs\bt8930\libvoices.a(npu.o)
-                0x000000000001c164                npu_malloc
-                0x000000000001c214                npu_calloc
-                0x000000000001c238                npu_free_last
-                0x000000000001c28c                npu_free_all
-                0x000000000001c2a8                npu_code_insert
-                0x000000000001c370                npu_kick_reset
-                0x000000000001c3a2                npu_kick_wait
- .com_text.irq  0x000000000001c3f0       0x36 ..\..\libs\bt8930\libvoices.a(npu.o)
-                0x000000000001c3f0                npu_isr
+                0x000000000001c28a       0x2a ..\..\libs\bt8930\libvoices.a(plc.o)
+                0x000000000001c28a                plc_isr
+ .com_text.npu  0x000000000001c2b4      0x28c ..\..\libs\bt8930\libvoices.a(npu.o)
+                0x000000000001c2b4                npu_malloc
+                0x000000000001c364                npu_calloc
+                0x000000000001c388                npu_free_last
+                0x000000000001c3dc                npu_free_all
+                0x000000000001c3f8                npu_code_insert
+                0x000000000001c4c0                npu_kick_reset
+                0x000000000001c4f2                npu_kick_wait
+ .com_text.irq  0x000000000001c540       0x36 ..\..\libs\bt8930\libvoices.a(npu.o)
+                0x000000000001c540                npu_isr
  .com_text.math.irq
-                0x000000000001c426        0x4 ..\..\libs\bt8930\libvoices.a(math_hw.o)
-                0x000000000001c426                math_isr
+                0x000000000001c576        0x4 ..\..\libs\bt8930\libvoices.a(math_hw.o)
+                0x000000000001c576                math_isr
  *debug.o(.rodata*)
  *(.com_rodata*)
- *fill*         0x000000000001c42a        0x2 
+ *fill*         0x000000000001c57a        0x2 
  .com_rodata.anc
-                0x000000000001c42c        0x3 Output\obj\modules\audio\bsp_eq.o
-                0x000000000001c42c                tbl_anc_header
- *fill*         0x000000000001c42f        0x1 
+                0x000000000001c57c        0x3 Output\obj\modules\audio\bsp_eq.o
+                0x000000000001c57c                tbl_anc_header
+ *fill*         0x000000000001c57f        0x1 
+ .com_rodata.bsp.key
+                0x000000000001c580        0xf Output\obj\modules\key\key_scan.o
+                0x000000000001c580                key_enqueue_str
+ *fill*         0x000000000001c58f        0x1 
  .com_rodata.dac
-                0x000000000001c430       0x10 ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x000000000001c590       0x10 ..\..\libs\bt8930\libplatform.a(dac_src.o)
  .com_rodata.ret.dac.vol
-                0x000000000001c440        0xa ..\..\libs\bt8930\libplatform.a(dac_vol.o)
- *fill*         0x000000000001c44a        0x2 
+                0x000000000001c5a0        0xa ..\..\libs\bt8930\libplatform.a(dac_vol.o)
+ *fill*         0x000000000001c5aa        0x2 
  .com_rodata.sdadc.table
-                0x000000000001c44c       0x78 ..\..\libs\bt8930\libplatform.a(sdadc.o)
-                0x000000000001c44c                sdadc_sfr
+                0x000000000001c5ac       0x78 ..\..\libs\bt8930\libplatform.a(sdadc.o)
+                0x000000000001c5ac                sdadc_sfr
  .com_rodata.ret.irq
-                0x000000000001c4c4       0x23 ..\..\libs\bt8930\libplatform.a(interrupt.o)
-                0x000000000001c4c4                str_wdt_error
-                0x000000000001c4d4                watch_point_str
- *fill*         0x000000000001c4e7        0x1 
+                0x000000000001c624       0x23 ..\..\libs\bt8930\libplatform.a(interrupt.o)
+                0x000000000001c624                str_wdt_error
+                0x000000000001c634                watch_point_str
+ *fill*         0x000000000001c647        0x1 
  .com_rodata.crc.tbl
-                0x000000000001c4e8      0x100 ..\..\libs\bt8930\libplatform.a(crc.o)
-                0x000000000001c4e8                crc8_tbl
+                0x000000000001c648      0x100 ..\..\libs\bt8930\libplatform.a(crc.o)
+                0x000000000001c648                crc8_tbl
  .com_rodata.err.str
-                0x000000000001c5e8        0xb ..\..\libs\bt8930\libplatform.a(debug.o)
-                0x000000000001c5e8                str_dump_err
- *fill*         0x000000000001c5f3        0x1 
+                0x000000000001c748        0xb ..\..\libs\bt8930\libplatform.a(debug.o)
+                0x000000000001c748                str_dump_err
+ *fill*         0x000000000001c753        0x1 
  .com_rodata.miss
-                0x000000000001c5f4       0x29 ..\..\libs\bt8930\libplatform.a(debug.o)
- *fill*         0x000000000001c61d        0x3 
+                0x000000000001c754       0x29 ..\..\libs\bt8930\libplatform.a(debug.o)
+ *fill*         0x000000000001c77d        0x3 
  .com_rodata.multi.key
-                0x000000000001c620        0x8 ..\..\libs\bt8930\libplatform.a(key.o)
-                0x000000000001c620                key_multi_tbl
+                0x000000000001c780        0x8 ..\..\libs\bt8930\libplatform.a(key.o)
+                0x000000000001c780                key_multi_tbl
  .com_rodata.bb.tws.spr
-                0x000000000001c628       0x78 ..\..\libs\bt8930\libbtstack.a(patch.o)
+                0x000000000001c788       0x78 ..\..\libs\bt8930\libbtstack.a(patch.o)
  .com_rodata.bb.tbl
-                0x000000000001c6a0        0x8 ..\..\libs\bt8930\libbtstack.a(rf.o)
+                0x000000000001c800        0x8 ..\..\libs\bt8930\libbtstack.a(rf.o)
  .com_rodata.bb.sco
-                0x000000000001c6a8       0x3c ..\..\libs\bt8930\libbtstack.a(bt_sco.o)
-                0x000000000001c6a8                tbl_msbc_mute
+                0x000000000001c808       0x3c ..\..\libs\bt8930\libbtstack.a(bt_sco.o)
+                0x000000000001c808                tbl_msbc_mute
  .com_rodata.bb.tbl
-                0x000000000001c6e4       0x32 ..\..\libs\bt8930\libbtstack.a(bt_acl.o)
- *fill*         0x000000000001c716        0x2 
+                0x000000000001c844       0x32 ..\..\libs\bt8930\libbtstack.a(bt_acl.o)
+ *fill*         0x000000000001c876        0x2 
  .com_rodata.bb.tbl
-                0x000000000001c718       0x18 ..\..\libs\bt8930\libbtstack.a(bt21.o)
+                0x000000000001c878       0x18 ..\..\libs\bt8930\libbtstack.a(bt21.o)
  .com_rodata.ret.bb.tbl
-                0x000000000001c730       0x18 ..\..\libs\bt8930\libbtstack.a(bt21.o)
+                0x000000000001c890       0x18 ..\..\libs\bt8930\libbtstack.a(bt21.o)
  .com_rodata.bb.tbl
-                0x000000000001c748       0x44 ..\..\libs\bt8930\libbtstack.a(bb_utils.o)
-                0x000000000001c748                one_bits
-                0x000000000001c758                bb_rate_to_byte_dur_us
-                0x000000000001c760                bb_rate_to_phy_mask
-                0x000000000001c764                bb_phy_value_to_mask
-                0x000000000001c768                bb_phy_mask_to_value
-                0x000000000001c770                bb_phy_to_rate
-                0x000000000001c774                bb_rate_to_phy
-                0x000000000001c77c                bb_sca2ppm
+                0x000000000001c8a8       0x44 ..\..\libs\bt8930\libbtstack.a(bb_utils.o)
+                0x000000000001c8a8                one_bits
+                0x000000000001c8b8                bb_rate_to_byte_dur_us
+                0x000000000001c8c0                bb_rate_to_phy_mask
+                0x000000000001c8c4                bb_phy_value_to_mask
+                0x000000000001c8c8                bb_phy_mask_to_value
+                0x000000000001c8d0                bb_phy_to_rate
+                0x000000000001c8d4                bb_rate_to_phy
+                0x000000000001c8dc                bb_sca2ppm
  .com_rodata.bb.tws
-                0x000000000001c78c       0x10 ..\..\libs\bt8930\libbtstack.a(bb_int.o)
-                0x000000000001c78c                str_bb_err
+                0x000000000001c8ec       0x10 ..\..\libs\bt8930\libbtstack.a(bb_int.o)
+                0x000000000001c8ec                str_bb_err
  .com_rodata.bb.tbl
-                0x000000000001c79c       0x3c ..\..\libs\bt8930\libbtstack.a(bb.o)
-                0x000000000001c79c                bb_priority
+                0x000000000001c8fc       0x3c ..\..\libs\bt8930\libbtstack.a(bb.o)
+                0x000000000001c8fc                bb_priority
  .com_rodata.btstakc.hci
-                0x000000000001c7d8        0x8 ..\..\libs\bt8930\libbtstack.a(hci_cmd.o)
-                0x000000000001c7d8                hci_num_of_packet_complete
+                0x000000000001c938        0x8 ..\..\libs\bt8930\libbtstack.a(hci_cmd.o)
+                0x000000000001c938                hci_num_of_packet_complete
  .com_rodata.bt.avdtp
-                0x000000000001c7e0       0x10 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
+                0x000000000001c940       0x10 ..\..\libs\bt8930\libbtstack.a(avdtp.o)
  .com_rodata.hci.trans
-                0x000000000001c7f0       0x20 ..\..\libs\bt8930\libbtstack.a(hci_transport_hcic.o)
+                0x000000000001c950       0x20 ..\..\libs\bt8930\libbtstack.a(hci_transport_hcic.o)
  .com_rodata.bb.tbl
-                0x000000000001c810        0xc ..\..\libs\bt8930\libbtstack.a(vs_proc.o)
-                0x000000000001c810                vs_msg_env
+                0x000000000001c970        0xc ..\..\libs\bt8930\libbtstack.a(vs_proc.o)
+                0x000000000001c970                vs_msg_env
  .com_rodata.bb.tbl
-                0x000000000001c81c        0xc ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
+                0x000000000001c97c        0xc ..\..\libs\bt8930\libbtstack.a(bt_hook.o)
  .com_rodata.bb.tbl
-                0x000000000001c828        0xc ..\..\libs\bt8930\libbtstack.a(lm_proc.o)
-                0x000000000001c828                lm_msg_env
+                0x000000000001c988        0xc ..\..\libs\bt8930\libbtstack.a(lm_proc.o)
+                0x000000000001c988                lm_msg_env
  .com_rodata.bb.tbl
-                0x000000000001c834        0xc ..\..\libs\bt8930\libbtstack.a(lc_proc.o)
-                0x000000000001c834                lc_msg_env
+                0x000000000001c994        0xc ..\..\libs\bt8930\libbtstack.a(lc_proc.o)
+                0x000000000001c994                lc_msg_env
  .com_rodata.bb.tbl
-                0x000000000001c840        0xc ..\..\libs\bt8930\libbtstack.a(ll_proc.o)
-                0x000000000001c840                ll_msg_env
+                0x000000000001c9a0        0xc ..\..\libs\bt8930\libbtstack.a(ll_proc.o)
+                0x000000000001c9a0                ll_msg_env
  .com_rodata.bb.tbl
-                0x000000000001c84c       0x10 ..\..\libs\bt8930\libbtstack.a(ble_con.o)
-                0x000000000001c84c                byte_tx_time
-                0x000000000001c854                fixed_tx_time
+                0x000000000001c9ac       0x10 ..\..\libs\bt8930\libbtstack.a(ble_con.o)
+                0x000000000001c9ac                byte_tx_time
+                0x000000000001c9b4                fixed_tx_time
  .com_rodata.bb.tbl
-                0x000000000001c85c        0xc ..\..\libs\bt8930\libbtstack.a(mgr_proc.o)
-                0x000000000001c85c                mgr_msg_env
+                0x000000000001c9bc        0xc ..\..\libs\bt8930\libbtstack.a(mgr_proc.o)
+                0x000000000001c9bc                mgr_msg_env
  .com_rodata.ret.bb.tbl
-                0x000000000001c868       0x18 ..\..\libs\bt8930\libbtstack.a(ble_buf.o)
+                0x000000000001c9c8       0x18 ..\..\libs\bt8930\libbtstack.a(ble_buf.o)
  *(.data*)
- .data          0x000000000001c880       0x30 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_profile.o
- .data          0x000000000001c8b0       0x3c Output\obj\modules\bluetooth\bt\profile.o
-                0x000000000001c8b0                spp_sdp_record_item
-                0x000000000001c8bc                hfp_sdp_record_item
-                0x000000000001c8c8                avctp_tg_sdp_record_item
-                0x000000000001c8d4                avdtp_sdp_record_item
-                0x000000000001c8e0                avctp_ct_sdp_record_item
- .data          0x000000000001c8ec       0x68 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
- .data          0x000000000001c954        0xc ..\..\libs\bt8930\libbtstack.a(spp.o)
- .data          0x000000000001c960       0x20 ..\..\libs\bt8930\libbtstack.a(btstack_link_key_db.o)
+ .data          0x000000000001c9e0       0x30 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_profile.o
+ .data          0x000000000001ca10       0x3c Output\obj\modules\bluetooth\bt\profile.o
+                0x000000000001ca10                spp_sdp_record_item
+                0x000000000001ca1c                hfp_sdp_record_item
+                0x000000000001ca28                avctp_tg_sdp_record_item
+                0x000000000001ca34                avdtp_sdp_record_item
+                0x000000000001ca40                avctp_ct_sdp_record_item
+ .data          0x000000000001ca4c       0x68 ..\..\libs\bt8930\libplatform.a(dac_dma.o)
+ .data          0x000000000001cab4        0xc ..\..\libs\bt8930\libbtstack.a(spp.o)
+ .data          0x000000000001cac0       0x20 ..\..\libs\bt8930\libbtstack.a(btstack_link_key_db.o)
  *(.sdata*)
- .sdata         0x000000000001c980        0x8 Output\obj\functions\func_bt.o
- .sdata         0x000000000001c988        0x1 Output\obj\functions\sfunc_bt_ring.o
- *fill*         0x000000000001c989        0x3 
- .sdata         0x000000000001c98c       0x1b Output\obj\modules\bluetooth\app\ab_mate\ab_mate_app.o
- *fill*         0x000000000001c9a7        0x1 
- .sdata         0x000000000001c9a8       0x21 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_profile.o
-                0x000000000001c9a8                ab_mate_generic_attribute_uuid
-                0x000000000001c9ac                ab_mate_dev_name_uuid16
-                0x000000000001c9b0                ab_mate_generic_access_primay_uuid16
-                0x000000000001c9b4                ab_mate_write_cmd_uuid16
-                0x000000000001c9b8                ab_mate_write_uuid16
-                0x000000000001c9bc                ab_mate_notify_uuid16
-                0x000000000001c9c0                ab_mate_primay_uuid16
- .sdata         0x000000000001c9c9        0x1 Output\obj\modules\bluetooth\ble\adv0.o
-                0x000000000001c9c9                cfg_ble_adv0_en
- .sdata         0x000000000001c9ca        0x2 Output\obj\modules\bluetooth\ble\ble.o
-                0x000000000001c9ca                cfg_bt_ble_adv
-                0x000000000001c9cb                cfg_ble_security_en
- .sdata         0x000000000001c9cc       0x22 Output\obj\modules\bluetooth\bt\bt.o
-                0x000000000001c9cc                bt_local_addr
-                0x000000000001c9d4                bt_local_name
-                0x000000000001c9dc                cfg_bt_sup_to_connect_times
-                0x000000000001c9de                cfg_bt_pwrup_connect_times
-                0x000000000001c9df                cfg_bt_connect_times
-                0x000000000001c9e0                cfg_bt_spp_rfcomm_server_ch2
-                0x000000000001c9e1                cfg_bt_spp_rfcomm_server_ch1
-                0x000000000001c9e2                cfg_bt_spp_rfcomm_server_ch0
-                0x000000000001c9e3                cfg_bt_hfp_feature
-                0x000000000001c9e4                cfg_bt_a2dp_feature1
-                0x000000000001c9e5                cfg_bt_a2dp_feature
-                0x000000000001c9e6                cfg_bt_support_codec
-                0x000000000001c9e8                cfg_bt_support_profile
-                0x000000000001c9ea                cfg_bt_simple_pair_mode
-                0x000000000001c9eb                cfg_bt_tws_mode
-                0x000000000001c9ec                cfg_bt_dual_mode
-                0x000000000001c9ed                cfg_bt_max_acl_link
- .sdata         0x000000000001c9ee        0x1 Output\obj\modules\bluetooth\call\bt_sco.o
-                0x000000000001c9ee                cfg_bt_near_frame
- *fill*         0x000000000001c9ef        0x1 
- .sdata         0x000000000001c9f0        0xa Output\obj\modules\bluetooth\tws\tws.o
-                0x000000000001c9f0                cfg_bt_tws_tick_freq
-                0x000000000001c9f2                cfg_bt_tws_sup_to_connect_times
-                0x000000000001c9f4                cfg_bt_tws_connect_times
-                0x000000000001c9f5                cfg_bt_tws_search_slave_times
-                0x000000000001c9f6                cfg_bt_nor_connect_times
-                0x000000000001c9f8                cfg_bt_tws_feat
- .sdata         0x000000000001c9fa        0x1 Output\obj\system\system.o
-                0x000000000001c9fa                cfg_spiflash_speed_up_en
- .sdata         0x000000000001c9fb        0x1 ..\..\libs\bt8930\libplatform.a(audio_eq.o)
-                0x000000000001c9fb                msc_dac_eq_fade_enable
- .sdata         0x000000000001c9fc        0x2 ..\..\libs\bt8930\libplatform.a(startup.o)
-                0x000000000001c9fc                cfg_sys_heap_size
- .sdata         0x000000000001c9fe        0x2 ..\..\libs\bt8930\libplatform.a(pmu.o)
-                0x000000000001c9fe                cfg_pmu_buck_freq
- .sdata         0x000000000001ca00        0x1 ..\..\libs\bt8930\libplatform.a(charge.o)
-                0x000000000001ca00                cfg_charge_dc_detect_time
- .sdata         0x000000000001ca01        0x1 ..\..\libs\bt8930\libplatform.a(bt_pll.o)
- .sdata         0x000000000001ca02        0x1 ..\..\libs\bt8930\libplatform.a(rf_zoom.o)
-                0x000000000001ca02                cfg_bb_rf_path_gain
- .sdata         0x000000000001ca03        0x3 ..\..\libs\bt8930\libbtstack.a(tws.o)
-                0x000000000001ca03                opreate_lid
-                0x000000000001ca04                snoop_lid
-                0x000000000001ca05                tws_lid
- .sdata         0x000000000001ca06        0x1 ..\..\libs\bt8930\libbtstack.a(ble_page.o)
- *fill*         0x000000000001ca07        0x1 
- .sdata         0x000000000001ca08       0x18 ..\..\libs\bt8930\libbtstack.a(extern_bt.o)
-                0x000000000001ca08                cfg_bt_att_auto_connect
-                0x000000000001ca09                cfg_bt_spp_auto_connect
-                0x000000000001ca0a                cfg_bt_2acl_adjust_ble_interval
-                0x000000000001ca0c                cfg_bt_comp_id
-                0x000000000001ca0e                cfg_bt_tbox_ota_support
-                0x000000000001ca10                cfg_bt_music_low_latency
-                0x000000000001ca12                cfg_bt_music_normal_latency
-                0x000000000001ca1e                cfg_bt_sniff_clk_sel
-                0x000000000001ca1f                cfg_bb_rf_gfsk_pwr
- .sdata         0x000000000001ca20        0x2 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
-                0x000000000001ca20                cfg_music_chk_cnt
-                0x000000000001ca21                cfg_silence_chk_cnt
- .sdata         0x000000000001ca22        0x2 ..\..\libs\bt8930\libbtstack.a(att_server.o)
- .sdata         0x000000000001ca24        0xc ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
- .sdata         0x000000000001ca30        0x1 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
-                0x000000000001ca30                active_lid
- *fill*         0x000000000001ca31        0x1 
- .sdata         0x000000000001ca32        0x2 ..\..\libs\bt8930\libbtstack.a(lc_proc.o)
-                0x000000000001ca32                cfg_sniff_interval
- .sdata         0x000000000001ca34        0xc ..\..\libs\bt8930\libbtstack.a(extern_tws.o)
-                0x000000000001ca36                cfg_bt_tws_sniff_interval
-                0x000000000001ca38                cfg_bt_tws_always_reconnect
-                0x000000000001ca3f                cfg_bt_tws_menu_feats
- .sdata         0x000000000001ca40        0x3 ..\..\libs\bt8930\libbtstack.a(extern_a2dp.o)
-                0x000000000001ca40                cfg_a2dp_setconf_ldac_spr
-                0x000000000001ca41                cfg_a2dp_ldac_spr
- *fill*         0x000000000001ca43        0x1 
- .sdata         0x000000000001ca44        0x3 ..\..\libs\bt8930\libbtstack.a(l2cap_signaling.o)
+ .sdata         0x000000000001cae0        0x8 Output\obj\functions\func_bt.o
+ .sdata         0x000000000001cae8        0x1 Output\obj\functions\sfunc_bt_ring.o
+ *fill*         0x000000000001cae9        0x3 
+ .sdata         0x000000000001caec       0x1b Output\obj\modules\bluetooth\app\ab_mate\ab_mate_app.o
+ *fill*         0x000000000001cb07        0x1 
+ .sdata         0x000000000001cb08       0x21 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_profile.o
+                0x000000000001cb08                ab_mate_generic_attribute_uuid
+                0x000000000001cb0c                ab_mate_dev_name_uuid16
+                0x000000000001cb10                ab_mate_generic_access_primay_uuid16
+                0x000000000001cb14                ab_mate_write_cmd_uuid16
+                0x000000000001cb18                ab_mate_write_uuid16
+                0x000000000001cb1c                ab_mate_notify_uuid16
+                0x000000000001cb20                ab_mate_primay_uuid16
+ .sdata         0x000000000001cb29        0x1 Output\obj\modules\bluetooth\ble\adv0.o
+                0x000000000001cb29                cfg_ble_adv0_en
+ .sdata         0x000000000001cb2a        0x2 Output\obj\modules\bluetooth\ble\ble.o
+                0x000000000001cb2a                cfg_bt_ble_adv
+                0x000000000001cb2b                cfg_ble_security_en
+ .sdata         0x000000000001cb2c       0x22 Output\obj\modules\bluetooth\bt\bt.o
+                0x000000000001cb2c                bt_local_addr
+                0x000000000001cb34                bt_local_name
+                0x000000000001cb3c                cfg_bt_sup_to_connect_times
+                0x000000000001cb3e                cfg_bt_pwrup_connect_times
+                0x000000000001cb3f                cfg_bt_connect_times
+                0x000000000001cb40                cfg_bt_spp_rfcomm_server_ch2
+                0x000000000001cb41                cfg_bt_spp_rfcomm_server_ch1
+                0x000000000001cb42                cfg_bt_spp_rfcomm_server_ch0
+                0x000000000001cb43                cfg_bt_hfp_feature
+                0x000000000001cb44                cfg_bt_a2dp_feature1
+                0x000000000001cb45                cfg_bt_a2dp_feature
+                0x000000000001cb46                cfg_bt_support_codec
+                0x000000000001cb48                cfg_bt_support_profile
+                0x000000000001cb4a                cfg_bt_simple_pair_mode
+                0x000000000001cb4b                cfg_bt_tws_mode
+                0x000000000001cb4c                cfg_bt_dual_mode
+                0x000000000001cb4d                cfg_bt_max_acl_link
+ .sdata         0x000000000001cb4e        0x1 Output\obj\modules\bluetooth\call\bt_sco.o
+                0x000000000001cb4e                cfg_bt_near_frame
+ *fill*         0x000000000001cb4f        0x1 
+ .sdata         0x000000000001cb50        0xa Output\obj\modules\bluetooth\tws\tws.o
+                0x000000000001cb50                cfg_bt_tws_tick_freq
+                0x000000000001cb52                cfg_bt_tws_sup_to_connect_times
+                0x000000000001cb54                cfg_bt_tws_connect_times
+                0x000000000001cb55                cfg_bt_tws_search_slave_times
+                0x000000000001cb56                cfg_bt_nor_connect_times
+                0x000000000001cb58                cfg_bt_tws_feat
+ .sdata         0x000000000001cb5a        0x1 Output\obj\system\system.o
+                0x000000000001cb5a                cfg_spiflash_speed_up_en
+ .sdata         0x000000000001cb5b        0x1 ..\..\libs\bt8930\libplatform.a(audio_eq.o)
+                0x000000000001cb5b                msc_dac_eq_fade_enable
+ .sdata         0x000000000001cb5c        0x2 ..\..\libs\bt8930\libplatform.a(startup.o)
+                0x000000000001cb5c                cfg_sys_heap_size
+ .sdata         0x000000000001cb5e        0x2 ..\..\libs\bt8930\libplatform.a(pmu.o)
+                0x000000000001cb5e                cfg_pmu_buck_freq
+ .sdata         0x000000000001cb60        0x1 ..\..\libs\bt8930\libplatform.a(charge.o)
+                0x000000000001cb60                cfg_charge_dc_detect_time
+ .sdata         0x000000000001cb61        0x1 ..\..\libs\bt8930\libplatform.a(bt_pll.o)
+ .sdata         0x000000000001cb62        0x1 ..\..\libs\bt8930\libplatform.a(rf_zoom.o)
+                0x000000000001cb62                cfg_bb_rf_path_gain
+ .sdata         0x000000000001cb63        0x3 ..\..\libs\bt8930\libbtstack.a(tws.o)
+                0x000000000001cb63                opreate_lid
+                0x000000000001cb64                snoop_lid
+                0x000000000001cb65                tws_lid
+ .sdata         0x000000000001cb66        0x1 ..\..\libs\bt8930\libbtstack.a(ble_page.o)
+ *fill*         0x000000000001cb67        0x1 
+ .sdata         0x000000000001cb68       0x18 ..\..\libs\bt8930\libbtstack.a(extern_bt.o)
+                0x000000000001cb68                cfg_bt_att_auto_connect
+                0x000000000001cb69                cfg_bt_spp_auto_connect
+                0x000000000001cb6a                cfg_bt_2acl_adjust_ble_interval
+                0x000000000001cb6c                cfg_bt_comp_id
+                0x000000000001cb6e                cfg_bt_tbox_ota_support
+                0x000000000001cb70                cfg_bt_music_low_latency
+                0x000000000001cb72                cfg_bt_music_normal_latency
+                0x000000000001cb7e                cfg_bt_sniff_clk_sel
+                0x000000000001cb7f                cfg_bb_rf_gfsk_pwr
+ .sdata         0x000000000001cb80        0x2 ..\..\libs\bt8930\libbtstack.a(a2dp_play.o)
+                0x000000000001cb80                cfg_music_chk_cnt
+                0x000000000001cb81                cfg_silence_chk_cnt
+ .sdata         0x000000000001cb82        0x2 ..\..\libs\bt8930\libbtstack.a(att_server.o)
+ .sdata         0x000000000001cb84        0xc ..\..\libs\bt8930\libbtstack.a(btstack_hal.o)
+ .sdata         0x000000000001cb90        0x1 ..\..\libs\bt8930\libbtstack.a(bt_api.o)
+                0x000000000001cb90                active_lid
+ *fill*         0x000000000001cb91        0x1 
+ .sdata         0x000000000001cb92        0x2 ..\..\libs\bt8930\libbtstack.a(lc_proc.o)
+                0x000000000001cb92                cfg_sniff_interval
+ .sdata         0x000000000001cb94        0xc ..\..\libs\bt8930\libbtstack.a(extern_tws.o)
+                0x000000000001cb96                cfg_bt_tws_sniff_interval
+                0x000000000001cb98                cfg_bt_tws_always_reconnect
+                0x000000000001cb9f                cfg_bt_tws_menu_feats
+ .sdata         0x000000000001cba0        0x3 ..\..\libs\bt8930\libbtstack.a(extern_a2dp.o)
+                0x000000000001cba0                cfg_a2dp_setconf_ldac_spr
+                0x000000000001cba1                cfg_a2dp_ldac_spr
+ *fill*         0x000000000001cba3        0x1 
+ .sdata         0x000000000001cba4        0x3 ..\..\libs\bt8930\libbtstack.a(l2cap_signaling.o)
  *(.plt)
  *(.text.wsbc.asm)
                 0x000000000001cc00                . = ALIGN (0x200)
- *fill*         0x000000000001ca47      0x1b9 
+ *fill*         0x000000000001cba7       0x59 
 
 .cram_dnn_comm  0x0000000000030000     0x2a00 load address 0x0000000010009200
  *(.dnn_rodata*)
@@ -8422,259 +8423,259 @@ LOAD Output\obj\projects\earphone\port\port_update.o
  .text.tws_remote_set_ledsta
                 0x0000000010021a2e       0x44 Output\obj\modules\gui\led\led.o
                 0x0000000010021a2e                tws_remote_set_ledsta
+ .text.bsp.key  0x0000000010021a72       0x2c Output\obj\modules\key\key_scan.o
+                0x0000000010021a72                get_pwroff_pressed_time
+                0x0000000010021a86                get_double_key_time
  .text.bsp.key.init
-                0x0000000010021a72       0x18 Output\obj\modules\key\key_scan.o
-                0x0000000010021a72                key_init
- .text.bsp.key  0x0000000010021a8a       0x2c Output\obj\modules\key\key_scan.o
-                0x0000000010021a8a                get_pwroff_pressed_time
-                0x0000000010021a9e                get_double_key_time
+                0x0000000010021a9e       0x42 Output\obj\modules\key\key_scan.o
+                0x0000000010021a9e                key_init
  .text.bsp_key_pwr_scan
-                0x0000000010021ab6        0x8 Output\obj\modules\key\key_scan.o
-                0x0000000010021ab6                bsp_key_pwr_scan
+                0x0000000010021ae0        0x8 Output\obj\modules\key\key_scan.o
+                0x0000000010021ae0                bsp_key_pwr_scan
  .text.pwrkey_off
-                0x0000000010021abe       0x44 Output\obj\modules\key\pwrkey.o
-                0x0000000010021abe                pwrkey_off
+                0x0000000010021ae8       0x44 Output\obj\modules\key\pwrkey.o
+                0x0000000010021ae8                pwrkey_off
  .text.pwrkey_init
-                0x0000000010021b02       0x64 Output\obj\modules\key\pwrkey.o
-                0x0000000010021b02                pwrkey_init
+                0x0000000010021b2c       0x64 Output\obj\modules\key\pwrkey.o
+                0x0000000010021b2c                pwrkey_init
  .text.bsp_tkey_var_init
-                0x0000000010021b66       0xae Output\obj\modules\key\tkey.o
-                0x0000000010021b66                bsp_tkey_var_init
+                0x0000000010021b90       0xae Output\obj\modules\key\tkey.o
+                0x0000000010021b90                bsp_tkey_var_init
  .text.bsp_tkey_init
-                0x0000000010021c14       0x10 Output\obj\modules\key\tkey.o
-                0x0000000010021c14                bsp_tkey_init
+                0x0000000010021c3e       0x10 Output\obj\modules\key\tkey.o
+                0x0000000010021c3e                bsp_tkey_init
  .text.bsp_tkey_wakeup_en
-                0x0000000010021c24        0x4 Output\obj\modules\key\tkey.o
-                0x0000000010021c24                bsp_tkey_wakeup_en
+                0x0000000010021c4e        0x4 Output\obj\modules\key\tkey.o
+                0x0000000010021c4e                bsp_tkey_wakeup_en
  .text.bt_sco_karaok_is_en
-                0x0000000010021c28        0x4 Output\obj\modules\music\bsp_karaok.o
-                0x0000000010021c28                bt_sco_karaok_is_en
+                0x0000000010021c52        0x4 Output\obj\modules\music\bsp_karaok.o
+                0x0000000010021c52                bt_sco_karaok_is_en
  .text.mp3_res_play
-                0x0000000010021c2c       0xf8 Output\obj\modules\music\bsp_music.o
-                0x0000000010021c2c                mp3_res_play
+                0x0000000010021c56       0xf8 Output\obj\modules\music\bsp_music.o
+                0x0000000010021c56                mp3_res_play
  .text.bsp_res_play_exit_cb
-                0x0000000010021d24       0x3a Output\obj\modules\music\bsp_music.o
-                0x0000000010021d24                bsp_res_play_exit_cb
- .text.piano    0x0000000010021d5e       0xb4 Output\obj\modules\music\bsp_piano.o
-                0x0000000010021d5e                piano_play_process
-                0x0000000010021d8e                bsp_piano_warning_play
- *fill*         0x0000000010021e12        0x2 
+                0x0000000010021d4e       0x3a Output\obj\modules\music\bsp_music.o
+                0x0000000010021d4e                bsp_res_play_exit_cb
+ .text.piano    0x0000000010021d88       0xb4 Output\obj\modules\music\bsp_piano.o
+                0x0000000010021d88                piano_play_process
+                0x0000000010021db8                bsp_piano_warning_play
+ *fill*         0x0000000010021e3c        0x0 
  .text.piano.table
-                0x0000000010021e14       0x7a Output\obj\modules\music\bsp_piano.o
-                0x0000000010021e14                warning_piano_tbl
-                0x0000000010021e3c                warning_tone_tbl
+                0x0000000010021e3c       0x7a Output\obj\modules\music\bsp_piano.o
+                0x0000000010021e3c                warning_piano_tbl
+                0x0000000010021e64                warning_tone_tbl
  .text.cm_loadparam
-                0x0000000010021e8e        0x4 Output\obj\system\cm.o
-                0x0000000010021e8e                cm_loadparam
+                0x0000000010021eb6        0x4 Output\obj\system\cm.o
+                0x0000000010021eb6                cm_loadparam
  .text.cm_factory
-                0x0000000010021e92       0x9c Output\obj\system\cm.o
-                0x0000000010021e92                cm_factory
- .text.bsp.sys  0x0000000010021f2e       0x68 Output\obj\system\mute.o
-                0x0000000010021f2e                bsp_sys_mute
-                0x0000000010021f56                bsp_sys_unmute
-                0x0000000010021f7c                bsp_clr_mute_sta
+                0x0000000010021eba       0x9c Output\obj\system\cm.o
+                0x0000000010021eba                cm_factory
+ .text.bsp.sys  0x0000000010021f56       0x68 Output\obj\system\mute.o
+                0x0000000010021f56                bsp_sys_mute
+                0x0000000010021f7e                bsp_sys_unmute
+                0x0000000010021fa4                bsp_clr_mute_sta
  .text.bsp.param
-                0x0000000010021f96      0x20c Output\obj\system\param.o
-                0x0000000010021f96                bsp_param_write
-                0x0000000010021f9a                bsp_param_read
-                0x0000000010021f9e                bsp_param_sync
-                0x0000000010021fa2                param_msc_num_write
-                0x0000000010021fce                param_msc_num_read
-                0x000000001002202c                param_sys_vol_write
-                0x000000001002203c                param_sys_vol_read
-                0x000000001002204c                param_hfp_vol_write
-                0x000000001002205c                param_hfp_vol_read
-                0x000000001002206c                param_lang_id_write
-                0x000000001002207c                param_lang_id_read
-                0x000000001002208c                param_sync
-                0x0000000010022090                param_get_xosc_addr
-                0x0000000010022094                param_init
-                0x0000000010022150                param_tws_channel_write
-                0x000000001002217c                param_tws_channel_read
+                0x0000000010021fbe      0x20c Output\obj\system\param.o
+                0x0000000010021fbe                bsp_param_write
+                0x0000000010021fc2                bsp_param_read
+                0x0000000010021fc6                bsp_param_sync
+                0x0000000010021fca                param_msc_num_write
+                0x0000000010021ff6                param_msc_num_read
+                0x0000000010022054                param_sys_vol_write
+                0x0000000010022064                param_sys_vol_read
+                0x0000000010022074                param_hfp_vol_write
+                0x0000000010022084                param_hfp_vol_read
+                0x0000000010022094                param_lang_id_write
+                0x00000000100220a4                param_lang_id_read
+                0x00000000100220b4                param_sync
+                0x00000000100220b8                param_get_xosc_addr
+                0x00000000100220bc                param_init
+                0x0000000010022178                param_tws_channel_write
+                0x00000000100221a4                param_tws_channel_read
  .text.param_vuart_popup_flag_read
-                0x00000000100221a2       0x3c Output\obj\system\param.o
-                0x00000000100221a2                param_vuart_popup_flag_read
+                0x00000000100221ca       0x3c Output\obj\system\param.o
+                0x00000000100221ca                param_vuart_popup_flag_read
  .text.param_vuart_popup_flag_write
-                0x00000000100221de       0x3a Output\obj\system\param.o
-                0x00000000100221de                param_vuart_popup_flag_write
+                0x0000000010022206       0x3a Output\obj\system\param.o
+                0x0000000010022206                param_vuart_popup_flag_write
  .text.bsp.param.fota
-                0x0000000010022218       0xa0 Output\obj\system\param.o
-                0x0000000010022218                param_fot_addr_write
-                0x000000001002222e                param_fot_addr_read
-                0x0000000010022238                param_fot_remote_ver_write
-                0x000000001002224e                param_fot_remote_ver_read
-                0x0000000010022258                param_fot_head_info_write
-                0x000000001002226e                param_fot_head_info_read
-                0x0000000010022278                param_fot_hash_write
-                0x000000001002228e                param_fot_hash_read
-                0x0000000010022298                param_fot_type_write
-                0x00000000100222ae                param_fot_type_read
+                0x0000000010022240       0xa0 Output\obj\system\param.o
+                0x0000000010022240                param_fot_addr_write
+                0x0000000010022256                param_fot_addr_read
+                0x0000000010022260                param_fot_remote_ver_write
+                0x0000000010022276                param_fot_remote_ver_read
+                0x0000000010022280                param_fot_head_info_write
+                0x0000000010022296                param_fot_head_info_read
+                0x00000000100222a0                param_fot_hash_write
+                0x00000000100222b6                param_fot_hash_read
+                0x00000000100222c0                param_fot_type_write
+                0x00000000100222d6                param_fot_type_read
  .text.bsp.sys.init
-                0x00000000100222b8      0x3ae Output\obj\system\system.o
-                0x0000000010022402                rtc_init
-                0x000000001002247e                sys_init
-                0x00000000100225ec                sys_update_init
+                0x00000000100222e0      0x3ae Output\obj\system\system.o
+                0x000000001002242a                rtc_init
+                0x00000000100224a6                sys_init
+                0x0000000010022614                sys_update_init
  .text.bsp_get_bat_level
-                0x0000000010022666       0x42 Output\obj\system\system.o
-                0x0000000010022666                bsp_get_bat_level
+                0x000000001002268e       0x42 Output\obj\system\system.o
+                0x000000001002268e                bsp_get_bat_level
  .text.uart0_mapping_sel
-                0x00000000100226a8       0x7a Output\obj\system\system.o
-                0x00000000100226a8                uart0_mapping_sel
+                0x00000000100226d0       0x7a Output\obj\system\system.o
+                0x00000000100226d0                uart0_mapping_sel
  .text.xosc_get_cfg_cap
-                0x0000000010022722       0x20 Output\obj\system\system.o
-                0x0000000010022722                xosc_get_cfg_cap
+                0x000000001002274a       0x20 Output\obj\system\system.o
+                0x000000001002274a                xosc_get_cfg_cap
  .text.bsp.power
-                0x0000000010022742      0x38e Output\obj\system\system.o
-                0x0000000010022742                power_off_check
-                0x00000000100228de                power_on_check
+                0x000000001002276a      0x38e Output\obj\system\system.o
+                0x000000001002276a                power_off_check
+                0x0000000010022906                power_on_check
  .text.vbat_init
-                0x0000000010022ad0        0xa Output\obj\system\vbat.o
-                0x0000000010022ad0                vbat_init
+                0x0000000010022af8        0xa Output\obj\system\vbat.o
+                0x0000000010022af8                vbat_init
  .text.vbat_voltage_init
-                0x0000000010022ada       0x60 Output\obj\system\vbat.o
-                0x0000000010022ada                vbat_voltage_init
+                0x0000000010022b02       0x60 Output\obj\system\vbat.o
+                0x0000000010022b02                vbat_voltage_init
  .text.is_lowpower_vbat_warning
-                0x0000000010022b3a       0x6a Output\obj\system\vbat.o
-                0x0000000010022b3a                is_lowpower_vbat_warning
- .text.func     0x0000000010022ba4        0x4 Output\obj\projects\earphone\config.o
-                0x0000000010022ba4                get_funcs_total
+                0x0000000010022b62       0x6a Output\obj\system\vbat.o
+                0x0000000010022b62                is_lowpower_vbat_warning
+ .text.func     0x0000000010022bcc        0x4 Output\obj\projects\earphone\config.o
+                0x0000000010022bcc                get_funcs_total
  .text.getcfg_vddio_sel
-                0x0000000010022ba8        0xc Output\obj\projects\earphone\config.o
-                0x0000000010022ba8                getcfg_vddio_sel
+                0x0000000010022bd0        0xc Output\obj\projects\earphone\config.o
+                0x0000000010022bd0                getcfg_vddio_sel
  .text.getcfg_vddbt_capless_en
-                0x0000000010022bb4        0xc Output\obj\projects\earphone\config.o
-                0x0000000010022bb4                getcfg_vddbt_capless_en
+                0x0000000010022bdc        0xc Output\obj\projects\earphone\config.o
+                0x0000000010022bdc                getcfg_vddbt_capless_en
  .text.getcfg_buck_mode_en
-                0x0000000010022bc0       0x18 Output\obj\projects\earphone\config.o
-                0x0000000010022bc0                getcfg_buck_mode_en
+                0x0000000010022be8       0x18 Output\obj\projects\earphone\config.o
+                0x0000000010022be8                getcfg_buck_mode_en
  .text.getcfg_mic_bias_method
-                0x0000000010022bd8       0x62 Output\obj\projects\earphone\config.o
-                0x0000000010022bd8                getcfg_mic_bias_method
+                0x0000000010022c00       0x62 Output\obj\projects\earphone\config.o
+                0x0000000010022c00                getcfg_mic_bias_method
  .text.getcfg_mic_power_level
-                0x0000000010022c3a        0xc Output\obj\projects\earphone\config.o
-                0x0000000010022c3a                getcfg_mic_power_level
+                0x0000000010022c62        0xc Output\obj\projects\earphone\config.o
+                0x0000000010022c62                getcfg_mic_power_level
  .text.bt_rf_get_param
-                0x0000000010022c46       0x38 Output\obj\projects\earphone\main.o
-                0x0000000010022c46                bt_rf_get_param
+                0x0000000010022c6e       0x38 Output\obj\projects\earphone\main.o
+                0x0000000010022c6e                bt_rf_get_param
  .text.startup.main
-                0x0000000010022c7e       0xe0 Output\obj\projects\earphone\main.o
-                0x0000000010022c7e                main
+                0x0000000010022ca6       0xe0 Output\obj\projects\earphone\main.o
+                0x0000000010022ca6                main
  .text.get_user_def_vol_msg
-                0x0000000010022d5e       0x62 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022d5e                get_user_def_vol_msg
+                0x0000000010022d86       0x62 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022d86                get_user_def_vol_msg
  .text.user_def_track_msg
-                0x0000000010022dc0       0x1c Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022dc0                user_def_track_msg
+                0x0000000010022de8       0x1c Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022de8                user_def_track_msg
  .text.user_def_func_is_ready
-                0x0000000010022ddc       0x26 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022ddc                user_def_func_is_ready
+                0x0000000010022e04       0x26 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022e04                user_def_func_is_ready
  .text.user_def_key_msg
-                0x0000000010022e02      0x132 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022e02                user_def_key_msg
+                0x0000000010022e2a      0x132 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022e2a                user_def_key_msg
  .text.user_def_lkey_tone_is_enable
-                0x0000000010022f34       0x12 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022f34                user_def_lkey_tone_is_enable
+                0x0000000010022f5c       0x12 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022f5c                user_def_lkey_tone_is_enable
  .text.bt_tws_pair_mode
-                0x0000000010022f46       0x58 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022f46                bt_tws_pair_mode
+                0x0000000010022f6e       0x58 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022f6e                bt_tws_pair_mode
  .text.func.bt.msg
-                0x0000000010022f9e      0x3c0 Output\obj\projects\earphone\message\msg_bt.o
-                0x0000000010022f9e                func_bt_message_do
-                0x0000000010023358                func_bt_message
+                0x0000000010022fc6      0x3c0 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010022fc6                func_bt_message_do
+                0x0000000010023380                func_bt_message
  .text.func.btring.msg
-                0x000000001002335e      0x20e Output\obj\projects\earphone\message\msg_bt.o
-                0x000000001002335e                sfunc_bt_ring_message_do
-                0x0000000010023566                sfunc_bt_ring_message
+                0x0000000010023386      0x20e Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010023386                sfunc_bt_ring_message_do
+                0x000000001002358e                sfunc_bt_ring_message
  .text.sfunc_bt_call_message_do
-                0x000000001002356c      0x1ce Output\obj\projects\earphone\message\msg_bt.o
-                0x000000001002356c                sfunc_bt_call_message_do
+                0x0000000010023594      0x1ce Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010023594                sfunc_bt_call_message_do
  .text.sfunc_bt_call_message
-                0x000000001002373a        0x8 Output\obj\projects\earphone\message\msg_bt.o
-                0x000000001002373a                sfunc_bt_call_message
+                0x0000000010023762        0x8 Output\obj\projects\earphone\message\msg_bt.o
+                0x0000000010023762                sfunc_bt_call_message
  .text.bt_sco_aec_init
-                0x0000000010023742      0x114 Output\obj\projects\earphone\plugin\bt_call.o
-                0x0000000010023742                bt_sco_aec_init
+                0x000000001002376a      0x114 Output\obj\projects\earphone\plugin\bt_call.o
+                0x000000001002376a                bt_sco_aec_init
  .text.bt_sco_far_nr_init
-                0x0000000010023856       0x5a Output\obj\projects\earphone\plugin\bt_call.o
-                0x0000000010023856                bt_sco_far_nr_init
+                0x000000001002387e       0x5a Output\obj\projects\earphone\plugin\bt_call.o
+                0x000000001002387e                bt_sco_far_nr_init
  .text.bt_sco_nr_exit
-                0x00000000100238b0        0x4 Output\obj\projects\earphone\plugin\bt_call.o
-                0x00000000100238b0                bt_sco_nr_exit
+                0x00000000100238d8        0x4 Output\obj\projects\earphone\plugin\bt_call.o
+                0x00000000100238d8                bt_sco_nr_exit
  .text.bt_sco_dnn_init
-                0x00000000100238b4       0xbc Output\obj\projects\earphone\plugin\bt_call.o
-                0x00000000100238b4                bt_sco_dnn_init
+                0x00000000100238dc       0xbc Output\obj\projects\earphone\plugin\bt_call.o
+                0x00000000100238dc                bt_sco_dnn_init
  .text.bt_sco_nr_init
-                0x0000000010023970       0x22 Output\obj\projects\earphone\plugin\bt_call.o
-                0x0000000010023970                bt_sco_nr_init
- *fill*         0x0000000010023992        0x2 
+                0x0000000010023998       0x22 Output\obj\projects\earphone\plugin\bt_call.o
+                0x0000000010023998                bt_sco_nr_init
+ *fill*         0x00000000100239ba        0x2 
  .text.sco.gain.tbl
-                0x0000000010023994       0x42 Output\obj\projects\earphone\plugin\bt_call.o
-                0x0000000010023994                mic_gain_tbl
+                0x00000000100239bc       0x42 Output\obj\projects\earphone\plugin\bt_call.o
+                0x00000000100239bc                mic_gain_tbl
  .text.multi_lang_init
-                0x00000000100239d6        0x2 Output\obj\projects\earphone\plugin\multi_lang.o
-                0x00000000100239d6                multi_lang_init
+                0x00000000100239fe        0x2 Output\obj\projects\earphone\plugin\multi_lang.o
+                0x00000000100239fe                multi_lang_init
  .text.plugin_init
-                0x00000000100239d8       0x3a Output\obj\projects\earphone\plugin\plugin.o
-                0x00000000100239d8                plugin_init
+                0x0000000010023a00       0x3a Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023a00                plugin_init
  .text.plugin_var_init
-                0x0000000010023a12      0x16e Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023a12                plugin_var_init
+                0x0000000010023a3a      0x16e Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023a3a                plugin_var_init
  .text.sleep_wakeup_config
-                0x0000000010023b80       0x1e Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023b80                sleep_wakeup_config
+                0x0000000010023ba8       0x1e Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023ba8                sleep_wakeup_config
  .text.is_sleep_dac_off_enable
-                0x0000000010023b9e       0x22 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023b9e                is_sleep_dac_off_enable
+                0x0000000010023bc6       0x22 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023bc6                is_sleep_dac_off_enable
  .text.get_wav_res_digvol
-                0x0000000010023bc0       0x12 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023bc0                get_wav_res_digvol
+                0x0000000010023be8       0x12 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023be8                get_wav_res_digvol
  .text.get_piano_digvol
-                0x0000000010023bd2        0x4 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023bd2                get_piano_digvol
+                0x0000000010023bfa        0x4 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023bfa                get_piano_digvol
  .text.maxvol_tone_play
-                0x0000000010023bd6        0x8 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023bd6                maxvol_tone_play
+                0x0000000010023bfe        0x8 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023bfe                maxvol_tone_play
  .text.plugin_lowbat_vol_reduce
-                0x0000000010023bde        0x2 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023bde                plugin_lowbat_vol_reduce
+                0x0000000010023c06        0x2 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023c06                plugin_lowbat_vol_reduce
  .text.plugin_lowbat_vol_recover
-                0x0000000010023be0        0x2 Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023be0                plugin_lowbat_vol_recover
+                0x0000000010023c08        0x2 Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023c08                plugin_lowbat_vol_recover
  .text.plugin_music_eq
-                0x0000000010023be2       0x1a Output\obj\projects\earphone\plugin\plugin.o
-                0x0000000010023be2                plugin_music_eq
+                0x0000000010023c0a       0x1a Output\obj\projects\earphone\plugin\plugin.o
+                0x0000000010023c0a                plugin_music_eq
  .text.led_disp
-                0x0000000010023bfc       0x20 Output\obj\projects\earphone\port\port_led.o
-                0x0000000010023bfc                led_power_up
-                0x0000000010023c06                led_power_down
-                0x0000000010023c10                led_idle
+                0x0000000010023c24       0x20 Output\obj\projects\earphone\port\port_led.o
+                0x0000000010023c24                led_power_up
+                0x0000000010023c2e                led_power_down
+                0x0000000010023c38                led_idle
  .text.led_disp.bt
-                0x0000000010023c1c       0x48 Output\obj\projects\earphone\port\port_led.o
-                0x0000000010023c1c                led_bt_init
-                0x0000000010023c26                led_bt_idle
-                0x0000000010023c30                led_bt_reconnect
-                0x0000000010023c3a                led_bt_connected
-                0x0000000010023c44                led_bt_play
-                0x0000000010023c4e                led_bt_ring
-                0x0000000010023c58                led_bt_call
-                0x0000000010023c62                led_bt_scan
+                0x0000000010023c44       0x48 Output\obj\projects\earphone\port\port_led.o
+                0x0000000010023c44                led_bt_init
+                0x0000000010023c4e                led_bt_idle
+                0x0000000010023c58                led_bt_reconnect
+                0x0000000010023c62                led_bt_connected
+                0x0000000010023c6c                led_bt_play
+                0x0000000010023c76                led_bt_ring
+                0x0000000010023c80                led_bt_call
+                0x0000000010023c8a                led_bt_scan
  .text.led_func_init
-                0x0000000010023c64      0x134 Output\obj\projects\earphone\port\port_led.o
-                0x0000000010023c64                led_func_init
+                0x0000000010023c8c      0x134 Output\obj\projects\earphone\port\port_led.o
+                0x0000000010023c8c                led_func_init
  .text.led_get_cfg_port
-                0x0000000010023d98       0x32 Output\obj\projects\earphone\port\port_led.o
-                0x0000000010023d98                led_get_cfg_port
+                0x0000000010023dc0       0x32 Output\obj\projects\earphone\port\port_led.o
+                0x0000000010023dc0                led_get_cfg_port
  .text.sdadc0_anlog_init
-                0x0000000010023dca       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
+                0x0000000010023df2       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
  .text.sdadc1_anlog_init
-                0x0000000010023e62       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
+                0x0000000010023e8a       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
  .text.sdadc2_anlog_init
-                0x0000000010023efa       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
+                0x0000000010023f22       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
  .text.sdadc3_anlog_init
-                0x0000000010023f92       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
+                0x0000000010023fba       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
  .text.sdadc4_anlog_init
-                0x000000001002402a       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
- *fill*         0x00000000100240c2       0x3e 
+                0x0000000010024052       0x98 ..\..\libs\bt8930\libplatform.a(audio.o)
+ *fill*         0x00000000100240ea       0x16 
  .text.dac_clk_source_sel
                 0x0000000010024100       0xfa ..\..\libs\bt8930\libplatform.a(audio.o)
                 0x0000000010024100                dac_clk_source_sel
@@ -13235,11 +13236,11 @@ LOAD Output\obj\projects\earphone\port\port_update.o
                 0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
  .rela.text.adkey_init
                 0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
- .rela.text.bsp.key.init
-                0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
  .rela.com_text.bsp.key
                 0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
  .rela.text.bsp.key
+                0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
+ .rela.text.bsp.key.init
                 0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
  .rela.text.bsp_key_pwr_scan
                 0x0000000010084014        0x0 Output\obj\bsp\bsp_huart.o
@@ -14430,7 +14431,7 @@ LOAD Output\obj\projects\earphone\port\port_update.o
  .mem_heap      0x0000000000010c00     0x3000 ..\..\libs\bt8930\libplatform.a(startup.o)
                 0x0000000000010c00                mem_heap
 
-.bss            0x000000000001dc00     0x5914
+.bss            0x000000000001dc00     0x5918
                 0x000000000001dc00                __bss_start = .
  *(COMMON)
  COMMON         0x000000000001dc00       0x30 Output\obj\bsp\bsp_uart.o
@@ -14747,88 +14748,88 @@ LOAD Output\obj\projects\earphone\port\port_update.o
                 0x000000000001fa04                led_lb
                 0x000000000001fa14                led_sync
  .buf.bsp.sys_cb
-                0x000000000001fa24       0x60 Output\obj\system\system.o
+                0x000000000001fa24       0x64 Output\obj\system\system.o
                 0x000000000001fa24                sys_cb
- .buf.led       0x000000000001fa84       0x28 Output\obj\projects\earphone\port\port_led.o
-                0x000000000001fa84                bled_gpio
-                0x000000000001fa8c                bled_func
-                0x000000000001fa98                rled_gpio
-                0x000000000001faa0                rled_func
- .buf.dac       0x000000000001faac       0x4c ..\..\libs\bt8930\libplatform.a(dac.o)
-                0x000000000001faac                dac_cb
+ .buf.led       0x000000000001fa88       0x28 Output\obj\projects\earphone\port\port_led.o
+                0x000000000001fa88                bled_gpio
+                0x000000000001fa90                bled_func
+                0x000000000001fa9c                rled_gpio
+                0x000000000001faa4                rled_func
+ .buf.dac       0x000000000001fab0       0x4c ..\..\libs\bt8930\libplatform.a(dac.o)
+                0x000000000001fab0                dac_cb
  .buf.device.cb
-                0x000000000001faf8       0x1c ..\..\libs\bt8930\libplatform.a(device.o)
-                0x000000000001faf8                dev_cb
- .buf.music.cb  0x000000000001fb14        0x8 ..\..\libs\bt8930\libplatform.a(music.o)
-                0x000000000001fb14                music_cb
- .buf.spires    0x000000000001fb1c       0x10 ..\..\libs\bt8930\libplatform.a(music_res.o)
-                0x000000000001fb1c                spires_cb
- .buf.wavres    0x000000000001fb2c        0xc ..\..\libs\bt8930\libplatform.a(music_res.o)
-                0x000000000001fb2c                wavres_cb
- .buf.stm       0x000000000001fb38       0x24 ..\..\libs\bt8930\libplatform.a(stream.o)
-                0x000000000001fb38                stm_cb
-                0x000000000001fb50                stm_avio
- .buf.piano     0x000000000001fb5c       0x18 ..\..\libs\bt8930\libplatform.a(piano.o)
-                0x000000000001fb5c                piano_cb
- .buf.cpu_gprs  0x000000000001fb74       0x80 ..\..\libs\bt8930\libplatform.a(debug.o)
-                0x000000000001fb74                cpu_gprs
- .buf.key.cb    0x000000000001fbf4       0x20 ..\..\libs\bt8930\libplatform.a(key.o)
- .buf.deccom    0x000000000001fc14       0x2c ..\..\libs\bt8930\libcodecs.a(codecs_com.o)
-                0x000000000001fc14                codec_info
-                0x000000000001fc18                qskip
+                0x000000000001fafc       0x1c ..\..\libs\bt8930\libplatform.a(device.o)
+                0x000000000001fafc                dev_cb
+ .buf.music.cb  0x000000000001fb18        0x8 ..\..\libs\bt8930\libplatform.a(music.o)
+                0x000000000001fb18                music_cb
+ .buf.spires    0x000000000001fb20       0x10 ..\..\libs\bt8930\libplatform.a(music_res.o)
+                0x000000000001fb20                spires_cb
+ .buf.wavres    0x000000000001fb30        0xc ..\..\libs\bt8930\libplatform.a(music_res.o)
+                0x000000000001fb30                wavres_cb
+ .buf.stm       0x000000000001fb3c       0x24 ..\..\libs\bt8930\libplatform.a(stream.o)
+                0x000000000001fb3c                stm_cb
+                0x000000000001fb54                stm_avio
+ .buf.piano     0x000000000001fb60       0x18 ..\..\libs\bt8930\libplatform.a(piano.o)
+                0x000000000001fb60                piano_cb
+ .buf.cpu_gprs  0x000000000001fb78       0x80 ..\..\libs\bt8930\libplatform.a(debug.o)
+                0x000000000001fb78                cpu_gprs
+ .buf.key.cb    0x000000000001fbf8       0x20 ..\..\libs\bt8930\libplatform.a(key.o)
+ .buf.deccom    0x000000000001fc18       0x2c ..\..\libs\bt8930\libcodecs.a(codecs_com.o)
+                0x000000000001fc18                codec_info
+                0x000000000001fc1c                qskip
  *(.btmem.stack.sdp)
  .btmem.stack.sdp
-                0x000000000001fc40      0x190 ..\..\libs\bt8930\libbtstack.a(sdp_server.o)
+                0x000000000001fc44      0x190 ..\..\libs\bt8930\libbtstack.a(sdp_server.o)
  .btmem.stack.sdp
-                0x000000000001fdd0       0xc0 ..\..\libs\bt8930\libbtstack.a(sdp_client.o)
+                0x000000000001fdd4       0xc0 ..\..\libs\bt8930\libbtstack.a(sdp_client.o)
  *(.btmem.stack.spp)
  .btmem.stack.spp
-                0x000000000001fe90       0x8c ..\..\libs\bt8930\libbtstack.a(spp.o)
-                0x000000000001fef4                spp_connections
+                0x000000000001fe94       0x8c ..\..\libs\bt8930\libbtstack.a(spp.o)
+                0x000000000001fef8                spp_connections
  *(.btmem.stack.l2cap)
  .btmem.stack.l2cap
-                0x000000000001ff1c       0xbc ..\..\libs\bt8930\libbtstack.a(l2cap.o)
-                0x000000000001ff44                l2cap_channels
+                0x000000000001ff20       0xbc ..\..\libs\bt8930\libbtstack.a(l2cap.o)
+                0x000000000001ff48                l2cap_channels
  *(.btmem.stack.hid*)
  .btmem.stack.hid.usage
-                0x000000000001ffd8       0x12 ..\..\libs\bt8930\libbtstack.a(hid_usage.o)
-                0x000000000001ffd8                hrpt_cb
-                0x000000000001ffe0                hid_report_buf
+                0x000000000001ffdc       0x12 ..\..\libs\bt8930\libbtstack.a(hid_usage.o)
+                0x000000000001ffdc                hrpt_cb
+                0x000000000001ffe4                hid_report_buf
  *(.qtest_buf)
  *(.dac_obuf*)
- *fill*         0x000000000001ffea        0x2 
+ *fill*         0x000000000001ffee        0x2 
  .dac_obuf.src0
-                0x000000000001ffec     0x1e00 ..\..\libs\bt8930\libplatform.a(dac_src.o)
-                0x000000000001ffec                dac_obuf
+                0x000000000001fff0     0x1e00 ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x000000000001fff0                dac_obuf
  .dac_obuf.src1
-                0x0000000000021dec      0x480 ..\..\libs\bt8930\libplatform.a(dac_src.o)
-                0x0000000000021dec                dac_src1_obuf
+                0x0000000000021df0      0x480 ..\..\libs\bt8930\libplatform.a(dac_src.o)
+                0x0000000000021df0                dac_src1_obuf
  *(.adc_buf*)
- .adc_buf.buf   0x000000000002226c      0xc00 ..\..\libs\bt8930\libplatform.a(sdadc.o)
-                0x000000000002226c                sdadc_buf
+ .adc_buf.buf   0x0000000000022270      0xc00 ..\..\libs\bt8930\libplatform.a(sdadc.o)
+                0x0000000000022270                sdadc_buf
  *(.tkey_buf.debug)
  *(.wav_res_buf)
- .wav_res_buf   0x0000000000022e6c      0x200 ..\..\libs\bt8930\libplatform.a(music_res.o)
-                0x0000000000022e6c                wav_res_buf
+ .wav_res_buf   0x0000000000022e70      0x200 ..\..\libs\bt8930\libplatform.a(music_res.o)
+                0x0000000000022e70                wav_res_buf
  *(.au0out_buf*)
  *(.sco_enc.obuf)
-                0x000000000002306c                __tuya_data_start = .
+                0x0000000000023070                __tuya_data_start = .
  *(.tuya_data*)
-                0x000000000002306c                __tuya_data_end = .
+                0x0000000000023070                __tuya_data_end = .
  *(.app.buf*)
- .app.buf       0x000000000002306c      0x1e5 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_app.o
-                0x000000000002306c                ab_mate_app
-                0x00000000000230c8                ab_mate_cmd_send
-                0x00000000000231c8                ab_mate_cmd_recv
- *fill*         0x0000000000023251        0x3 
- .app.buf       0x0000000000023254       0x30 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_ota.o
-                0x0000000000023254                fot_var
-                0x0000000000023280                fot_data
- .app.buf       0x0000000000023284      0x290 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_tws.o
-                0x0000000000023284                tws_sync_ota
-                0x0000000000023494                tws_sync_data
+ .app.buf       0x0000000000023070      0x1e5 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_app.o
+                0x0000000000023070                ab_mate_app
+                0x00000000000230cc                ab_mate_cmd_send
+                0x00000000000231cc                ab_mate_cmd_recv
+ *fill*         0x0000000000023255        0x3 
+ .app.buf       0x0000000000023258       0x30 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_ota.o
+                0x0000000000023258                fot_var
+                0x0000000000023284                fot_data
+ .app.buf       0x0000000000023288      0x290 Output\obj\modules\bluetooth\app\ab_mate\ab_mate_tws.o
+                0x0000000000023288                tws_sync_ota
+                0x0000000000023498                tws_sync_data
  *(.opus_buf.input)
-                0x0000000000023514                __bss_end = .
+                0x0000000000023518                __bss_end = .
                 0x0000000000000000                __tuya_data_size = (__tuya_data_end - __tuya_data_start)
 
 .bram           0x0000000000024000     0xbb70
@@ -15477,7 +15478,7 @@ LOAD Output\obj\projects\earphone\port\port_update.o
 
 .anc_tool_data
  *(.anc_tool_buf*)
-                0x0000000000005914                __bss_size = (__bss_end - __bss_start)
+                0x0000000000005918                __bss_size = (__bss_end - __bss_start)
                 0x0000000000076e00                __bank_size = SIZEOF (.flash)
                 0x0000000010000200                __comm_lma = LOADADDR (.comm)
                 0x0000000000009000                __comm_size = SIZEOF (.comm)

@@ -36,15 +36,15 @@
 
 1731483930 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\sfr.h
 
-1733320113 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\xcfg.h
+1733402161 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\xcfg.h
 
-1733209764 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\config.h
+1733400310 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\config.h
 	"config_define.h"
 	"config_extra.h"
 
 1724910912 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\config_define.h
 
-1732755527 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\config_extra.h
+1733399528 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\config_extra.h
 
 1714025678 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\include\io_def.h
 	"global.h"
@@ -188,7 +188,7 @@
 
 1697613588 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\3rd-party\sensor\sc7a20.h
 
-1733216634 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\system.h
+1733628908 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\system\system.h
 	"mute.h"
 	"param.h"
 	"device.h"
@@ -225,7 +225,7 @@
 	"warning/warning_play.h"
 	"bluetooth/app/dueros_dma/dueros_dma_app.h"
 
-1732155090 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.h
+1733492040 e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.h
 	"pwrkey.h"
 	"adkey.h"
 	"tkey.h"
@@ -500,7 +500,7 @@
 	"bsp_vad.h"
 	"asr.h"
 
-1732610723 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func.c
+1733477578 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func.c
 	"include.h"
 
 1701942803 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\functions\func_aux.c
@@ -1254,7 +1254,7 @@
 1701859126 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\adkey.c
 	"include.h"
 
-1732238143 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.c
+1733630892 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\key_scan.c
 	"include.h"
 
 1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\modules\key\knob.c
@@ -1383,7 +1383,7 @@
 	"include.h"
 	"func.h"
 
-1733304816 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_bt.c
+1733400311 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\message\msg_bt.c
 	"include.h"
 	"func.h"
 	"func_bt.h"
@@ -1414,7 +1414,7 @@
 
 1697613588 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\res.xm
 
-1733320304 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\xcfg.xm
+1733402160 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\output\bin\xcfg.xm
 
 1727146869 source:e:\lewis\gsm\walkers_supressor\softwarematerial\sourcecode\walkers_supressor_bluetrum\sdk_bt893x_v012_s7970_20241024\app\projects\earphone\plugin\bt_call.c
 	"include.h"

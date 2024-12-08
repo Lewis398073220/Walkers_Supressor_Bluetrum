@@ -61,6 +61,10 @@ volatile u8  incall_flag;
     u8 inbox_wken_flag;
     u8 outbox_pwron_flag;
     u16 kh_vol_msg;
+	//@lewis
+	u16 double_delay_cnt;
+	u16 poweroff_hold_cnt;
+	//End
     u16 vbat;
     u32 sleep_time;
     u32 pwroff_time;

@@ -16,13 +16,25 @@ const key_shake_tbl_t key_shake_table = {
     .scan_cnt = KEY_SCAN_TIMES,
     .up_cnt   = KEY_UP_TIMES,
     .long_cnt = KEY_LONG_TIMES,
+    //@lewis
+    #if 1
+	.lv1_long_cnt = KEY_LV1_LONG_TIMES,
+	.lv2_long_cnt = KEY_LV2_LONG_TIMES,
+	.hold_cnt = KEY_HOLD_TIMES,
+	#else
     .hold_cnt = KEY_LONG_HOLD_TIMES,
+    #endif
+    //End
 };
 
 AT(.text.bsp.key.init)
 void key_init(void)
 {
     key_var_init();
+	//@lewis
+	sys_cb.double_delay_cnt = get_double_key_time();
+	sys_cb.poweroff_hold_cnt = ((PWROFF_PRESS_TIME - 3) / 3) * 100 + 300;
+	//End
 
 #if USER_IOKEY
     io_key_init();
@@ -105,6 +117,224 @@ void set_poweron_flag(bool flag)
     sys_cb.poweron_flag = flag;
 }
 
+//@lewis
+typedef enum {
+    KEY_STATE_NOTHING,        // 按键无状态
+    KEY_STATE_PRESS,          // 按键按下
+    KEY_STATE_UP,             // 按键抬起
+    KEY_STATE_DELY,           // 按键抬起后多击延迟
+    KEY_STATE_LONG,           // 按键长按
+    KEY_STATE_LV1_LONG,       // LV1按键长按
+    KEY_STATE_LV2_LONG,       // LV2按键长按
+} KEY_STATE_E;
+
+typedef struct {
+	u16 pwrkey_up;
+    u16 key_up;
+    u16 key_cnt;
+    u16 pre_keyval;
+    u16 delay_cnt;
+	u16 repeat_cnt;
+    u8 press_cnt;
+    KEY_STATE_E KEY_STATE;       
+} key_cb_t;
+
+key_cb_t key_cb AT(.com_text.bsp.key_cb);
+
+AT(.com_text.bsp.key)
+u16 key_deal(u16 key_val)
+{
+    u16 key_return = NO_KEY;
+
+	if(sys_cb.poweron_flag) //pwrkey按键松开自动清此标志
+	{
+		if ((key_val & K_PWR_MASK) == K_PWR) {
+			key_cb.key_cnt = 0;
+			key_cb.press_cnt = 0;
+			key_cb.delay_cnt = 0;
+			key_cb.repeat_cnt = 0;
+			key_cb.pwrkey_up = 0; // pwrkey按键抬起消抖
+			key_cb.KEY_STATE = KEY_STATE_NOTHING; //pwrkey开机时，等待pwrkey松开再作按键检测
+			return key_return;
+		} else{
+			if(key_cb.pwrkey_up < 10) {
+				key_cb.pwrkey_up += 1;
+			} else{
+				sys_cb.poweron_flag = 0;
+				key_cb.pwrkey_up = 0;
+			}
+		}
+	}
+	
+    if (key_val != NO_KEY)
+        key_cb.pre_keyval = key_val;
+	
+    switch(key_cb.KEY_STATE) 
+	{
+        case KEY_STATE_NOTHING:
+        case KEY_STATE_UP:
+            if (key_val == NO_KEY) {
+                key_cb.key_cnt = 0;    // 按下计时
+                key_cb.key_up = 0;     // 抬起计时
+                key_cb.press_cnt = 0;  // 按下次数
+            } else {
+                // 按下消抖
+                key_cb.key_cnt++;
+                if (key_cb.key_cnt >= key_shake_table.scan_cnt) {
+					key_cb.key_up = 0;
+                    // 输出按下事件
+                    key_return = key_cb.pre_keyval | KEY_SHORT;
+                    key_cb.KEY_STATE = KEY_STATE_PRESS;
+                }
+            }
+        break;
+			
+        case KEY_STATE_PRESS:
+            if (key_val == NO_KEY) {
+                if (key_cb.key_up < key_shake_table.up_cnt) {
+                    // 抬起消抖
+                    key_cb.key_up++;
+                } else {
+                    // printf("KEY_STATE_PRESS\n");
+                    key_cb.key_cnt = 0;
+                    key_cb.key_up = 0;
+					if(USER_MULTI_PRESS_EN && xcfg_cb.user_key_multi_press_en) {
+						key_cb.press_cnt += 1;
+						key_cb.KEY_STATE = KEY_STATE_DELY;
+					} else{
+						key_cb.press_cnt = 0;
+						key_return = key_cb.pre_keyval | KEY_SHORT_UP;
+						key_cb.KEY_STATE = KEY_STATE_NOTHING;
+					}
+                }
+            } else {
+                key_cb.key_cnt++;
+                key_cb.key_up = 0;
+                if (key_cb.key_cnt >= key_shake_table.long_cnt) {
+                    // 达到最低长按次数
+                    key_cb.KEY_STATE = KEY_STATE_LONG;
+                    // 无多击+长按，长按对多击次数重置
+                    //key_cb.press_cnt = 0;
+                }
+            }
+        break;
+			
+        case KEY_STATE_LONG:
+		case KEY_STATE_LV1_LONG:
+		case KEY_STATE_LV2_LONG:
+            if (key_val == NO_KEY) {
+                if (key_cb.key_up < key_shake_table.up_cnt) {
+                    // 抬起消抖
+                    key_cb.key_up++;
+                } else {
+                    // 输出长按抬起事件
+                    // printf("KEY_STATE_LONG_UP\n");
+                    if(key_cb.KEY_STATE == KEY_STATE_LV1_LONG) {
+						if(key_cb.press_cnt == 0) {
+							key_return = key_cb.pre_keyval | KEY_LONG_UP;
+						}
+                    }
+					
+                    key_cb.press_cnt = 0; //长按抬起事件对多击次数重置
+                    key_cb.key_cnt = 0;
+					key_cb.repeat_cnt = 0;
+                    key_cb.KEY_STATE = KEY_STATE_UP;
+                }
+            } else {
+                key_cb.key_cnt++;
+                key_cb.key_up = 0;
+
+				//软关机长按时间检测
+				if(key_cb.key_cnt == sys_cb.poweroff_hold_cnt) {
+					// printf("KEY_LHOLD\n");
+					key_return = key_cb.pre_keyval | KEY_LHOLD;
+					return key_return;
+				}
+
+				if(key_cb.KEY_STATE == KEY_STATE_LONG) {
+					if(key_cb.key_cnt >= key_shake_table.lv1_long_cnt) {
+						// printf("KEY_STATE_LV1_LONG\n");
+						if(key_cb.press_cnt == 0) {
+							key_return = key_cb.pre_keyval | KEY_LONG; //LV1长按
+						}
+						key_cb.KEY_STATE = KEY_STATE_LV1_LONG;
+						return key_return; //key_cb.repeat_cnt不需要+1
+					}
+				} else if(key_cb.KEY_STATE == KEY_STATE_LV1_LONG) {
+					if(key_cb.key_cnt >= key_shake_table.lv2_long_cnt) {
+						// printf("KEY_STATE_LV2_LONG\n");
+						if(key_cb.press_cnt == 2) {
+							key_return = key_cb.pre_keyval | KEY_DOUBLE_LV2_LONG; //双击+LV2长按
+						} else if(key_cb.press_cnt == 0){
+							key_return = key_cb.pre_keyval | KEY_LV2_LONG; //LV2长按
+						}
+						key_cb.KEY_STATE = KEY_STATE_LV2_LONG;
+					}
+				}
+				
+				if(key_cb.KEY_STATE >= KEY_STATE_LV1_LONG) { //长按次数大于KEY_LV1_LONG_TIMES后才可以触发连按事件
+					key_cb.repeat_cnt += 1;
+					if(key_cb.repeat_cnt >= key_shake_table.hold_cnt)
+					{
+						if(key_return == NO_KEY) { //如果有长按事件，先输出长按事件，后输出长按保持事件
+							key_cb.repeat_cnt = 0;
+							// 输出长按保持时间
+							if(key_cb.press_cnt == 0) {
+								key_return = key_cb.pre_keyval | KEY_HOLD;
+							}
+						}
+					}
+				}
+            }
+        break;
+			
+        // 延迟等待多击输出时间
+        case KEY_STATE_DELY:
+            if (key_val == NO_KEY) {
+                key_cb.delay_cnt++;
+                key_cb.key_cnt = 0;
+                if (key_cb.delay_cnt >= sys_cb.double_delay_cnt) {
+                    // printf("key_cb.press_cnt=%d\n", key_cb.press_cnt);
+                    switch(key_cb.press_cnt) {
+                        case 1:
+                            key_return = key_cb.pre_keyval | KEY_SHORT_UP;
+                            break;
+                        case 2:
+                            key_return = key_cb.pre_keyval | KEY_DOUBLE;
+                            break;
+                        case 3:
+                            key_return = key_cb.pre_keyval | KEY_THREE;
+                            break;
+                        case 4:
+                            key_return = key_cb.pre_keyval | KEY_FOUR;
+                            break;
+                        case 5:
+                            key_return = key_cb.pre_keyval | KEY_FIVE;
+                            break;
+                        default:
+                            break;
+                    }
+                    key_cb.press_cnt = 0;
+                    key_cb.delay_cnt = 0;
+                    key_cb.KEY_STATE = KEY_STATE_NOTHING;
+                }
+            } else {
+                key_cb.key_cnt++;
+                if (key_cb.key_cnt >= key_shake_table.scan_cnt) {
+					key_cb.delay_cnt = 0;
+                    key_cb.KEY_STATE = KEY_STATE_PRESS;
+                }
+            }
+        break;
+
+		default:
+			break;
+    }
+	
+    return key_return;
+}
+//End
+
 AT(.com_text.bsp.key)
 u16 bsp_key_process(u16 key_val)
 {
@@ -121,6 +351,10 @@ u16 bsp_key_process(u16 key_val)
     timer1ms_cnt=0;
 #endif
 
+//@lewis
+#if 1
+    u16 key_return = key_deal(key_val);
+#else
     u16 key_return = key_process(key_val);
 
     //双击处理
@@ -130,6 +364,9 @@ u16 bsp_key_process(u16 key_val)
         key_return = key_multi_press_process(key_return);
     }
 #endif
+#endif
+//End
+
     return key_return;
 }
 
@@ -202,7 +439,7 @@ u8 bsp_key_scan(void)
         } else if (sys_cb.kh_vol_msg == key) {
             msg_queue_detach(key, 0);
         }
-//        printf(key_enqueue_str, key);
+        printf(key_enqueue_str, key);
         msg_enqueue(key);
     }
     return key_val;
