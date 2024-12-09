@@ -7,7 +7,7 @@ u16 get_user_def_vol_msg(u8 func_sel)
     u16 msg = NO_MSG;
 
     if(func_sel == UDK_VOL_UP) {            //VOL+
-#if 0//BT_TWS_EN
+#if 0//BT_TWS_EN //@lewis
         if(xcfg_cb.user_def_lr_en && xcfg_cb.bt_tws_en) {
             msg = func_bt_tws_get_channel()? KU_VOL_UP : KU_VOL_DOWN;
         } else
@@ -16,7 +16,7 @@ u16 get_user_def_vol_msg(u8 func_sel)
             msg = KU_VOL_UP;
         }
     } else if(func_sel == UDK_VOL_DOWN) {   //VOL-
-#if 0//BT_TWS_EN
+#if 0//BT_TWS_EN //@lewis
         if(xcfg_cb.user_def_lr_en && xcfg_cb.bt_tws_en) {
             msg = func_bt_tws_get_channel()? KU_VOL_DOWN : KU_VOL_UP;
         } else
@@ -69,7 +69,7 @@ bool user_def_key_msg(u8 func_sel)
     } else if (func_sel == UDK_NR) {                    //NR
         bt_ctl_nr_sta_change();                         //发消息通知手机
     } else if (func_sel == UDK_PREV) {                  //PREV
-#if 0//BT_TWS_EN
+#if 0//BT_TWS_EN //@lewis
         if(xcfg_cb.user_def_lr_en && xcfg_cb.bt_tws_en) {
             msg = func_bt_tws_get_channel()? KU_PREV : KU_NEXT;
         } else
@@ -79,7 +79,7 @@ bool user_def_key_msg(u8 func_sel)
         }
         user_def_track_msg(msg);
     } else if (func_sel == UDK_NEXT) {                  //NEXT
-#if 0//BT_TWS_EN
+#if 0//BT_TWS_EN //@lewis
         if(xcfg_cb.user_def_lr_en && xcfg_cb.bt_tws_en) {
             msg = func_bt_tws_get_channel()? KU_NEXT : KU_PREV;
         } else
