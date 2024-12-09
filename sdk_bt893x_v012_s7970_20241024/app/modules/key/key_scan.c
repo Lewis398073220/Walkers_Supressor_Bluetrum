@@ -34,6 +34,37 @@ void key_init(void)
 	//@lewis
 	sys_cb.double_delay_cnt = get_double_key_time();
 	sys_cb.poweroff_hold_cnt = ((PWROFF_PRESS_TIME - 3) / 3) * 100 + 300;
+	//先保存左耳user def按键功能
+	sys_cb.user_def_l_ks_sel = xcfg_cb.user_def_ks_sel;
+	sys_cb.user_def_l_kl_sel = xcfg_cb.user_def_kl_sel;
+	sys_cb.user_def_l_kd_sel = xcfg_cb.user_def_kd_sel;
+	sys_cb.user_def_l_kt_sel = xcfg_cb.user_def_kt_sel;
+	sys_cb.user_def_l_kfour_sel = xcfg_cb.user_def_kfour_sel;
+	sys_cb.user_def_l_kfive_sel = xcfg_cb.user_def_kfive_sel;
+	#if BT_TWS_EN
+	if(xcfg_cb.bt_tws_en)
+	{
+		if(xcfg_cb.user_def_lr_en) {
+			if(!func_bt_tws_get_channel()) { //如果为TWS右声道
+				//本地load入右耳按键功能
+				xcfg_cb.user_def_ks_sel = xcfg_cb.user_def_r_ks_sel;
+				xcfg_cb.user_def_kl_sel = xcfg_cb.user_def_r_kl_sel;
+				xcfg_cb.user_def_kd_sel = xcfg_cb.user_def_r_kd_sel;
+				xcfg_cb.user_def_kt_sel = xcfg_cb.user_def_r_kt_sel;
+				xcfg_cb.user_def_kfour_sel = xcfg_cb.user_def_r_kfour_sel;
+				xcfg_cb.user_def_kfive_sel = xcfg_cb.user_def_r_kfive_sel;
+			}
+		} else{
+		    //右耳按键功能与左耳一样
+			xcfg_cb.user_def_r_ks_sel = sys_cb.user_def_l_ks_sel;
+			xcfg_cb.user_def_r_kl_sel = sys_cb.user_def_l_kl_sel;
+			xcfg_cb.user_def_r_kd_sel = sys_cb.user_def_l_kd_sel;
+			xcfg_cb.user_def_r_kt_sel = sys_cb.user_def_l_kt_sel;
+			xcfg_cb.user_def_r_kfour_sel = sys_cb.user_def_l_kfour_sel;
+			xcfg_cb.user_def_r_kfive_sel = sys_cb.user_def_l_kfive_sel;
+		}
+	} 
+	#endif
 	//End
 
 #if USER_IOKEY

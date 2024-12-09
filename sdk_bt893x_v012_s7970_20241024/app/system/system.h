@@ -45,6 +45,14 @@ typedef struct {
     u8 name_suffix_en;          //TWS名称是否增加后缀名了
     u8 tws_force_channel;       //1: 固定左声道, 2:固定右声道
     u8 vusb_force_channel;      //VUSB UART固定的声道
+    //@lewis
+	u8 user_def_l_ks_sel;
+	u8 user_def_l_kl_sel;
+	u8 user_def_l_kd_sel;
+	u8 user_def_l_kt_sel;
+	u8 user_def_l_kfour_sel;
+	u8 user_def_l_kfive_sel;
+	//End
 #if USER_INEAR_DETECT_EN
     u8 rem_ear_sta;             //对耳的入耳状态，0为入耳，1为出耳
     u8 loc_ear_sta;				//耳机的入耳状态，0为入耳，1为出耳

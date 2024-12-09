@@ -210,15 +210,21 @@ typedef struct __attribute__((packed)) _xcfg_cb_t {
     u32 adkey2_ch                        : 4;   //ADKEY2通路选择: ADCCH_PA5: 0, ADCCH_PA6: 1, ADCCH_PA7: 2, ADCCH_PB1: 3, ADCCH_PB2: 4, ADCCH_PB3: 5, ADCCH_PB4: 6, ADCCH_PE5: 7, ADCCH_PE6: 8, ADCCH_PE7: 9, ADCCH_PF0: 10, ADCCH_PB0: 11
     u32 user_key_multi_press_en          : 1;   //按键多击功能
     u32 double_key_time                  : 3;   //双击响应时间选择: 200ms: 0, 300ms: 1, 400ms: 2, 500ms: 3, 600ms: 4, 700ms: 5, 800ms: 6, 900ms: 7
-    u32 user_def_ks_sel                  : 4;   //USER_DEF键短按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
-    u32 user_def_kl_sel                  : 4;   //USER_DEF键长按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
-    u32 user_def_kd_sel                  : 4;   //USER_DEF键双击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
-    u32 user_def_kt_sel                  : 4;   //USER_DEF键三击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
-    u32 user_def_kfour_sel               : 4;   //USER_DEF键四击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
-    u32 user_def_kfive_sel               : 4;   //USER_DEF键五击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_ks_sel                  : 8;   //左耳USER_DEF键短按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_kl_sel                  : 8;   //左耳USER_DEF键长按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_kd_sel                  : 8;   //左耳USER_DEF键双击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_kt_sel                  : 8;   //左耳USER_DEF键三击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_kfour_sel               : 8;   //左耳USER_DEF键四击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_kfive_sel               : 8;   //左耳USER_DEF键五击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_lr_en                   : 1;   //USER_DEF键区分左右耳
+    u32 user_def_r_ks_sel                : 8;   //右耳USER_DEF键短按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_r_kl_sel                : 8;   //右耳USER_DEF键长按: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_r_kd_sel                : 8;   //右耳USER_DEF键双击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_r_kt_sel                : 8;   //右耳USER_DEF键三击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_r_kfour_sel             : 8;   //右耳USER_DEF键四击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
+    u32 user_def_r_kfive_sel             : 8;   //右耳USER_DEF键五击: 无: 0, 回拨: 1, SIRI: 2, PREV: 3, NEXT: 4, VOL+: 5, VOL-: 6, MODE: 7, HID拍照: 8, IOS HOME: 9, 中英文切换: 10, PLAY/PAUSE: 11, CBT_TEST: 12, 低延时: 13, 降噪控制: 14
     u32 user_def_kl_tone_en              : 1;   //USER_DEF键长按按键音
     u32 user_def_kd_lang_en              : 1;   //USER_DEF键双击切语言
-    u32 user_def_lr_en                   : 1;   //USER_DEF键区分左右耳
     u32 key_multi_config_en              : 1;   //支持多击的按键定制
     u8 dblkey_num0;                             //多击按键1选择: None: 0, P/P: 1, PWR: 2, NEXT/VOL+: 3, PREV/VOL-: 4, NEXT/VOL-: 5, PREV/VOL+: 6, VOL+/NEXT: 7, VOL-/PREV: 8, VOL-/NEXT: 9, VOL+/PREV: 10, VOL+: 11, VOL-: 12, NEXT: 13, PREV: 14, MODE: 15, HSF: 16, MODE/PWR: 17, SIRI: 18, HOME: 19, PP/PWR/USER_DEF: 20, PP/USER_DEF: 21
     u8 dblkey_num1;                             //多击按键2选择: None: 0, P/P: 1, PWR: 2, NEXT/VOL+: 3, PREV/VOL-: 4, NEXT/VOL-: 5, PREV/VOL+: 6, VOL+/NEXT: 7, VOL-/PREV: 8, VOL-/NEXT: 9, VOL+/PREV: 10, VOL+: 11, VOL-: 12, NEXT: 13, PREV: 14, MODE: 15, HSF: 16, MODE/PWR: 17, SIRI: 18, HOME: 19, PP/PWR/USER_DEF: 20, PP/USER_DEF: 21
