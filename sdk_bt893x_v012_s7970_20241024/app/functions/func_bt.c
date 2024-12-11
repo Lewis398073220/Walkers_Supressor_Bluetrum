@@ -138,6 +138,7 @@ void func_bt_warning_do(void)
                 func_bt_tws_set_channel();
                 tws_get_lr_channel();
 
+#if WARNING_TWS_CONNECT //@lewis
                 if (!bsp_res_is_playing()) {
                     #if WARNING_WSBC_EN
                     if(sys_cb.tws_left_channel) {
@@ -162,9 +163,12 @@ void func_bt_warning_do(void)
                     }
                     #endif
                 }
+#endif //WARNING_TWS_CONNECT
             } else {
                 if (tws_warning & BT_WARN_TWS_MCON) {
+#if WARNING_TWS_CONNECT //@lewis
                     bsp_res_play(TWS_RES_CONNECTED);
+#endif //WARNING_TWS_CONNECT
                     return;
                 }
             }

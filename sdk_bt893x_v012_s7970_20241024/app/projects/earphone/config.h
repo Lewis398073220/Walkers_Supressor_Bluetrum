@@ -673,6 +673,7 @@
 #define WARNING_BT_HID_MENU             0            //BT HID MENU手动连接/断开HID Profile提示音
 #define WARNING_BTHID_CONN              0            //BTHID模式是否有独立的连接/断开提示音
 #define WARNING_BT_PAIR                 1            //BT PAIRING提示音
+#define WARNING_TWS_CONNECT             0            //@lewis tws connect提示音
 
 
 #define SW_VERSION		"V0.0.1"		//只能使用数字0-9,ota需要转码

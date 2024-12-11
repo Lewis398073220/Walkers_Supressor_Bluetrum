@@ -950,6 +950,7 @@
 #define WARNING_BTHID_CONN             0
 #define WARNING_MAX_VOLUME             0
 #define WARNING_BT_PAIR                0
+#define WARNING_TWS_CONNECT            0            //@lewis tws connect提示音
 #endif
 
 #if ((!MUSIC_UDISK_EN) && (!MUSIC_SDCARD_EN))
