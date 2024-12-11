@@ -41,6 +41,11 @@ static const u8 tws_res_type_tbl[TWS_RES_MAX] =
     [TWS_RES_ASR_ON]        = TWS_RES_TYPE,
     [TWS_RES_ASR_OFF]       = TWS_RES_TYPE,
 #endif
+
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#endif
+//End
 };
 
 AT(.text.tws.res.type) WEAK
@@ -210,6 +215,12 @@ void tws_res_get_addr(u32 index, u32 *addr, u32 *len)
         *len = RES_LEN_ASR_OFF;
         break;
 #endif
+
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#endif
+//End
+
     default :
         *addr = 0;
         *len = 0;

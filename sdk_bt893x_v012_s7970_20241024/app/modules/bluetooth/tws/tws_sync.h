@@ -25,6 +25,11 @@ void bsp_tws_set_led(const void *cfg);      //设置同步LED显示
 #define bsp_res_cleanup()                   tws_res_cleanup()           //清除提示音播放列表
 #define bsp_res_search(idx)                 tws_res_search(idx)         //查找列表是否存在某个提示音
 #define bsp_res_play(idx)                   tws_res_add(idx, RES_FLAG_TWS)    //添加一个提示音到播放列表，返回值：RES_ERR_NO_ERR/RES_ERR_LIST_FULL/RES_ERR_INVALID
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#define bsp_res_local_play(idx)             tws_res_add(idx, 0)    //添加一个本地播放提示音到播放列表，返回值：RES_ERR_NO_ERR/RES_ERR_LIST_FULL/RES_ERR_INVALID
+#endif
+//End
 
 #define bsp_res_tone_play(n)                bt_tws_req_alarm_tone(n)
 
@@ -42,6 +47,11 @@ void bsp_tws_set_led(const void *cfg);      //设置同步LED显示
 #define bsp_res_cleanup()
 #define bsp_res_search(idx)                  false                      //查找列表是否存在某个提示音
 uint8_t bsp_res_play(uint8_t res_idx);                                  //播放一个提示音
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+uint8_t bsp_res_local_play(uint8_t res_idx);                            //播放一个提示音
+#endif
+//End
 
 #define bsp_res_tone_play(n)
 

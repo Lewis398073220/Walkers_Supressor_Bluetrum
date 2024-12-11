@@ -644,14 +644,15 @@
 #define WARNING_WAV_EN                  1            //是否支持wav提示音（可以和音乐、通话叠加播放）
 #define WARNING_WSBC_EN                 0            //是否支持wsbc提示音（可以和音乐、通话叠加播放）
 #define WARNING_PIANO_EN                1            //是否支持tone提示音（可以和音乐、通话叠加播放）
-#define WARNING_BREAK_EN                1            //是否支持提示音打断功能（主要是打断开机提示音和TWS副耳断开提示音）
-#define WARNING_FIXED_VOLUME            0            //提示音是否固定音量，不跟随系统音量调节
+#define WARNING_BREAK_EN                0            //@lewis close. 是否支持提示音打断功能（主要是打断开机提示音和TWS副耳断开提示音）
+#define WARNING_FIXED_VOLUME            1            //@lewis open. 提示音是否固定音量，不跟随系统音量调节
 #define WARING_MAXVOL_TYPE              RES_TYPE_TONE            //最大音量提示音类型
 #define WARNING_VOLUME                  xcfg_cb.warning_volume   //播放提示音的音量级数
 #define LANG_SELECT                     LANG_EN_ZH   //提示音语言选择
-#define WARNING_SYSVOL_ADJ_EN           0            //是否使能音乐最大音量时播放wav、tone音降低音乐音量
+#define WARNING_SYSVOL_ADJ_EN           1            //@lewis open. 是否使能音乐最大音量时播放wav、tone音降低音乐音量
 #define WARNING_SYSVOL_ADJ_LEVEL        0x3fff       //音乐降低音量，最大时0x7fff
 
+#define CMT_USE_CLIENT_VOICEOVERS       1            //@lewis whether to use client voiceovers
 #define WARNING_POWER_ON                1
 #define WARNING_POWER_OFF               1
 #define WARNING_FUNC_MUSIC              0

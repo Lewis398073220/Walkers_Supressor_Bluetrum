@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <appSettings>
-        <add key="lang_id" value="中英文(出厂默认英文)" />
+        <add key="lang_id" value="英文" />
         <add key="powkey_10s_reset" value="False" />
         <add key="spk_mute_en" value="False" />
         <add key="spk_mute_io_sel" value="0" />
@@ -31,10 +31,10 @@
         <add key="dac_off_for_conn" value="False" />
         <add key="dac_max_gain" value="-3DB" />
         <add key="bt_call_max_gain" value="-3DB" />
-        <add key="vol_max" value="32级音量" />
-        <add key="sys_init_vol" value="19" />
-        <add key="sys_recover_initvol" value="5" />
-        <add key="warning_volume" value="21" />
+        <add key="vol_max" value="16级音量" />
+        <add key="sys_init_vol" value="13" />
+        <add key="sys_recover_initvol" value="16" />
+        <add key="warning_volume" value="13" />
         <add key="buck_mode_en" value="True" />
         <add key="vddba_buck_en" value="True" />
         <add key="vddbt_capless_en" value="False" />
@@ -66,7 +66,7 @@
         <add key="warning_bt_pair" value="True" />
         <add key="bt_2acl_en" value="False" />
         <add key="bt_a2dp_en" value="True" />
-        <add key="bt_a2dp_vol_ctrl_en" value="False" />
+        <add key="bt_a2dp_vol_ctrl_en" value="True" />
         <add key="bt_sco_en" value="True" />
         <add key="bt_hfp_private_en" value="True" />
         <add key="bt_hfp_ring_number_en" value="True" />

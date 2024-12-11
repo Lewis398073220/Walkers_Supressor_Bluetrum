@@ -42,6 +42,12 @@ enum {
     TWS_RES_ASR_ON,
     TWS_RES_ASR_OFF,
 #endif
+
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#endif
+//End
+
     TWS_RES_MAX,
 };
 

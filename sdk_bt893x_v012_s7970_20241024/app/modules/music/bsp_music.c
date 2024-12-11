@@ -535,4 +535,14 @@ uint8_t bsp_res_play(uint8_t res_idx)
 
     return RES_ERR_INVALID;
 }
+
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+uint8_t bsp_res_local_play(uint8_t res_idx)
+{
+	bsp_res_play(res_idx);
+}
+#endif
+//End
+
 #endif

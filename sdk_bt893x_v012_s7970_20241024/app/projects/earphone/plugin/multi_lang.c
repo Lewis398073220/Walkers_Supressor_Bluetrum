@@ -5,8 +5,15 @@ const res_addr_t mul_lang_tbl[2][RES_IDX_MAX] = {
     {
         [RES_IDX_LANGUAGE   ] = {&RES_BUF(EN_LANGUAGE),      &RES_LEN(EN_LANGUAGE)},
         [RES_IDX_LOW_BATTERY] = {&RES_BUF(EN_LOW_BATTERY),   &RES_LEN(EN_LOW_BATTERY)},
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS        
+        [RES_IDX_POWERON    ] = {&RES_BUF(EN_0POWER_ON),       &RES_LEN(EN_0POWER_ON)},
+        [RES_IDX_POWEROFF   ] = {&RES_BUF(EN_1POWER_OFF),      &RES_LEN(EN_1POWER_OFF)},
+#else //CMT_USE_CLIENT_VOICEOVERS
         [RES_IDX_POWERON    ] = {&RES_BUF(EN_POWERON),       &RES_LEN(EN_POWERON)},
         [RES_IDX_POWEROFF   ] = {&RES_BUF(EN_POWEROFF),      &RES_LEN(EN_POWEROFF)},
+#endif
+//End
         [RES_IDX_MAX_VOL    ] = {&RES_BUF(EN_MAX_VOL),       &RES_LEN(EN_MAX_VOL)},
 //        [RES_IDX_SDCARD_MODE] = {&RES_BUF(EN_SDCARD_MODE),   &RES_LEN(EN_SDCARD_MODE)},
 //        [RES_IDX_USB_MODE   ] = {&RES_BUF(EN_USB_MODE),      &RES_LEN(EN_USB_MODE)},

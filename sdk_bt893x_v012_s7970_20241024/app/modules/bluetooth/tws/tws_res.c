@@ -770,6 +770,11 @@ void tws_slave_res_add_req_cb(uint16_t param)
         case TWS_RES_ASR_ON:
         case TWS_RES_ASR_OFF:
 #endif
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#endif
+//End
+
             bsp_res_play(res_idx);
             break;
         }
