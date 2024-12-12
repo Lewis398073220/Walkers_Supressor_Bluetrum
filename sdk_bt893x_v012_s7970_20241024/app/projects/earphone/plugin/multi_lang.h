@@ -7,6 +7,12 @@
 #define RES_LEN_MP3(name)           RES_CONST_CAT(RES_LEN_, name, MP3)
 #define RES_BUF_SBC(name)           RES_CONST_CAT(RES_BUF_, name, SBC)
 #define RES_LEN_SBC(name)           RES_CONST_CAT(RES_LEN_, name, SBC)
+//@lewis
+#if CMT_USE_CLIENT_VOICEOVERS
+#define RES_BUF_WAV(name)           RES_CONST_CAT(RES_BUF_, name, WAV)
+#define RES_LEN_WAV(name)           RES_CONST_CAT(RES_LEN_, name, WAV)
+#endif
+//End
 
 #if WARNING_WSBC_EN
 #define RES_BUF(n)              	RES_BUF_SBC(n)          //主要格式，个别可单独修改tbl

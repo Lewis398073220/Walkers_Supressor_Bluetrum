@@ -126,39 +126,18 @@ void tws_res_get_addr(u32 index, u32 *addr, u32 *len)
         *len = RES_LEN(RING);
         break;
     case TWS_RES_CONNECTED:
-//@lewis
-#if CMT_USE_CLIENT_VOICEOVERS
-        *addr = RES_BUF_EN_3CONNECTED_WAV;
-        *len = RES_LEN_EN_3CONNECTED_WAV;
-#else //CMT_USE_CLIENT_VOICEOVERS
         *addr = RES_BUF_CONNECTED;
         *len = RES_LEN_CONNECTED;
-#endif
-//End
         break;
 
     case TWS_RES_DISCONNECT:
-//@lewis
-#if CMT_USE_CLIENT_VOICEOVERS
-        *addr = RES_BUF_EN_4DISCONNECT_WAV;
-        *len = RES_LEN_EN_4DISCONNECT_WAV;
-#else //CMT_USE_CLIENT_VOICEOVERS
         *addr = RES_BUF_DISCONNECT;
         *len = RES_LEN_DISCONNECT;
-#endif
-//End
         break;
 
     case TWS_RES_PAIRING:
-//@lewis
-#if CMT_USE_CLIENT_VOICEOVERS
-        *addr = RES_BUF_EN_2PAIRING_WAV;
-        *len = RES_LEN_EN_2PAIRING_WAV;
-#else //CMT_USE_CLIENT_VOICEOVERS
         *addr = RES_BUF_PAIRING;
         *len = RES_LEN_PAIRING;
-#endif
-//End
         break;
 
     case TWS_RES_LOW_BATTERY:
